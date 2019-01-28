@@ -4,26 +4,31 @@ import { GlobalErrorHandler } from "./global-error-handler.service";
 
 describe("GlobalErrorHandler Service", () => {
   let service: GlobalErrorHandler;
+  let error;
   beforeEach(() => {
     service = new GlobalErrorHandler();
-  });
-  afterEach(() => {
-    service = null;
-  });
-
-  it("should catch HttpErrors and output to console", () => {
-    let error = new HttpErrorResponse({
+    error = new HttpErrorResponse({
       url: "Some url",
       error: { message: "error message details" },
       status: 404
     });
-    let errorLog = {
-      status: error.status,
-      message: error.message,
-      details: error.error.message
-    };
-    service.handleError(error);
-    console.error = jasmine.createSpy("error");
-    expect(console.error).toHaveBeenCalled();
+  });
+  afterEach(() => {
+    service = null;
+    error = null;
+  });
+  
+  it("should show output error message to console", () => {
+    const errorSpy = spyOn(console, "error");
+    let promise = new Promise((resolve, reject) => {
+      resolve(()=>service.handleError(error));
+    })
+    promise.then(()=> {},()=>expect(errorSpy).toHaveBeenCalled());
+  });
+
+  it("should throw error when called", () => {
+    expect(() => {
+      service.handleError(error);
+    }).toThrow(new Error(error.message));
   });
 });
