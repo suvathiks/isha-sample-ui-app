@@ -1,6 +1,5 @@
 # Dependencies:-
-1. "@angular/material" // for the error notifier service
-2. "@angular/cdk" and "@angular/animations" // dependencies for @angular/material
+1. "@angular/material" (dependencies - "@angular/cdk" and "@angular/animations") // for the error notifier service
 
 # Description:-
 This has useful abstractions for any application that has a backend service integrated.

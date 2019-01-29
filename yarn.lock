@@ -310,6 +310,13 @@
     tree-kill "1.2.0"
     webpack-sources "1.2.0"
 
+"@ngxs/devtools-plugin@^3.3.4":
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/@ngxs/devtools-plugin/-/devtools-plugin-3.3.4.tgz#7836ddb94245a8f5bd5137599c66a1a8aea31993"
+  integrity sha512-gwVbK+utZlikIJ1wOC8WuOqAjB3t55J4LYiN9VwSxntvnXEAe+J2PQrnvK0e/C9df8HAbytGK2Jbisg00QO/ew==
+  dependencies:
+    tslib "^1.9.0"
+
 "@ngxs/store@^3.3.4":
   version "3.3.4"
   resolved "https://registry.yarnpkg.com/@ngxs/store/-/store-3.3.4.tgz#dced015eedf054bc651bbc1b67b590287cec7437"
@@ -4083,6 +4090,19 @@ karma@~3.1.1:
     tmp "0.0.33"
     useragent "2.3.0"
 
+keycloak-angular@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/keycloak-angular/-/keycloak-angular-6.0.0.tgz#0ad0d10bf24de8ddd406449874bb109277cd1d25"
+  integrity sha512-MRmtC+X8RS2dVF2Y3j1Q7Mz0Wc9Yw+vb822D02sITzG8HRulUYACw0OshS+HM2CmVp9ZcFhvAFW3v5nLOJsjug==
+  dependencies:
+    keycloak-js "^4.6.0"
+    tslib "^1.9.0"
+
+keycloak-js@^4.6.0:
+  version "4.8.3"
+  resolved "https://registry.yarnpkg.com/keycloak-js/-/keycloak-js-4.8.3.tgz#e065f41d144d260afa8466b5b587a65d5f308d30"
+  integrity sha512-TXoZdoOYu2ScYs58L95/xSYjsTto9KRvZ+vt6mv4Dyf4pYhYZSgwMPnmi128qj/z8sm4mL1Z8nncR6XdWgNKMQ==
+
 killable@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/killable/-/killable-1.0.1.tgz#4c8ce441187a061c7474fb87ca08e2a638194892"
@@ -5483,6 +5503,11 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
   integrity sha1-gV7R9uvGWSb4ZbMQwHE7yzMVzks=
+
+primeng@^7.0.5:
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/primeng/-/primeng-7.0.5.tgz#9a2e5921a7dcdd0052e99e11f7d23ea1953d155b"
+  integrity sha512-CVc6XxMZEsuCKXkyLUI/bRKX+spSBnEwqOFnAeXfSjIq0Uok51Dnrn8yNHyAWU2YRx93h7NWgxBtSXWVddEwqg==
 
 process-nextick-args@~1.0.6:
   version "1.0.7"

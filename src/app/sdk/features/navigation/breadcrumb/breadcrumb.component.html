@@ -1,0 +1,8 @@
+<div id="breadcrumb" *ngIf="breadcrumbs.length">
+  <span *ngFor="let crumb of breadcrumbs">
+    <i class="material-icons crumb-label"> keyboard_arrow_right </i>
+    <span [routerLink]="crumb.path" class="crumb-label" [class.crumb-link]="crumb.path ? true : false" [class.last-crumb]="crumb.path === currentPath">
+      {{ crumb.label }}
+    </span>
+  </span>
+</div>

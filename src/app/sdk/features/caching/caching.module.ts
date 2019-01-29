@@ -7,7 +7,7 @@ import { CacheInterceptor } from "./cache.interceptor";
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, NgxsModule.forFeature([CacheState])]],
+  imports: [CommonModule, NgxsModule.forFeature([CacheState])],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
