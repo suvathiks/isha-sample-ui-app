@@ -27,88 +27,38 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content component">
+               <div class="content injectable">
                    <div class="content-data">
 
 
 
 
+
+
+
 <ol class="breadcrumb">
-  <li>Components</li>
-  <li>TopnavComponent</li>
+  <li>Injectables</li>
+  <li>ConstantsService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
-        </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="c-info"><p class="comment">
-    <h3>File</h3>
-</p>
-<p class="comment">
-    <code>src/app/sdk/features/navigation_og/topnav/topnav.component.ts</code>
-</p>
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/services/api/constants.service.ts</code>
+        </p>
 
 
 
-    <p class="comment">
-        <h3>Implements</h3>
-    </p>
-    <p class="comment">
-                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
-    </p>
-
-
-<section>
-    <h3>Metadata</h3>
-    <table class="table table-sm table-hover">
-        <tbody>
-
-
-
-
-
-
-
-
-
-
-
-            <tr>
-                <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-topnav</code></td>
-            </tr>
-
-            <tr>
-                <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./topnav.component.scss</code></td>
-            </tr>
-
-
-
-            <tr>
-                <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./topnav.component.html</code></td>
-            </tr>
-
-
-
-
-
-
-
-
-        </tbody>
-    </table>
-</section>
-
-    <section>
+            <section>
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
@@ -122,26 +72,15 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#logout">logout</a>
+                                <a href="#fetchConstantTypes">fetchConstantTypes</a>
+                            </li>
+                            <li>
+                                <a href="#fetchConstantValues">fetchConstantValues</a>
                             </li>
                         </ul>
                     </td>
                 </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Inputs</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#currentPath">currentPath</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
 
 
 
@@ -150,13 +89,13 @@
     </table>
 </section>
 
-    <section>
+            <section>
     <h3 id="constructor">Constructor</h3>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(store: Store)</code>
+<code>constructor(http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
                     </td>
                 </tr>
 
@@ -174,10 +113,10 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>store</td>
+                                                        <td>http</td>
                                                   
                                                         <td>
-                                                                    <code>Store</code>
+                                                                    <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -194,25 +133,7 @@
         </table>
 </section>
 
-    <section>
-    <h3 id="inputs">Inputs</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-2">
-                        <a name="currentPath"></a>
-                        <code>currentPath</code>
-                    </td>
-                    <td class="col-md-10">
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
-
-
-
-    <section>
+            <section>
     
         <h3 id="methods">
             Methods
@@ -221,18 +142,18 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="logout"></a>
+                        <a name="fetchConstantTypes"></a>
                         <span class="name">
                             <b>
-                            logout
+                            fetchConstantTypes
                             </b>
-                            <a href="#logout"><span class="icon ion-ios-link"></span></a>
+                            <a href="#fetchConstantTypes"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-<code>logout()</code>
+<code>fetchConstantTypes()</code>
                     </td>
                 </tr>
 
@@ -243,7 +164,40 @@
                     <td class="col-md-4">
 
                             <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fetchConstantValues"></a>
+                        <span class="name">
+                            <b>
+                            fetchConstantValues
+                            </b>
+                            <a href="#fetchConstantValues"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>fetchConstantValues()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                             </div>
                     </td>
@@ -253,91 +207,11 @@
 </section>
 
 
-</div>
-
-
-
-
-    <div class="tab-pane fade " id="c-styleData">
-                <p class="comment">
-                    <code>./topnav.component.scss</code>
-                </p>
-                <pre class="line-numbers"><code class="language-scss">#topnav {
-  top: 0;
-  left: 0;
-  width: 100%;
-  margin: 0;
-  padding: 0px 0px 0px 2px;
-  height: var(--topnav-height);
-  z-index: 1;
-  position: fixed;
-  border-bottom: solid 1px rgba(0, 0, 0, 0.5);
-  background-color: white;
-  // overflow: visible;
-}
-#logo {
-  left: 0;
-  margin: 0;
-  visibility: visible;
-  cursor: pointer;
-  height: var(--topnav-height);
-  padding: 2px;
-}
-#logo-min {
-  left: 0;
-  margin: 0;
-  height: var(--topnav-height);
-  width: auto;
-  padding: 2px;
-  visibility: hidden;
-  width: 0;
-  cursor: pointer;
-}
-#topnav-breadcrumb {
-  font-size: 0.7em;
-  vertical-align: bottom;
-  height: var(--breadcrumb-height);
-  margin-top: calc(var(--topnav-height)-var(--breadcrumb-height));
-}
-@media screen and (max-width: 480px) {
-  #logo {
-    visibility: hidden;
-    width: 0;
-  }
-  #logo-min {
-    visibility: visible;
-    width: initial;
-  }
-}
-#logout-button {
-  position: fixed;
-  right: 10px;
-  .logout {
-    color: red;
-    &amp;:hover {
-      cursor: pointer;
-    }
-  }
-}</code></pre>
     </div>
 
 
-    
+
 </div>
-
-<script src="../js/libs/vis.min.js"></script>
-<script src="../js/libs/htmlparser.js"></script>
-<script src="../js/libs/deep-iterator.js"></script>
-<script>
-        var COMPONENT_TEMPLATE = '<div><mat-toolbar id="topnav">  <img    id="logo"    class="topnav-item"    src="assets/logo/logo.png"    routerLink="/"    height="45px"    alt="HYS Logo"  />  <img    id="logo-min"    class="topnav-item"    src="assets/logo/logoMin.png"    routerLink="/"    height="45px"    alt="HYS Logo"  />  <app-breadcrumb    [currentPath]="currentPath"    id="topnav-breadcrumb"    class="topnav-item"  ></app-breadcrumb>  <span id="logout-button" class="topnav-item">      <i class="material-icons logout" (click)="logout()">logout</i>  </span></mat-toolbar></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'TopnavComponent', 'selector': 'app-topnav'},{'name': 'TopnavComponent', 'selector': 'app-topnav'}];
-    var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'TopnavComponent-1'};
-</script>
-<script src="../js/tree.js"></script>
-
-
-
 
 
 
@@ -365,8 +239,8 @@
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'TopnavComponent-1.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'ConstantsService.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

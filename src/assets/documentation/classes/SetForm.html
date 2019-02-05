@@ -27,121 +27,73 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content component">
+               <div class="content class">
                    <div class="content-data">
 
 
 
 
+
+
+
+
+
+
+
 <ol class="breadcrumb">
-  <li>Components</li>
-  <li>TopnavComponent</li>
+  <li>Classes</li>
+  <li>SetForm</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
-        <li >
-            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
-        </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="c-info"><p class="comment">
-    <h3>File</h3>
-</p>
-<p class="comment">
-    <code>src/app/sdk/features/navigation/topnav/topnav.component.ts</code>
-</p>
-
-
-
-    <p class="comment">
-        <h3>Implements</h3>
-    </p>
-    <p class="comment">
-                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
-    </p>
-
-
-<section>
-    <h3>Metadata</h3>
-    <table class="table table-sm table-hover">
-        <tbody>
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/sdk/features/master-form/master-form.actions.ts</code>
+        </p>
 
 
 
 
 
-
-
-
-
-
-
-            <tr>
-                <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-topnav</code></td>
-            </tr>
-
-            <tr>
-                <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./topnav.component.scss</code></td>
-            </tr>
-
-
-
-            <tr>
-                <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./topnav.component.html</code></td>
-            </tr>
-
-
-
-
-
-
-
-
-        </tbody>
-    </table>
-</section>
-
-    <section>
+            <section>
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
-
                 <tr>
                     <td class="col-md-4">
-                        <h6><b>Methods</b></h6>
+                        <h6><b>Properties</b></h6>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#logout">logout</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#formId">formId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#recordId">recordId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#type">type</a>
                             </li>
                         </ul>
                     </td>
                 </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Inputs</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#currentPath">currentPath</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
+
 
 
 
@@ -150,13 +102,13 @@
     </table>
 </section>
 
-    <section>
+            <section>
     <h3 id="constructor">Constructor</h3>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(store: Store)</code>
+<code>constructor(formId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, recordId: number | "NEW")</code>
                     </td>
                 </tr>
 
@@ -174,10 +126,22 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>store</td>
+                                                        <td>formId</td>
                                                   
                                                         <td>
-                                                                    <code>Store</code>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>recordId</td>
+                                                  
+                                                        <td>
+                                                                    <code>number | &quot;NEW&quot;</code>
                                                         </td>
                                                   
                                                     <td>
@@ -194,154 +158,119 @@
         </table>
 </section>
 
-    <section>
-    <h3 id="inputs">Inputs</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-2">
-                        <a name="currentPath"></a>
-                        <code>currentPath</code>
-                    </td>
-                    <td class="col-md-10">
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
-
-
-
-    <section>
+            <section>
     
-        <h3 id="methods">
-            Methods
+        <h3 id="inputs">
+            Properties
         </h3>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="logout"></a>
+                        <a name="formId"></a>
                         <span class="name">
                             <b>
-                            logout
+                                <span class="modifier">Public</span>
+                            formId
                             </b>
-                            <a href="#logout"><span class="icon ion-ios-link"></span></a>
+                            <a href="#formId"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-<code>logout()</code>
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>formId:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
                     </td>
                 </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
 
 
-
-
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
                 <tr>
                     <td class="col-md-4">
-
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
+                        <a name="recordId"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            recordId
+                            </b>
+                            <a href="#recordId"><span class="icon ion-ios-link"></span></a>
+                        </span>
                     </td>
                 </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>recordId:     <code>number | &quot;NEW&quot;</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>number | &quot;NEW&quot;</code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="type"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Static</span>
+                                <span class="modifier">Readonly</span>
+                            type
+                            </b>
+                            <a href="#type"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>type:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;[FORM] SET&quot;</code>
+                        </td>
+                    </tr>
+
+
             </tbody>
         </table>
 </section>
 
 
-</div>
 
 
 
 
-    <div class="tab-pane fade " id="c-styleData">
-                <p class="comment">
-                    <code>./topnav.component.scss</code>
-                </p>
-                <pre class="line-numbers"><code class="language-scss">#topnav {
-  top: 0;
-  left: 0;
-  width: 100%;
-  margin: 0;
-  padding: 0px 0px 0px 2px;
-  height: var(--topnav-height);
-  z-index: 1;
-  position: fixed;
-  border-bottom: solid 1px rgba(0, 0, 0, 0.5);
-  background-color: white;
-  // overflow: visible;
-}
-#logo {
-  left: 0;
-  margin: 0;
-  visibility: visible;
-  cursor: pointer;
-  height: calc(var(--topnav-height) - var(--generic-padding));
-  padding: 2px;
-}
-#logo-min {
-  left: 0;
-  margin: 0;
-  height: var(--topnav-height);
-  width: auto;
-  padding: 2px;
-  visibility: hidden;
-  width: 0;
-  cursor: pointer;
-}
-#topnav-breadcrumb {
-  font-size: 0.7em;
-  vertical-align: bottom;
-  height: var(--breadcrumb-height);
-  margin-top: calc(var(--topnav-height)-var(--breadcrumb-height));
-}
-@media screen and (max-width: 480px) {
-  #logo {
-    visibility: hidden;
-    width: 0;
-  }
-  #logo-min {
-    visibility: visible;
-    width: initial;
-  }
-}
-#logout-button {
-  position: fixed;
-  right: 10px;
-  .logout {
-    color: red;
-    &amp;:hover {
-      cursor: pointer;
-    }
-  }
-}</code></pre>
+
     </div>
 
 
-    
 </div>
-
-<script src="../js/libs/vis.min.js"></script>
-<script src="../js/libs/htmlparser.js"></script>
-<script src="../js/libs/deep-iterator.js"></script>
-<script>
-        var COMPONENT_TEMPLATE = '<div><mat-toolbar id="topnav">  <img id="logo" class="topnav-item" src="assets/logo/logo.png" routerLink="/" alt="Logo" />  <img id="logo-min" class="topnav-item" src="assets/logo/logoMin.png" routerLink="/" alt="Logo Mini" />  <app-breadcrumb [currentPath]="currentPath" id="topnav-breadcrumb" class="topnav-item"></app-breadcrumb>  <span id="logout-button" class="topnav-item">    <i class="material-icons logout" (click)="logout()">logout</i>  </span></mat-toolbar></div>'
-    var COMPONENTS = [{'name': 'AddEditProgramComponent', 'selector': 'app-add-program'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'DataTableComponent', 'selector': 'app-data-table'},{'name': 'EditButtonRenderer', 'selector': 'edit-button'},{'name': 'FormFieldComponent', 'selector': 'form-field'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'MasterFormComponent', 'selector': 'app-master-form'},{'name': 'PaginatorComponent', 'selector': 'app-paginator'},{'name': 'ProgramsComponent', 'selector': 'app-programs'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'TopnavComponent', 'selector': 'app-topnav'}];
-    var DIRECTIVES = [{'name': 'CreditCardValidator', 'selector': '[validCreditCard]'}];
-    var ACTUAL_COMPONENT = {'name': 'TopnavComponent'};
-</script>
-<script src="../js/tree.js"></script>
-
-
-
-
-
-
-
 
 
 
@@ -365,8 +294,8 @@
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'TopnavComponent.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'SetForm.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

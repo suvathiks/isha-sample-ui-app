@@ -34,13 +34,16 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li>SdkModule</li>
+    <li>MasterFormModule</li>
 </ol>
 
 
 <ul class="nav nav-tabs" role="tablist">
     <li  class="active" >
         <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
+    <li >
+        <a href="#readme" role="tab" id="readme-tab" data-toggle="tab" data-link="readme">README</a>
     </li>
 </ul>
 
@@ -51,7 +54,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/sdk/sdk.module.ts</code>
+            <code>src/app/sdk/features/master-form/master-form.module.ts</code>
         </p>
 
 
@@ -60,26 +63,41 @@
         <div class="container-fluid module">
             <div class="row">
                 <div class="col-sm-3">
+                    <h3>Declarations<a href="https://angular.io/api/core/NgModule#declarations" target="_blank"
+                            title="Official documentation about module declarations"><span class="icon ion-ios-information-circle-outline"></span></a></h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="../components/MasterFormComponent.html">MasterFormComponent</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h3>Providers<a href="https://angular.io/api/core/NgModule#providers" target="_blank"
+                            title="Official documentation about module providers"><span class="icon ion-ios-information-circle-outline"></a></h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="../injectables/FormCloseChecker.html">FormCloseChecker</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../injectables/FormNotification.html">FormNotification</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
                     <h3>Imports<a href="https://angular.io/api/core/NgModule#imports" target="_blank" title="Official documentation about module imports"><span
                                 class="icon ion-ios-information-circle-outline"></a></h3>
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="../modules/ApiModule.html">ApiModule</a>
+                            <a href="../modules/MasterFormStylingModule.html">MasterFormStylingModule</a>
                         </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h3>Exports<a href="https://angular.io/api/core/NgModule#exports" target="_blank" title="Official documentation about module exports"><span
+                                class="icon ion-ios-information-circle-outline"></a></h3>
+                    <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="../modules/CachingModule.html">CachingModule</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="../modules/KeycloakModule.html">KeycloakModule</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="../modules/MasterFormModule.html">MasterFormModule</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="../modules/NavigationModule.html">NavigationModule</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="../modules/TableModule.html">TableModule</a>
+                            <a href="../components/MasterFormComponent.html">MasterFormComponent</a>
                         </li>
                     </ul>
                 </div>
@@ -89,6 +107,23 @@
 
     </div>
 
+    <div class="tab-pane fade " id="c-readme">
+        <p><h1 id="dependencies-">Dependencies:-</h1>
+<ol>
+<li>&quot;@ngxs/store&quot;</li>
+<li>&quot;primeng&quot;</li>
+</ol>
+<h1 id="description-">Description:-</h1>
+<p>This module offers full featured form that can be imported wherever forms are necessary.</p>
+<h2 id="features-include-">Features include:-</h2>
+<ol>
+<li>Prevention of accidental loss of unsaved data. Warns the user if they are trying to close the form when unsaved changes exist. Also works when closing the tab or browser.</li>
+<li>Form notifications on both successful and unsuccessful save.</li>
+</ol>
+<h1 id="instructions-">Instructions-</h1>
+<p>In order for the form notifications to be styled differently on successful and unsuccessful save, the custom stylesheet must be imported into the main styles.scss sheet of the app. Add this line to the top of the file <code>@import &quot;./app/sdk/features/master-form/form-notifications/notification.style.scss&quot;;</code></p>
+</p>
+    </div>
 
 </div>
 
@@ -122,7 +157,7 @@
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'SdkModule.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'MasterFormModule.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

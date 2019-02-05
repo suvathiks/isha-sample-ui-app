@@ -1,6 +1,6 @@
 # Dependencies:-
 1. "@ngxs/store"
-2. "primeng"
+2. "primeng" // Follow instructions in official primeng documentation
 
 # Description:-
 This module offers full featured form that can be imported wherever forms are necessary.

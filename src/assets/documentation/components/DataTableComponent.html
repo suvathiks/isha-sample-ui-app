@@ -1,0 +1,1469 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ng-starter-app-seven documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ng-starter-app-seven documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>DataTableComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/sdk/features/table/components/data-table/data-table.component.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-data-table</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./data-table.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./data-table.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#currentlyShowing">currentlyShowing</a>
+                            </li>
+                            <li>
+                                <a href="#currentPage">currentPage</a>
+                            </li>
+                            <li>
+                                <a href="#currentSearchQuery">currentSearchQuery</a>
+                            </li>
+                            <li>
+                                <a href="#lastPage">lastPage</a>
+                            </li>
+                            <li>
+                                <a href="#onColumnReorder">onColumnReorder</a>
+                            </li>
+                            <li>
+                                <a href="#onColumnResize">onColumnResize</a>
+                            </li>
+                            <li>
+                                <a href="#onSortChanged">onSortChanged</a>
+                            </li>
+                            <li>
+                                <a href="#previewPages">previewPages</a>
+                            </li>
+                            <li>
+                                <a href="#previewPageStyles">previewPageStyles</a>
+                            </li>
+                            <li>
+                                <a href="#sortModel">sortModel</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#autoSizeAll">autoSizeAll</a>
+                            </li>
+                            <li>
+                                <a href="#callSearchQuery">callSearchQuery</a>
+                            </li>
+                            <li>
+                                <a href="#fetchData">fetchData</a>
+                            </li>
+                            <li>
+                                <a href="#hideOverlays">hideOverlays</a>
+                            </li>
+                            <li>
+                                <a href="#onFirstDataRendered">onFirstDataRendered</a>
+                            </li>
+                            <li>
+                                <a href="#onGridReady">onGridReady</a>
+                            </li>
+                            <li>
+                                <a href="#returnNewPageNumber">returnNewPageNumber</a>
+                            </li>
+                            <li>
+                                <a href="#showLoadingOverlay">showLoadingOverlay</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addLabel">addLabel</a>
+                            </li>
+                            <li>
+                                <a href="#addRoute">addRoute</a>
+                            </li>
+                            <li>
+                                <a href="#columns">columns</a>
+                            </li>
+                            <li>
+                                <a href="#frameworkComponents">frameworkComponents</a>
+                            </li>
+                            <li>
+                                <a href="#rowHeight">rowHeight</a>
+                            </li>
+                            <li>
+                                <a href="#rows">rows</a>
+                            </li>
+                            <li>
+                                <a href="#searchParams">searchParams</a>
+                            </li>
+                            <li>
+                                <a href="#tableHeight">tableHeight</a>
+                            </li>
+                            <li>
+                                <a href="#tableId">tableId</a>
+                            </li>
+                            <li>
+                                <a href="#totalRecords">totalRecords</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#fetchDataCallback">fetchDataCallback</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostBindings</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#attr.style">attr.style</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(sanitizer: <a href="https://angular.io/api/platform-browser/DomSanitizer" target="_blank">DomSanitizer</a>)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>sanitizer</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/platform-browser/DomSanitizer" target="_blank" >DomSanitizer</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="addLabel"></a>
+                        <code>addLabel</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>&quot;&quot;</code>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="addRoute"></a>
+                        <code>addRoute</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>&quot;&quot;</code>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="columns"></a>
+                        <code>columns</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="../interfaces/Column.html" target="_self" >Column[]</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>[]</code>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="frameworkComponents"></a>
+                        <code>frameworkComponents</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank" >Object</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="rowHeight"></a>
+                        <code>rowHeight</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>36</code>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="rows"></a>
+                        <code>rows</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code>any[]</code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>[]</code>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="searchParams"></a>
+                        <code>searchParams</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="../classes/SearchParams.html" target="_self" >SearchParams</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="tableHeight"></a>
+                        <code>tableHeight</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>&quot;80vh&quot;</code>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="tableId"></a>
+                        <code>tableId</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>&quot;&quot;</code>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="totalRecords"></a>
+                        <code>totalRecords</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>0</code>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="fetchDataCallback"></a>
+                        <code>fetchDataCallback</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code>EventEmitter&lt;any&gt;</code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3>HostBindings</h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="attr.style"></a>
+                        <span class="name">
+                            <b>
+                            attr.style
+                            </b>
+                            <a href="#attr.style"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>attr.style:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="autoSizeAll"></a>
+                        <span class="name">
+                            <b>
+                            autoSizeAll
+                            </b>
+                            <a href="#autoSizeAll"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>autoSizeAll()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="callSearchQuery"></a>
+                        <span class="name">
+                            <b>
+                            callSearchQuery
+                            </b>
+                            <a href="#callSearchQuery"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>callSearchQuery()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fetchData"></a>
+                        <span class="name">
+                            <b>
+                            fetchData
+                            </b>
+                            <a href="#fetchData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>fetchData()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hideOverlays"></a>
+                        <span class="name">
+                            <b>
+                            hideOverlays
+                            </b>
+                            <a href="#hideOverlays"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>hideOverlays()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onFirstDataRendered"></a>
+                        <span class="name">
+                            <b>
+                            onFirstDataRendered
+                            </b>
+                            <a href="#onFirstDataRendered"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>onFirstDataRendered(event)</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onGridReady"></a>
+                        <span class="name">
+                            <b>
+                            onGridReady
+                            </b>
+                            <a href="#onGridReady"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>onGridReady(params)</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>params</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="returnNewPageNumber"></a>
+                        <span class="name">
+                            <b>
+                            returnNewPageNumber
+                            </b>
+                            <a href="#returnNewPageNumber"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>returnNewPageNumber(page)</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>page</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showLoadingOverlay"></a>
+                        <span class="name">
+                            <b>
+                            showLoadingOverlay
+                            </b>
+                            <a href="#showLoadingOverlay"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>showLoadingOverlay()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currentlyShowing"></a>
+                        <span class="name">
+                            <b>
+                            currentlyShowing
+                            </b>
+                            <a href="#currentlyShowing"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>currentlyShowing:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currentPage"></a>
+                        <span class="name">
+                            <b>
+                            currentPage
+                            </b>
+                            <a href="#currentPage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>currentPage:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>1</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currentSearchQuery"></a>
+                        <span class="name">
+                            <b>
+                            currentSearchQuery
+                            </b>
+                            <a href="#currentSearchQuery"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>currentSearchQuery:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;&quot;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lastPage"></a>
+                        <span class="name">
+                            <b>
+                            lastPage
+                            </b>
+                            <a href="#lastPage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>lastPage:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>1</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onColumnReorder"></a>
+                        <span class="name">
+                            <b>
+                            onColumnReorder
+                            </b>
+                            <a href="#onColumnReorder"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>onColumnReorder:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>event &#x3D;&gt; {
+    /** If you wish, you can uncomment the following lines and
+     * save it in localStorage, just like the column widths.
+     */
+    // const newOrder &#x3D; this.gridColumnApi
+    //   .getAllGridColumns()
+    //   .map(col &#x3D;&gt; col.colId);
+    //
+  }</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onColumnResize"></a>
+                        <span class="name">
+                            <b>
+                            onColumnResize
+                            </b>
+                            <a href="#onColumnResize"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>onColumnResize:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>event &#x3D;&gt; {
+    if (event.columns.length &amp;&amp; this.tableId) {
+      event.columns.map(c &#x3D;&gt; {
+        let colWidth: ColWidth &#x3D; {
+          table: this.tableId,
+          colId: c.colId,
+          width: c.actualWidth
+        };
+        updateColumnWidth(colWidth);
+      });
+    }
+  }</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onSortChanged"></a>
+                        <span class="name">
+                            <b>
+                            onSortChanged
+                            </b>
+                            <a href="#onSortChanged"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>onSortChanged:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>event &#x3D;&gt; {
+    const originalSortObject &#x3D; this.originalSearchParams;
+    const tableSortObject &#x3D; event.api.getSortModel();
+    let newSortField &#x3D; &quot;&quot;;
+    let newSortOrder &#x3D; &quot;&quot;;
+    if (tableSortObject.length) {
+      // Getting exact fieldName in case colId is rendererd differently
+      const colId &#x3D; tableSortObject[0].colId;
+      const column &#x3D; event.columnApi.columnController.allDisplayedColumns.find(
+        c &#x3D;&gt; c.colId &#x3D;&#x3D;&#x3D; colId
+      );
+      //
+      newSortField &#x3D; column.colDef.field;
+      newSortOrder &#x3D; tableSortObject[0].sort.toUpperCase();
+    }
+    if (!newSortField || (!newSortOrder &amp;&amp; originalSortObject)) {
+      newSortField &#x3D; originalSortObject.sortField;
+      newSortOrder &#x3D; originalSortObject.sortOrder;
+    }
+    this.searchParams.sortField &#x3D; newSortField;
+    this.searchParams.sortOrder &#x3D; newSortOrder;
+    this.searchParams.pageNumber &#x3D; 1;
+    this.fetchData();
+  }</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="previewPages"></a>
+                        <span class="name">
+                            <b>
+                            previewPages
+                            </b>
+                            <a href="#previewPages"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>previewPages:     <code>number[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>number[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="previewPageStyles"></a>
+                        <span class="name">
+                            <b>
+                            previewPageStyles
+                            </b>
+                            <a href="#previewPageStyles"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>previewPageStyles:     <code>object[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>object[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sortModel"></a>
+                        <span class="name">
+                            <b>
+                            sortModel
+                            </b>
+                            <a href="#sortModel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>sortModel:     <code>[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./data-table.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.title {
+  padding: 0;
+  text-align: center;
+}
+#search-controls {
+  display: table;
+  span {
+    display: table-cell;
+  }
+}
+.page-size-control {
+  div {
+    margin-left: 2px;
+    height: 1.3em;
+  }
+}
+
+#search-input {
+  padding: 4px;
+}
+@media screen and (max-width: 768px) {
+  #search-input {
+    width: 10em;
+  }
+}
+
+.third-block {
+  padding: 0px;
+  margin: 0px;
+  width: 33%;
+}
+
+.add-button {
+  float: right;
+}
+
+#ag-grid-style {
+  // See the component file for the injection of --table-height into the DOM element
+  width: 100%;
+  // Calculating height based on 100vh - (topnav height + search input height + paginator height)
+  height: calc(100vh - (50px + 50px + 45px));
+  min-height: 300px;
+}
+
+:host {
+  // This is all stuff that
+  ::ng-deep {
+    .page-size-control .ui-dropdown-label {
+      padding: 0px 10px;
+      width: 4em;
+      margin-right: 10px;
+      height: 1.3em;
+    }
+    .no-rows-message {
+      width: 200px;
+      padding: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.1em;
+      font-weight: bold;
+      border: solid var(--warning-text-color) 1px;
+      border-radius: 2px;
+      color: var(--warning-text-color);
+    }
+    .loading-animation {
+      -webkit-animation: flickerAnimation 2s infinite;
+      -moz-animation: flickerAnimation 2s infinite;
+      -o-animation: flickerAnimation 2s infinite;
+      animation: flickerAnimation 2s infinite;
+    }
+
+    @keyframes flickerAnimation {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.2;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @-o-keyframes flickerAnimation {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.2;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @-moz-keyframes flickerAnimation {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.2;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @-webkit-keyframes flickerAnimation {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.2;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}
+</code></pre>
+    </div>
+
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><table style="width: 100%">  <tr>    <td class="third-block" id="search-controls">      <span class="ui-float-label search-input">        <input id="search-input" [(ngModel)]="searchParams.searchQuery" (keyup.enter)="callSearchQuery()" type="text" pInputText>        <label for="float-input">Search</label>      </span>      <span class="page-size-control">        <div>          <p-dropdown [style]="{\'padding\':\'0px\', \'margin-top\': \'-3px\'}" autoWidth autoDisplayFirst [options]="pageSizeOptions " (onChange)="fetchData() "            [(ngModel)]="searchParams.pageSize                              " [placeholder]="searchParams.pageSize " [showClear]="false "></p-dropdown>        </div>      </span>    </td>    <td class="third-block">    </td>    <td class="third-block">      <p-button routerLink={{addRoute}} label={{addLabel}} class="add-button"></p-button>    </td>  </tr></table><ag-grid-angular class=" ag-theme-balham " id="ag-grid-style" [style.--table-height]="tableHeight" [rowData]="rows" [columnDefs]="columns  " (firstDataRendered)="onFirstDataRendered($event) "  (sortChanged)="onSortChanged($event)  " (columnResized)="onColumnResize($event) " (dragStopped)="onColumnReorder($event)" [rowHeight]="rowHeight " (gridReady)="onGridReady($event) "  [overlayLoadingTemplate]="overlayLoadingTemplate" [overlayNoRowsTemplate]="overlayNoRowsTemplate" [frameworkComponents]="frameworkComponents"></ag-grid-angular><app-paginator [totalRecords]="totalRecords" [pageSize]="searchParams.pageSize " [currentPage]="searchParams.pageNumber  " [searchQuery]="currentSearchQuery" (onPageChange)="returnNewPageNumber($event[0]) "></app-paginator></div>'
+    var COMPONENTS = [{'name': 'AddEditProgramComponent', 'selector': 'app-add-program'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'DataTableComponent', 'selector': 'app-data-table'},{'name': 'EditButtonRenderer', 'selector': 'edit-button'},{'name': 'FormFieldComponent', 'selector': 'form-field'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'MasterFormComponent', 'selector': 'app-master-form'},{'name': 'PaginatorComponent', 'selector': 'app-paginator'},{'name': 'ProgramsComponent', 'selector': 'app-programs'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'TopnavComponent', 'selector': 'app-topnav'}];
+    var DIRECTIVES = [{'name': 'CreditCardValidator', 'selector': '[validCreditCard]'}];
+    var ACTUAL_COMPONENT = {'name': 'DataTableComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'DataTableComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

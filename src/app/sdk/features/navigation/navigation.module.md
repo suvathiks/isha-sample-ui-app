@@ -1,5 +1,5 @@
 # Dependencies
-1. "primeng"
+1. "primeng" // Follow instructions in official primeng documentation
 2. "@angular/material" (dependencies - "@angular/cdk" and "@angular/animations")
 
 # Description

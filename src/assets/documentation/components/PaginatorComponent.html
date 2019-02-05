@@ -1,0 +1,1048 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ng-starter-app-seven documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ng-starter-app-seven documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>PaginatorComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/sdk/features/table/components/paginator/paginator.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-paginator</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./paginator.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./paginator.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#firstPageDisabled">firstPageDisabled</a>
+                            </li>
+                            <li>
+                                <a href="#GoToFirst">GoToFirst</a>
+                            </li>
+                            <li>
+                                <a href="#GoToLast">GoToLast</a>
+                            </li>
+                            <li>
+                                <a href="#GoToNext">GoToNext</a>
+                            </li>
+                            <li>
+                                <a href="#GoToPage">GoToPage</a>
+                            </li>
+                            <li>
+                                <a href="#GoToPrevious">GoToPrevious</a>
+                            </li>
+                            <li>
+                                <a href="#lastPageDisabled">lastPageDisabled</a>
+                            </li>
+                            <li>
+                                <a href="#nextPageDisabled">nextPageDisabled</a>
+                            </li>
+                            <li>
+                                <a href="#previewPages">previewPages</a>
+                            </li>
+                            <li>
+                                <a href="#previewPageStyles">previewPageStyles</a>
+                            </li>
+                            <li>
+                                <a href="#previousPageDisabled">previousPageDisabled</a>
+                            </li>
+                            <li>
+                                <a href="#searchInfoText">searchInfoText</a>
+                            </li>
+                            <li>
+                                <a href="#SetPaginationMeta">SetPaginationMeta</a>
+                            </li>
+                            <li>
+                                <a href="#SetPreviewPages">SetPreviewPages</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#runOnPageChange">runOnPageChange</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#currentPage">currentPage</a>
+                            </li>
+                            <li>
+                                <a href="#pageSize">pageSize</a>
+                            </li>
+                            <li>
+                                <a href="#searchQuery">searchQuery</a>
+                            </li>
+                            <li>
+                                <a href="#totalRecords">totalRecords</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#onPageChange">onPageChange</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="currentPage"></a>
+                        <code>currentPage</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>1</code>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="pageSize"></a>
+                        <code>pageSize</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>0</code>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="searchQuery"></a>
+                        <code>searchQuery</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="totalRecords"></a>
+                        <code>totalRecords</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>0</code>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="onPageChange"></a>
+                        <code>onPageChange</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code>EventEmitter&lt;any&gt;</code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="runOnPageChange"></a>
+                        <span class="name">
+                            <b>
+                            runOnPageChange
+                            </b>
+                            <a href="#runOnPageChange"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>runOnPageChange(newPage: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>newPage</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="firstPageDisabled"></a>
+                        <span class="name">
+                            <b>
+                            firstPageDisabled
+                            </b>
+                            <a href="#firstPageDisabled"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>firstPageDisabled:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="GoToFirst"></a>
+                        <span class="name">
+                            <b>
+                            GoToFirst
+                            </b>
+                            <a href="#GoToFirst"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>GoToFirst:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {
+    if (this.currentPage !&#x3D;&#x3D; 1) {
+      this.runOnPageChange(1);
+    }
+  }</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="GoToLast"></a>
+                        <span class="name">
+                            <b>
+                            GoToLast
+                            </b>
+                            <a href="#GoToLast"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>GoToLast:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {
+    if (this.currentPage !&#x3D;&#x3D; this.lastPage) {
+      this.runOnPageChange(this.lastPage);
+    }
+  }</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="GoToNext"></a>
+                        <span class="name">
+                            <b>
+                            GoToNext
+                            </b>
+                            <a href="#GoToNext"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>GoToNext:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {
+    if (this.currentPage !&#x3D;&#x3D; this.lastPage) {
+      this.runOnPageChange(this.currentPage + 1);
+    }
+  }</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="GoToPage"></a>
+                        <span class="name">
+                            <b>
+                            GoToPage
+                            </b>
+                            <a href="#GoToPage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>GoToPage:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>page &#x3D;&gt; {
+    if (this.currentPage !&#x3D;&#x3D; page) {
+      this.runOnPageChange(page);
+    }
+  }</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="GoToPrevious"></a>
+                        <span class="name">
+                            <b>
+                            GoToPrevious
+                            </b>
+                            <a href="#GoToPrevious"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>GoToPrevious:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {
+    if (this.currentPage !&#x3D;&#x3D; 1) {
+      this.runOnPageChange(this.currentPage - 1);
+    }
+  }</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lastPageDisabled"></a>
+                        <span class="name">
+                            <b>
+                            lastPageDisabled
+                            </b>
+                            <a href="#lastPageDisabled"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>lastPageDisabled:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="nextPageDisabled"></a>
+                        <span class="name">
+                            <b>
+                            nextPageDisabled
+                            </b>
+                            <a href="#nextPageDisabled"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>nextPageDisabled:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="previewPages"></a>
+                        <span class="name">
+                            <b>
+                            previewPages
+                            </b>
+                            <a href="#previewPages"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>previewPages:     <code>number[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>number[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="previewPageStyles"></a>
+                        <span class="name">
+                            <b>
+                            previewPageStyles
+                            </b>
+                            <a href="#previewPageStyles"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>previewPageStyles:     <code>object[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>object[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="previousPageDisabled"></a>
+                        <span class="name">
+                            <b>
+                            previousPageDisabled
+                            </b>
+                            <a href="#previousPageDisabled"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>previousPageDisabled:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="searchInfoText"></a>
+                        <span class="name">
+                            <b>
+                            searchInfoText
+                            </b>
+                            <a href="#searchInfoText"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>searchInfoText:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="SetPaginationMeta"></a>
+                        <span class="name">
+                            <b>
+                            SetPaginationMeta
+                            </b>
+                            <a href="#SetPaginationMeta"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>SetPaginationMeta:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {
+    // Calculating the last page from total records...
+    this.lastPage &#x3D; lastPageCalculator(this.totalRecords, this.pageSize);
+    // Setting disabling logic for the buttons for first/last page buttons and previous/next buttons
+    this.previousPageDisabled &#x3D; this.currentPage &#x3D;&#x3D;&#x3D; 1;
+    this.firstPageDisabled &#x3D; this.currentPage &lt; 4;
+    this.nextPageDisabled &#x3D; this.currentPage &#x3D;&#x3D;&#x3D; this.lastPage;
+    this.lastPageDisabled &#x3D; this.currentPage &gt; this.lastPage - 3;
+    // Calculating the no. of records being shown on current page...
+    this.currentlyShowing &#x3D;
+      this.currentPage &lt; this.lastPage
+        ? this.pageSize
+        : this.totalRecords % this.pageSize;
+    this.searchInfoText &#x3D; &#x60;Showing ${this.currentlyShowing} of ${this.totalRecords} records${this.searchQuery ? &#x60; for &quot;${this.searchQuery}&quot;&#x60;: &#x27;&#x27;}&#x60;;
+    this.SetPreviewPages();
+  }</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="SetPreviewPages"></a>
+                        <span class="name">
+                            <b>
+                            SetPreviewPages
+                            </b>
+                            <a href="#SetPreviewPages"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>SetPreviewPages:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {
+    const lastPage &#x3D; this.lastPage;
+    const currentPage &#x3D; this.currentPage;
+    if (currentPage &lt; 4 &amp;&amp; lastPage &gt;&#x3D; 5) {
+      // If there are 5 or more pages and current page is less than 4...
+      let previewPages &#x3D; [];
+      for (let i &#x3D; 1; i &lt;&#x3D; 5; i++) {
+        previewPages.push(i);
+      }
+      this.previewPages &#x3D; previewPages;
+    } else if (currentPage &gt; 3 &amp;&amp; currentPage &lt;&#x3D; lastPage - 3) {
+      // If current page is more than 3 and less than or equal to (lastPage - 3)
+      this.previewPages &#x3D; [
+        currentPage - 2,
+        currentPage - 1,
+        currentPage,
+        currentPage + 1,
+        currentPage + 2
+      ];
+    } else if (currentPage &gt; lastPage - 3 &amp;&amp; lastPage &gt; 4) {
+      // If current page is greater than (lastPage - 3) and last page is more than 4...
+      this.previewPages &#x3D; [
+        lastPage - 4,
+        lastPage - 3,
+        lastPage - 2,
+        lastPage - 1,
+        lastPage
+      ];
+    } else if (lastPage &lt; 5) {
+      let previewPages &#x3D; [];
+      for (let i &#x3D; 1; i &lt;&#x3D; lastPage; i++) {
+        previewPages.push(i);
+      }
+      this.previewPages &#x3D; previewPages;
+    }
+    // Setting style for the page numbers...
+    let previewPageStyles &#x3D; this.previewPages.map(p &#x3D;&gt; {
+      if (p &#x3D;&#x3D;&#x3D; this.currentPage) {
+        return { &quot;background-color&quot;: &quot;rgba(0,0,0,0.2)&quot;, &quot;font-weight&quot;: &quot;bold&quot; };
+      } else return { &quot;background-color&quot;: &quot;&quot;, &quot;font-weight&quot;: &quot;&quot; };
+    });
+    this.previewPageStyles &#x3D; previewPageStyles;
+  }</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./paginator.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">#table-footer-wrapper {
+  display: table;
+  width: 100%;
+  height: var(--paginator-height);
+}
+#records-info {
+  display: table-cell;
+  width: 33%;
+  padding: 5px;
+  text-align: left;
+  color: var(--sidenav-black);
+}
+
+#pagination-controls {
+  display: table-cell;
+  text-align: center;
+  width: 33%;
+  padding: 2px;
+}
+
+#last-block {
+  display: table-cell;
+  width: 33%;
+  visibility: visible;
+}
+
+.terminal-buttons {
+  font-weight: bold;
+  background-color: rgba(256, 0, 0, 0.1);
+  margin-right: 5px;
+}
+@media only screen and (max-width: 768px) {
+  #records-info {
+    width: 40%;
+  }
+  #pagination-controls {
+    width: 60%;
+  }
+  #last-block {
+    width: 0px;
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 480px) {
+  #records-info {
+    display: table-row;
+    width: 100%;
+  }
+  #pagination-controls {
+    display: table-row;
+    width: 100%;
+  }
+  #last-block {
+    width: 0px;
+    visibility: hidden;
+  }
+}
+</code></pre>
+    </div>
+
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div id="table-footer-wrapper">  <div id="records-info">    <span *ngIf="currentlyShowing !== 0">      {{searchInfoText}}    </span>  </div>  <div id="pagination-controls">    <ng-template [ngTemplateOutlet]="paginationControls"></ng-template>  </div>  <div id="last-block">  </div></div><ng-template #paginationControls>  <span *ngIf="totalRecords > pageSize">    <button class="terminal-buttons" *ngIf="!firstPageDisabled" mat-mini-fab color="" (click)="GoToFirst()">      1    </button>    <button [disabled]="previousPageDisabled" mat-icon-button (click)="GoToPrevious()">      <i class="material-icons">        arrow_left      </i>    </button>    <button *ngIf="previewPages.length >=1" [style.font-weight]="previewPageStyles[0][\'font-weight\']" [style.background-color]="previewPageStyles[0][\'background-color\']"      mat-icon-button (click)="GoToPage(previewPages[0])">{{previewPages[0]}}</button>    <button *ngIf="previewPages.length >=2" [style.font-weight]="previewPageStyles[1][\'font-weight\']" [style.background-color]="previewPageStyles[1][\'background-color\']"      (click)="GoToPage(previewPages[1])" mat-icon-button>{{previewPages[1]}}</button>    <button *ngIf="previewPages.length >=3" [style.font-weight]="previewPageStyles[2][\'font-weight\']" [style.background-color]="previewPageStyles[2][\'background-color\']"      (click)="GoToPage(previewPages[2])" mat-icon-button>{{previewPages[2]}}</button>    <button *ngIf="previewPages.length >=4" [style.font-weight]="previewPageStyles[3][\'font-weight\']" [style.background-color]="previewPageStyles[3][\'background-color\']"      (click)="GoToPage(previewPages[3])" mat-icon-button>{{previewPages[3]}}</button>    <button *ngIf="previewPages.length >=5" [style.font-weight]="previewPageStyles[4][\'font-weight\']" [style.background-color]="previewPageStyles[4][\'background-color\']"      (click)="GoToPage(previewPages[4])" mat-icon-button>{{previewPages[4]}}</button>    <button [disabled]="nextPageDisabled" mat-icon-button (click)="GoToNext()">      <i class="material-icons">        arrow_right      </i>    </button>    <button class="terminal-buttons" *ngIf="!lastPageDisabled" mat-mini-fab color="" (click)="GoToLast()">      {{lastPage}}    </button>  </span></ng-template></div>'
+    var COMPONENTS = [{'name': 'AddEditProgramComponent', 'selector': 'app-add-program'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'DataTableComponent', 'selector': 'app-data-table'},{'name': 'EditButtonRenderer', 'selector': 'edit-button'},{'name': 'FormFieldComponent', 'selector': 'form-field'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'MasterFormComponent', 'selector': 'app-master-form'},{'name': 'PaginatorComponent', 'selector': 'app-paginator'},{'name': 'ProgramsComponent', 'selector': 'app-programs'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'TopnavComponent', 'selector': 'app-topnav'}];
+    var DIRECTIVES = [{'name': 'CreditCardValidator', 'selector': '[validCreditCard]'}];
+    var ACTUAL_COMPONENT = {'name': 'PaginatorComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'PaginatorComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

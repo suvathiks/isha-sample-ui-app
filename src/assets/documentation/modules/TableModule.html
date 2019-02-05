@@ -34,13 +34,16 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li>SdkModule</li>
+    <li>TableModule</li>
 </ol>
 
 
 <ul class="nav nav-tabs" role="tablist">
     <li  class="active" >
         <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
+    <li >
+        <a href="#readme" role="tab" id="readme-tab" data-toggle="tab" data-link="readme">README</a>
     </li>
 </ul>
 
@@ -51,7 +54,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/sdk/sdk.module.ts</code>
+            <code>src/app/sdk/features/table/table.module.ts</code>
         </p>
 
 
@@ -60,26 +63,35 @@
         <div class="container-fluid module">
             <div class="row">
                 <div class="col-sm-3">
+                    <h3>Declarations<a href="https://angular.io/api/core/NgModule#declarations" target="_blank"
+                            title="Official documentation about module declarations"><span class="icon ion-ios-information-circle-outline"></span></a></h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="../components/DataTableComponent.html">DataTableComponent</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../components/PaginatorComponent.html">PaginatorComponent</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
                     <h3>Imports<a href="https://angular.io/api/core/NgModule#imports" target="_blank" title="Official documentation about module imports"><span
                                 class="icon ion-ios-information-circle-outline"></a></h3>
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="../modules/ApiModule.html">ApiModule</a>
+                            <a href="../modules/TableStylingModule.html">TableStylingModule</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h3>Exports<a href="https://angular.io/api/core/NgModule#exports" target="_blank" title="Official documentation about module exports"><span
+                                class="icon ion-ios-information-circle-outline"></a></h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="../components/DataTableComponent.html">DataTableComponent</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="../modules/CachingModule.html">CachingModule</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="../modules/KeycloakModule.html">KeycloakModule</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="../modules/MasterFormModule.html">MasterFormModule</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="../modules/NavigationModule.html">NavigationModule</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="../modules/TableModule.html">TableModule</a>
+                            <a href="../components/PaginatorComponent.html">PaginatorComponent</a>
                         </li>
                     </ul>
                 </div>
@@ -89,6 +101,31 @@
 
     </div>
 
+    <div class="tab-pane fade " id="c-readme">
+        <p><h1 id="dependencies">Dependencies</h1>
+<ol>
+<li>&quot;ag-grid-angular&quot;</li>
+<li>&quot;ag-grid-community&quot;</li>
+<li>&quot;primeng&quot;</li>
+<li>&quot;@angular/material&quot;</li>
+</ol>
+<h1 id="description">Description</h1>
+<p>A fully featured data table that is also extensible with more advanced features if necessary.</p>
+<h2 id="features-include-">Features include:-</h2>
+<ol>
+<li>Server-side pagination, sorting, filtering</li>
+<li>Fixed columns (left or right), fixed header, resizable columns, reorder columns using drag and drop</li>
+<li>User’s resizing of the columns will store new widths in local storage and be automatically restored in all subsequent sessions, making resizing columns a persistent change for each machine.</li>
+<li>Vist official page of <a href="https://www.ag-grid.com/javascript-grid-features/">ag-grid</a> for a listing of all possible features.</li>
+</ol>
+<p>Follow instructions below to enable it.</p>
+<h1 id="instructions">Instructions</h1>
+<ol>
+<li>Import the table into your template by using the <app-data-table> selector.</li>
+</ol>
+<p>For working example, see the relevant files of the component where the sample table appears.</p>
+</p>
+    </div>
 
 </div>
 
@@ -122,7 +159,7 @@
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'SdkModule.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'TableModule.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

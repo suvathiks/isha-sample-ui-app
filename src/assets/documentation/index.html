@@ -30,20 +30,69 @@
                <div class="content getting-started">
                    <div class="content-data">
 
-<h1 id="ngstarterappseven">NgStarterAppSeven</h1>
-<p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 7.2.3.</p>
-<h2 id="development-server">Development server</h2>
-<p>Run <code>ng serve</code> for a dev server. Navigate to <code>http://localhost:4200/</code>. The app will automatically reload if you change any of the source files.</p>
-<h2 id="code-scaffolding">Code scaffolding</h2>
-<p>Run <code>ng generate component component-name</code> to generate a new component. You can also use <code>ng generate directive|pipe|service|class|guard|interface|enum|module</code>.</p>
-<h2 id="build">Build</h2>
-<p>Run <code>ng build</code> to build the project. The build artifacts will be stored in the <code>dist/</code> directory. Use the <code>--prod</code> flag for a production build.</p>
-<h2 id="running-unit-tests">Running unit tests</h2>
-<p>Run <code>ng test</code> to execute the unit tests via <a href="https://karma-runner.github.io">Karma</a>.</p>
-<h2 id="running-end-to-end-tests">Running end-to-end tests</h2>
-<p>Run <code>ng e2e</code> to execute the end-to-end tests via <a href="http://www.protractortest.org/">Protractor</a>.</p>
-<h2 id="further-help">Further help</h2>
-<p>To get more help on the Angular CLI use <code>ng help</code> or go check out the <a href="https://github.com/angular/angular-cli/blob/master/README.md">Angular CLI README</a>.</p>
+<p><strong>IMPORTANT</strong>: Master branch is the only branch that is guaranteed to be up-to-date.</p>
+<p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 7.2.4.</p>
+<h1 id="purpose">Purpose</h1>
+<p>This is a ready-to-consume reference application that contains commonly used components in Angular written using best practices. This is intended to allow developers to set up a working production-ready application with minimal coding and minimal set up time.</p>
+<h1 id="getting-started">Getting Started</h1>
+<ul>
+<li>Make sure Node.js is installed. Recommended version - v10.0.0.</li>
+<li>Yarn is the recommended package manager. <a href="https://yarnpkg.com/en/docs/install#debian-stable">Install latest version</a>.</li>
+<li>Make sure Angular-cli is installed. Use <code>yarn global add angular-cli</code></li>
+<li>Clone this repo locally and run <code>yarn install</code> from within the directory</li>
+<li>Run <code>yarn start</code> for a dev server. Navigate to <code>http://localhost:4200/</code>. The app will automatically reload if you change any of the source files.</li>
+</ul>
+<h1 id="features">Features</h1>
+<p>For a comprehensive and up-to-date listing of features, visit - <a href="https://docs.google.com/document/d/1Durdkqi23tCq6CFDptcCBbKdqiKZZ6w9i6EavfdXkO4/edit#">https://docs.google.com/document/d/1Durdkqi23tCq6CFDptcCBbKdqiKZZ6w9i6EavfdXkO4/edit#</a></p>
+<h1 id="concepts">Concepts</h1>
+<p>To use this repository most effectively you will need to be familiar with these tools/concepts on top of being familiar with Angular 2+:-</p>
+<ol>
+<li><a href="https://angular.io/guide/feature-modules">Angular Feature Modules</a></li>
+<li><a href="https://angular.io/guide/lazy-loading-ngmodules">Lazy Loading of Feature Modules</a></li>
+<li><a href="https://ngxs.gitbook.io/ngxs">Global State Management with NGXS</a></li>
+</ol>
+<h1 id="usage">Usage</h1>
+<p>There are two ways to use this repository. First is to use this as starter application for a new application in Angular. Second is to selectively import features into your existing project.</p>
+<h2 id="option-1-use-this-as-a-starter-application">Option 1: Use this as a starter application</h2>
+<p>Using this as a starter application is the easiest and most straightforward way to get started. To do this:-</p>
+<ol>
+<li>Clone this repo locally and run <code>yarn install &amp;&amp; yarn start</code> to run the app locally</li>
+<li>In your editor, do a global search for the term <code>ng-starter-app</code> in the project and replace it with the name of your application.</li>
+<li>You will have to replace the environment variables (including Keycloak URLs, API Gateway URL for each of your environments etc.) in these files - <code>src/environments/*.ts</code></li>
+<li>Modify the configurations within <code>src/app/sdk/config/*</code> and example code to suit your specific use case.</li>
+</ol>
+<h2 id="option-2-importing-modules-into-existing-projects">Option 2: Importing Modules into existing projects</h2>
+<p>You will find individual features (listed in the doc linked above) in this folder - <code>src/app/sdk/features</code>. To import the feature into your existing project:-</p>
+<ol>
+<li>Create a folder <code>src/app/sdk</code> within your project</li>
+<li>Copy the folder of the feature you wish to import into the folder created in step 1, along with its respective config file if there is any.</li>
+<li>Open the folder and find the <code>.md</code> file there. </li>
+<li>In the file you will find a list of dependencies and instructions for integrating the feature into your app. Follow these instructions. </li>
+<li>Refer to the implementation in this repo for troubleshooting in case you run into trouble.</li>
+</ol>
+<p>Also, if you&#39;re copy-pasting only select modules into your project, do the following in your existing project for the components to work:-</p>
+<ol>
+<li>Make sure to include the relevant dependencies into your <code>package.json</code> file</li>
+<li>Add types module from npm (for instructions, see below).</li>
+</ol>
+<hr>
+<p><strong>Instructions to add types module from npm:-</strong></p>
+<p>Step 1: install @types/node with either of the following:</p>
+<ul>
+<li>npm install --save @types/node</li>
+</ul>
+<p>Step 2: - edit your src/tsconfig.app.json file and add the following in place of the empty &quot;types&quot;: [], which should already be there:</p>
+<p>...
+&quot;types&quot;: [ &quot;node&quot; ],
+&quot;typeRoots&quot;: [ &quot;../node_modules/@types&quot; ]
+...</p>
+<hr>
+<h1 id="support">Support</h1>
+<p>In case you need assistance setting this up or have any feedback/suggestions, you can reach for support via:</p>
+<ul>
+<li>Email: <a href="mailto:__ragavendra.yarasi@ishafoundation.or">__ragavendra.yarasi@ishafoundation.or</a>g__</li>
+<li><a href="https://isha-it.slack.com">Slack</a> Display Name: <strong>ragavendra</strong></li>
+</ul>
 
 
 
