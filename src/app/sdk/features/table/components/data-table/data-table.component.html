@@ -1,0 +1,31 @@
+<table style="width: 100%">
+  <tr>
+    <td class="third-block" id="search-controls">
+      <span class="ui-float-label search-input">
+        <input id="search-input" [(ngModel)]="searchParams.searchQuery" (keyup.enter)="callSearchQuery()" type="text" pInputText>
+        <label for="float-input">Search</label>
+      </span>
+      <span class="page-size-control">
+        <div>
+          <p-dropdown [style]="{'padding':'0px', 'margin-top': '-3px'}" autoWidth autoDisplayFirst [options]="pageSizeOptions " (onChange)="fetchData() "
+            [(ngModel)]="searchParams.pageSize
+                              " [placeholder]="searchParams.pageSize " [showClear]="false "></p-dropdown>
+        </div>
+      </span>
+    </td>
+    <td class="third-block">
+    </td>
+    <td class="third-block">
+      <p-button routerLink={{addRoute}} label={{addLabel}} class="add-button"></p-button>
+    </td>
+  </tr>
+</table>
+<ag-grid-angular class=" ag-theme-balham " id="ag-grid-style" [style.--table-height]="tableHeight" [rowData]="rows" [columnDefs]="columns
+  " (firstDataRendered)="onFirstDataRendered($event) "
+  (sortChanged)="onSortChanged($event)
+  " (columnResized)="onColumnResize($event) " (dragStopped)="onColumnReorder($event)" [rowHeight]="rowHeight " (gridReady)="onGridReady($event) "
+  [overlayLoadingTemplate]="overlayLoadingTemplate" [overlayNoRowsTemplate]="overlayNoRowsTemplate" [frameworkComponents]="frameworkComponents">
+</ag-grid-angular>
+<app-paginator [totalRecords]="totalRecords" [pageSize]="searchParams.pageSize " [currentPage]="searchParams.pageNumber
+  " [searchQuery]="currentSearchQuery" (onPageChange)="returnNewPageNumber($event[0]) ">
+</app-paginator>

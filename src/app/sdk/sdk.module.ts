@@ -8,6 +8,8 @@ import { NavigationModule } from "./features/navigation/navigation.module";
 import { KeycloakModule } from "./features/keycloak/keycloak.module";
 import { NgxsReduxDevtoolsPluginModule } from "@ngxs/devtools-plugin";
 import { BrowserModule } from "@angular/platform-browser";
+import {MasterFormModule} from "./features/master-form/master-form.module";
+import {TableModule} from "./features/table/table.module";
 
 @NgModule({
   declarations: [],
@@ -19,7 +21,10 @@ import { BrowserModule } from "@angular/platform-browser";
     CachingModule,
     NavigationModule,
     KeycloakModule,
+    MasterFormModule,
+    TableModule,
     NgxsReduxDevtoolsPluginModule.forRoot()
-  ]
+  ],
+  providers: []
 })
 export class SdkModule {}

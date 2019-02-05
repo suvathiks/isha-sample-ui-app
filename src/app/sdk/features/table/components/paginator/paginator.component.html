@@ -1,0 +1,43 @@
+<div id="table-footer-wrapper">
+  <div id="records-info">
+    <span *ngIf="currentlyShowing !== 0">
+      {{searchInfoText}}
+    </span>
+  </div>
+  <div id="pagination-controls">
+    <ng-template [ngTemplateOutlet]="paginationControls"></ng-template>
+  </div>
+  <div id="last-block">
+  </div>
+</div>
+
+<ng-template #paginationControls>
+  <span *ngIf="totalRecords > pageSize">
+    <button class="terminal-buttons" *ngIf="!firstPageDisabled" mat-mini-fab color="" (click)="GoToFirst()">
+      1
+    </button>
+    <button [disabled]="previousPageDisabled" mat-icon-button (click)="GoToPrevious()">
+      <i class="material-icons">
+        arrow_left
+      </i>
+    </button>
+    <button *ngIf="previewPages.length >=1" [style.font-weight]="previewPageStyles[0]['font-weight']" [style.background-color]="previewPageStyles[0]['background-color']"
+      mat-icon-button (click)="GoToPage(previewPages[0])">{{previewPages[0]}}</button>
+    <button *ngIf="previewPages.length >=2" [style.font-weight]="previewPageStyles[1]['font-weight']" [style.background-color]="previewPageStyles[1]['background-color']"
+      (click)="GoToPage(previewPages[1])" mat-icon-button>{{previewPages[1]}}</button>
+    <button *ngIf="previewPages.length >=3" [style.font-weight]="previewPageStyles[2]['font-weight']" [style.background-color]="previewPageStyles[2]['background-color']"
+      (click)="GoToPage(previewPages[2])" mat-icon-button>{{previewPages[2]}}</button>
+    <button *ngIf="previewPages.length >=4" [style.font-weight]="previewPageStyles[3]['font-weight']" [style.background-color]="previewPageStyles[3]['background-color']"
+      (click)="GoToPage(previewPages[3])" mat-icon-button>{{previewPages[3]}}</button>
+    <button *ngIf="previewPages.length >=5" [style.font-weight]="previewPageStyles[4]['font-weight']" [style.background-color]="previewPageStyles[4]['background-color']"
+      (click)="GoToPage(previewPages[4])" mat-icon-button>{{previewPages[4]}}</button>
+    <button [disabled]="nextPageDisabled" mat-icon-button (click)="GoToNext()">
+      <i class="material-icons">
+        arrow_right
+      </i>
+    </button>
+    <button class="terminal-buttons" *ngIf="!lastPageDisabled" mat-mini-fab color="" (click)="GoToLast()">
+      {{lastPage}}
+    </button>
+  </span>
+</ng-template>

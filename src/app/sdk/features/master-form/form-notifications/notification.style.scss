@@ -1,0 +1,16 @@
+// Import this file at the top of your main styles.scss for these to work...
+
+.positive-notification {
+  border: 1px solid rgba(129,199,132, 1);
+  border-radius: 5px;
+  div {
+    color: rgba(129, 199, 132, 1);
+  }
+}
+.negative-notification {
+  border: 1px solid rgba(229,115,115, 1);
+  border-radius: 5px;  
+  div {
+    color: rgba(229, 115, 115, 1);
+  }
+}

@@ -7,10 +7,11 @@ import { HeaderInjector } from "./header-injection-intercepter";
 import { ErrorNotification } from "./error-notification.service";
 import { MatSnackBarModule } from "@angular/material";
 import { MatSnackBar } from "@angular/material";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, MatSnackBarModule],
+  imports: [CommonModule, MatSnackBarModule, HttpClientModule],
   providers: [
     GlobalErrorHandler,
     {

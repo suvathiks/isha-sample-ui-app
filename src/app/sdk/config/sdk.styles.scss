@@ -1,0 +1,42 @@
+// Global CSS Variables
+:root {
+  --topnav-height: 45px;
+  --generic-padding: 5px;
+  --search-input-height: 50px;
+  --paginator-height: 50px;
+  --mini-sidenav-width: 40px;
+  --breadcrumb-height: 25px;
+  --isha-orange: #ff851b;
+  --isha-orange-transparent: rgba(255, 119, 0, 0.5);
+  --sidenav-black: rgba(45, 46, 46);
+  --sidenav-icon-size: 25px;
+  --warning-text-color: #9f6000;
+}
+
+// Setting some global style defaults
+* {
+  margin: 0px;
+}
+
+// Custom Scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(200, 200, 200, 0.1);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: darkgrey;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: slategrey;
+}

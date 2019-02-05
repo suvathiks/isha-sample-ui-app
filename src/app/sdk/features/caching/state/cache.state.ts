@@ -76,7 +76,7 @@ export class CacheState {
       expiresAt: expiresAt.toString(),
       response: response
     };
-    const newCachedResponses = cachedResponses.push(cache);
+    const newCachedResponses = cachedResponses.concat([cache]);
   }
 
   /**

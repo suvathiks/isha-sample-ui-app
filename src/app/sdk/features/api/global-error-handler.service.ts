@@ -22,7 +22,6 @@ export class GlobalErrorHandler {
       // If error is not an instance of HttpErrorResponse...
       console.error(`An error occurred => "${error.message}"`);
     }
-    throw new Error(error.message);
     // enable the following line to show notification...
     // this.errorNotifier.handleError(error);
   }

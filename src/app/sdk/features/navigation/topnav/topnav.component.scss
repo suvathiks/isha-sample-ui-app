@@ -16,7 +16,7 @@
   margin: 0;
   visibility: visible;
   cursor: pointer;
-  height: var(--topnav-height);
+  height: calc(var(--topnav-height) - var(--generic-padding));
   padding: 2px;
 }
 #logo-min {

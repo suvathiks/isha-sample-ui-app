@@ -1,0 +1,133 @@
+<app-master-form
+    [formId]="formId"
+    [recordId]="recordId"
+    [Form]="programForm"
+    [formSubmitted]="formSubmitted"
+    [submittingForm]="submittingForm"
+    [showNotification]="showNotification"
+    [notificationMessage]="notificationMessage"
+    [formCloseNavigationRoute]="formCloseNavigationRoute">
+<ng-template #formRef>
+    <!-- <ng-container>
+        <p-dialog header="Title" [minHeight]="auto" [(visible)]="displayDialog" draggable="false" resizable="false">
+            Unsaved changes will be lost, Do you want to continue ?
+            <p-footer>
+                <p-button label="Yes" (click)="cancelForm('/programs')"></p-button>
+                <p-button label="No" (click)="displayDialog = false;"></p-button>
+            </p-footer>
+        </p-dialog>
+        <p-panel>
+            <p-toast></p-toast>
+            <p-header>
+                <div class="ui-helper-clearfix">
+                    <span class="ui-panel-title" style="font-size:16px;display:inline-block;margin-top:2px">Add/ Edit Program</span>
+                    <button style="float:right; margin-left: 5px;" pButton type="button" (click)="cancelForm()" label="Cancel"></button>
+                    <button style="float:right;" pButton type="submit" (click)="submitProgram()" label="Save"></button>
+                </div>
+            </p-header> -->
+        <form class="hys-sml-frm" [formGroup]="programForm" novalidate ngxsForm="programs.programForm" >
+          <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid" style="margin: 10px 0px">
+              <div class="ui-grid-row">
+                  <div class="ui-grid-col-2">
+                      <div style="float: left; margin-right: 7px;">Active:</div>
+                      <p-inputSwitch formControlName="active"></p-inputSwitch>
+                  </div>
+              </div>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-2"> 
+                    Program Type
+                    <span>*</span>:
+                    </div>
+                    <div class="ui-grid-col-4" style="padding: .24em .5em;">
+                        <p-dropdown formControlName="programType" [options]="programOptions" [style]="{'width':'100%'}"></p-dropdown>
+                    </div>
+                    <div class="ui-grid-col-4" *ngIf="programForm.controls.programType.dirty && !programForm.controls.programType.valid">
+                        <p-message severity="error" text="Program Type is required">
+                        </p-message>
+                    </div>
+                </div>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-2">
+                        Start Date
+                    <span>*</span>:
+                    </div>
+                    <div class="ui-grid-col-4" >
+                        <p-calendar formControlName="startDate"  dateFormat="yy.mm.dd"></p-calendar>
+                        <div *ngIf="programForm.controls.startDate.dirty && !programForm.controls.startDate.valid">
+                            <p-message severity="error" *ngIf="programForm.controls.startDate.errors.required" text="Start Date is required.">
+                            </p-message>
+                            <p-message severity="error" *ngIf="programForm.controls.startDate.errors.dateRange" text="Start date must be less than the end date.">
+                            </p-message>
+                        </div>
+                        
+                    </div>
+                    <div class="ui-grid-col-2">
+                        End Date
+                    <span>*</span>:
+                    </div>
+                    <div class="ui-grid-col-4" > 
+                        <p-calendar formControlName="endDate" [minDate]="programForm.controls.startDate.value" dateFormat="yy.mm.dd"></p-calendar>
+                        <p-message severity="error" *ngIf="programForm.controls.endDate.dirty && !programForm.controls.endDate.valid" text="End Date is required.">
+                        </p-message>
+                    </div>
+                </div>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-2"> 
+                    Program Name
+                    <span>*</span>:
+                    </div>
+                    <div class="ui-grid-col-4">
+                        <input type="text" pInputText formControlName="programName" />
+                    </div>
+                    <div class="ui-grid-col-4" *ngIf="programForm.controls.programName.dirty && !programForm.controls.programName.valid">
+                        <p-message severity="error" text="Program Name is required">
+                        </p-message>
+                    </div>
+                </div>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-2"> 
+                    Venue :
+                    </div>
+                    <div class="ui-grid-col-4">
+                            <input type="text" pInputText formControlName="venue" />
+                    </div>
+                </div>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-2">
+                        City
+                    <span>*</span>:
+                    </div>
+                    <div class="ui-grid-col-4" >
+                            <input type="text" pInputText formControlName="city" />
+                        <p-message severity="error" *ngIf="programForm.controls.city.dirty && !programForm.controls.city.valid" text="City is required.">
+                        </p-message>
+                    </div>
+                    <div class="ui-grid-col-2">
+                        State
+                    <span>*</span>:
+                    </div>
+                    <div class="ui-grid-col-4" >
+                            <input type="text" pInputText formControlName="state" />
+                        <p-message severity="error" *ngIf="programForm.controls.state.dirty && !programForm.controls.state.valid" text="State is required.">
+                        </p-message>
+                    </div>
+                </div>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-2"> 
+                    Country
+                    <span>*</span>:
+                    </div>
+                    <div class="ui-grid-col-4" style="padding: .24em .5em;">
+                            <p-dropdown formControlName="country" [options]="countryOptions" [style]="{'width':'100%'}"></p-dropdown>
+                    </div>
+                    <div class="ui-grid-col-4" *ngIf="programForm.controls.country.dirty && !programForm.controls.country.valid">
+                        <p-message severity="error" text="Country is required">
+                        </p-message>
+                    </div>
+                </div>
+                </div>
+                </form>
+                <!-- </p-panel>
+                </ng-container> -->
+    </ng-template>
+</app-master-form>

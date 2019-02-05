@@ -1,0 +1,57 @@
+#table-footer-wrapper {
+  display: table;
+  width: 100%;
+  height: var(--paginator-height);
+}
+#records-info {
+  display: table-cell;
+  width: 33%;
+  padding: 5px;
+  text-align: left;
+  color: var(--sidenav-black);
+}
+
+#pagination-controls {
+  display: table-cell;
+  text-align: center;
+  width: 33%;
+  padding: 2px;
+}
+
+#last-block {
+  display: table-cell;
+  width: 33%;
+  visibility: visible;
+}
+
+.terminal-buttons {
+  font-weight: bold;
+  background-color: rgba(256, 0, 0, 0.1);
+  margin-right: 5px;
+}
+@media only screen and (max-width: 768px) {
+  #records-info {
+    width: 40%;
+  }
+  #pagination-controls {
+    width: 60%;
+  }
+  #last-block {
+    width: 0px;
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 480px) {
+  #records-info {
+    display: table-row;
+    width: 100%;
+  }
+  #pagination-controls {
+    display: table-row;
+    width: 100%;
+  }
+  #last-block {
+    width: 0px;
+    visibility: hidden;
+  }
+}

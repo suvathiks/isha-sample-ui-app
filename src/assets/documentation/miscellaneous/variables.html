@@ -1,0 +1,1692 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ng-starter-app-seven documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ng-starter-app-seven documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content miscellaneous-variables">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Miscellaneous</li>
+  <li>Variables</li>
+</ol>
+
+<section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <ul class="index-list">
+                        <li>
+                            <a href="#baseUrl" title="src/app/sdk/config/api.config.ts"><b>baseUrl</b>&nbsp;&nbsp;&nbsp;(src/.../api.config.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#breadcrumbs" title="src/app/sdk/features/navigation_og/breadcrumb/breadcrumbs.generator.ts"><b>breadcrumbs</b>&nbsp;&nbsp;&nbsp;(src/.../breadcrumbs.generator.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#breadcrumbs" title="src/app/sdk/features/navigation/breadcrumb/breadcrumbs.generator.ts"><b>breadcrumbs</b>&nbsp;&nbsp;&nbsp;(src/.../breadcrumbs.generator.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#cacheWhitelist" title="src/app/sdk/config/cache.config.ts"><b>cacheWhitelist</b>&nbsp;&nbsp;&nbsp;(src/.../cache.config.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#convertSitemapToLinearArrayOfLinks" title="src/app/sdk/features/navigation_og/breadcrumb/breadcrumbs.generator.ts"><b>convertSitemapToLinearArrayOfLinks</b>&nbsp;&nbsp;&nbsp;(src/.../breadcrumbs.generator.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#convertSitemapToLinearArrayOfLinks" title="src/app/sdk/features/navigation/breadcrumb/breadcrumbs.generator.ts"><b>convertSitemapToLinearArrayOfLinks</b>&nbsp;&nbsp;&nbsp;(src/.../breadcrumbs.generator.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#deepCopyHttpResponse" title="src/app/sdk/features/caching/state/cache.state.ts"><b>deepCopyHttpResponse</b>&nbsp;&nbsp;&nbsp;(src/.../cache.state.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#deepCopyHttpResponse" title="src/app/sdk/features/caching/cache.store.ts"><b>deepCopyHttpResponse</b>&nbsp;&nbsp;&nbsp;(src/.../cache.store.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#defaultExpiry" title="src/app/sdk/config/cache.config.ts"><b>defaultExpiry</b>&nbsp;&nbsp;&nbsp;(src/.../cache.config.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#defaultToken" title="src/app/sdk/features/keycloak/keycloak.state.ts"><b>defaultToken</b>&nbsp;&nbsp;&nbsp;(src/.../keycloak.state.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#endpoints" title="src/app/sdk/config/api.config.ts"><b>endpoints</b>&nbsp;&nbsp;&nbsp;(src/.../api.config.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#environment" title="src/environments/environment.prod.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.prod.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#environment" title="src/environments/environment.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#generateBreadcrumbs" title="src/app/sdk/features/navigation_og/breadcrumb/breadcrumbs.generator.ts"><b>generateBreadcrumbs</b>&nbsp;&nbsp;&nbsp;(src/.../breadcrumbs.generator.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#generateBreadcrumbs" title="src/app/sdk/features/navigation/breadcrumb/breadcrumbs.generator.ts"><b>generateBreadcrumbs</b>&nbsp;&nbsp;&nbsp;(src/.../breadcrumbs.generator.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#generateRequestId" title="src/app/sdk/features/caching/cache.functions.ts"><b>generateRequestId</b>&nbsp;&nbsp;&nbsp;(src/.../cache.functions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#getApiPath" title="src/app/sdk/features/caching/cache.functions.ts"><b>getApiPath</b>&nbsp;&nbsp;&nbsp;(src/.../cache.functions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#getInvalidatePaths" title="src/app/sdk/features/caching/cache.functions.ts"><b>getInvalidatePaths</b>&nbsp;&nbsp;&nbsp;(src/.../cache.functions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#getPathFromUrl" title="src/app/sdk/features/caching/cache.functions.ts"><b>getPathFromUrl</b>&nbsp;&nbsp;&nbsp;(src/.../cache.functions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#getRequestExpiryTime" title="src/app/sdk/features/caching/cache.functions.ts"><b>getRequestExpiryTime</b>&nbsp;&nbsp;&nbsp;(src/.../cache.functions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#hasExpired" title="src/app/sdk/features/caching/state/cache.state.ts"><b>hasExpired</b>&nbsp;&nbsp;&nbsp;(src/.../cache.state.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#hasExpired" title="src/app/sdk/features/caching/cache.store.ts"><b>hasExpired</b>&nbsp;&nbsp;&nbsp;(src/.../cache.store.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#homeLink" title="src/app/sdk/config/sitemap.config.ts"><b>homeLink</b>&nbsp;&nbsp;&nbsp;(src/.../sitemap.config.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#httpOptions" title="src/app/sdk/config/api.config.ts"><b>httpOptions</b>&nbsp;&nbsp;&nbsp;(src/.../api.config.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#isRequestCacheable" title="src/app/sdk/features/caching/cache.functions.ts"><b>isRequestCacheable</b>&nbsp;&nbsp;&nbsp;(src/.../cache.functions.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#Keycloak" title="src/app/sdk/features/keycloak/keycloak.service.ts"><b>Keycloak</b>&nbsp;&nbsp;&nbsp;(src/.../keycloak.service.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#keycloakClientId" title="src/app/sdk/features/keycloak/keycloak.service.ts"><b>keycloakClientId</b>&nbsp;&nbsp;&nbsp;(src/.../keycloak.service.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#keycloakRealm" title="src/app/sdk/features/keycloak/keycloak.service.ts"><b>keycloakRealm</b>&nbsp;&nbsp;&nbsp;(src/.../keycloak.service.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#keycloakUrl" title="src/app/sdk/features/keycloak/keycloak.service.ts"><b>keycloakUrl</b>&nbsp;&nbsp;&nbsp;(src/.../keycloak.service.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#sitemap" title="src/app/sdk/config/sitemap.config.ts"><b>sitemap</b>&nbsp;&nbsp;&nbsp;(src/.../sitemap.config.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#urlParamSeparator" title="src/app/sdk/features/caching/cache.functions.ts"><b>urlParamSeparator</b>&nbsp;&nbsp;&nbsp;(src/.../cache.functions.ts)</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    <h3>src/app/sdk/config/api.config.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="baseUrl"></a>
+                        <span class="name">
+                            <b>
+                            baseUrl
+                            </b>
+                            <a href="#baseUrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>baseUrl:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>environment.apiBaseUrl</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Application API&#39;s baseUrl</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="endpoints"></a>
+                        <span class="name">
+                            <b>
+                            endpoints
+                            </b>
+                            <a href="#endpoints"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>endpoints:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  constantTypes: { fetch: &quot;hysConstant/pullTypes&quot; },
+  constantValues: { fetch: &quot;hysConstant/pullValues&quot; },
+  programs: {
+    fetch: &quot;programs/tableProgramSearch&quot;,
+    create: &quot;programs/create&quot;,
+    update: &quot;programs/update&quot;
+  }
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="httpOptions"></a>
+                        <span class="name">
+                            <b>
+                            httpOptions
+                            </b>
+                            <a href="#httpOptions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>httpOptions:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  Accept: &quot;application/json&quot;,
+  &quot;Content-Type&quot;: &quot;application/json&quot;,
+  &quot;X-Application-Id&quot;: &quot;5&quot;,
+  From: &quot;IshaUser&quot;
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/sdk/features/navigation_og/breadcrumb/breadcrumbs.generator.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="breadcrumbs"></a>
+                        <span class="name">
+                            <b>
+                            breadcrumbs
+                            </b>
+                            <a href="#breadcrumbs"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>breadcrumbs:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>generateBreadcrumbs(sitemap)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="convertSitemapToLinearArrayOfLinks"></a>
+                        <span class="name">
+                            <b>
+                            convertSitemapToLinearArrayOfLinks
+                            </b>
+                            <a href="#convertSitemapToLinearArrayOfLinks"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>convertSitemapToLinearArrayOfLinks:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>sitemap &#x3D;&gt; {
+  let currentLevel &#x3D; JSON.parse(JSON.stringify(sitemap));
+  let childLinks &#x3D; [];
+  let allLinks &#x3D; [];
+  let done &#x3D; false;
+  let level &#x3D; 1;
+  let linksObject &#x3D; {};
+  do {
+    linksObject[level] &#x3D; [];
+    currentLevel.map(link &#x3D;&gt; {
+      linksObject[level] &#x3D; linksObject[level].concat([link]);
+      const childrenLink &#x3D; link.children.map(c &#x3D;&gt; {
+        c &#x3D; { ...c, parentLink: link };
+        return c;
+      });
+      childLinks &#x3D; link.children.length
+        ? childLinks.concat(childrenLink)
+        : childLinks;
+      if (!childLinks.length) {
+        done &#x3D; true;
+      }
+    });
+    level++;
+    currentLevel &#x3D; childLinks;
+    childLinks &#x3D; [];
+  } while (!done);
+
+  for (let i &#x3D; 1; i &lt; level; i++) {
+    allLinks &#x3D; allLinks.concat(linksObject[i]);
+  }
+  return allLinks;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Converts the sitemap into a hierarchy of arrays of links</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="generateBreadcrumbs"></a>
+                        <span class="name">
+                            <b>
+                            generateBreadcrumbs
+                            </b>
+                            <a href="#generateBreadcrumbs"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>generateBreadcrumbs:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>sitemap &#x3D;&gt; {
+  let crumbs &#x3D; {};
+  let allLinks &#x3D; convertSitemapToLinearArrayOfLinks(sitemap);
+  allLinks &#x3D; allLinks.map(link &#x3D;&gt; {
+    const linkPath &#x3D; link.path;
+    if (linkPath) {
+      crumbs[linkPath] &#x3D; [
+        { label: link.label, path: link.path, icon: link.icon }
+      ];
+      let done &#x3D; false;
+      let parentLink &#x3D; link.parentLink;
+      if (parentLink) {
+        do {
+          if (parentLink) {
+            crumbs[linkPath] &#x3D; crumbs[linkPath].concat([
+              {
+                label: parentLink.label,
+                path: parentLink.path,
+                icon: parentLink.icon
+              }
+            ]);
+            parentLink &#x3D; parentLink.parentLink ? parentLink.parentLink : null;
+          } else {
+            done &#x3D; true;
+          }
+        } while (!done);
+      }
+    }
+  });
+
+  /**
+   * Reverse the order of the breadcrumbs...
+   */
+  for (let key in crumbs) {
+    crumbs[key] &#x3D; crumbs[key].reverse();
+  }
+  return crumbs;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Converts the hierarcy of link arrays from previous step,
+into an object with key as the paths and then its value,
+as the list of parent links, aka breadcrumbs.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/sdk/features/navigation/breadcrumb/breadcrumbs.generator.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="breadcrumbs"></a>
+                        <span class="name">
+                            <b>
+                            breadcrumbs
+                            </b>
+                            <a href="#breadcrumbs"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>breadcrumbs:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>generateBreadcrumbs(sitemap)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="convertSitemapToLinearArrayOfLinks"></a>
+                        <span class="name">
+                            <b>
+                            convertSitemapToLinearArrayOfLinks
+                            </b>
+                            <a href="#convertSitemapToLinearArrayOfLinks"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>convertSitemapToLinearArrayOfLinks:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>sitemap &#x3D;&gt; {
+  let currentLevel &#x3D; JSON.parse(JSON.stringify(sitemap));
+  let childLinks &#x3D; [];
+  let allLinks &#x3D; [];
+  let done &#x3D; false;
+  let level &#x3D; 1;
+  let linksObject &#x3D; {};
+  do {
+    linksObject[level] &#x3D; [];
+    currentLevel.map(link &#x3D;&gt; {
+      linksObject[level] &#x3D; linksObject[level].concat([link]);
+      const childrenLink &#x3D; link.children.map(c &#x3D;&gt; {
+        c &#x3D; { ...c, parentLink: link };
+        return c;
+      });
+      childLinks &#x3D; link.children.length
+        ? childLinks.concat(childrenLink)
+        : childLinks;
+      if (!childLinks.length) {
+        done &#x3D; true;
+      }
+    });
+    level++;
+    currentLevel &#x3D; childLinks;
+    childLinks &#x3D; [];
+  } while (!done);
+
+  for (let i &#x3D; 1; i &lt; level; i++) {
+    allLinks &#x3D; allLinks.concat(linksObject[i]);
+  }
+  return allLinks;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Converts the sitemap into a hierarchy of arrays of links</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="generateBreadcrumbs"></a>
+                        <span class="name">
+                            <b>
+                            generateBreadcrumbs
+                            </b>
+                            <a href="#generateBreadcrumbs"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>generateBreadcrumbs:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>sitemap &#x3D;&gt; {
+  let crumbs &#x3D; {};
+  let allLinks &#x3D; convertSitemapToLinearArrayOfLinks(sitemap);
+  allLinks &#x3D; allLinks.map(link &#x3D;&gt; {
+    const linkPath &#x3D; link.path;
+    if (linkPath) {
+      crumbs[linkPath] &#x3D; [
+        { label: link.label, path: link.path, icon: link.icon }
+      ];
+      let done &#x3D; false;
+      let parentLink &#x3D; link.parentLink;
+      if (parentLink) {
+        do {
+          if (parentLink) {
+            crumbs[linkPath] &#x3D; crumbs[linkPath].concat([
+              {
+                label: parentLink.label,
+                path: parentLink.path,
+                icon: parentLink.icon
+              }
+            ]);
+            parentLink &#x3D; parentLink.parentLink ? parentLink.parentLink : null;
+          } else {
+            done &#x3D; true;
+          }
+        } while (!done);
+      }
+    }
+  });
+
+  /**
+   * Reverse the order of the breadcrumbs...
+   */
+  for (let key in crumbs) {
+    crumbs[key] &#x3D; crumbs[key].reverse();
+  }
+  return crumbs;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Converts the hierarcy of link arrays from previous step,
+into an object with key as the paths and then its value,
+as the list of parent links, aka breadcrumbs.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/sdk/config/cache.config.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cacheWhitelist"></a>
+                        <span class="name">
+                            <b>
+                            cacheWhitelist
+                            </b>
+                            <a href="#cacheWhitelist"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>cacheWhitelist:     <code><a href="../classes/cacheableItem.html" target="_self" >cacheableItem[]</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/cacheableItem.html" target="_self" >cacheableItem[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+  {
+    name: &quot;constantTypes&quot;,
+    apiPath: endpoints.constantTypes.fetch,
+    invalidatedBy: [],
+    expiresIn: 3600 * 24 * 7 * 4
+  },
+  {
+    name: &quot;constantValues&quot;,
+    apiPath: endpoints.constantValues.fetch,
+    invalidatedBy: [],
+    expiresIn: 3600 * 24 * 7 * 4
+  },
+  {
+    name: &quot;programs&quot;,
+    apiPath: endpoints.programs.fetch,
+    invalidatedBy: [endpoints.programs.create, endpoints.programs.update],
+    expiresIn: 3600
+  }
+]</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>List of apiPaths that will be cached.
+See cacheItem model for descriptions on the properties.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="defaultExpiry"></a>
+                        <span class="name">
+                            <b>
+                            defaultExpiry
+                            </b>
+                            <a href="#defaultExpiry"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>defaultExpiry:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>3600</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/sdk/features/caching/state/cache.state.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="deepCopyHttpResponse"></a>
+                        <span class="name">
+                            <b>
+                            deepCopyHttpResponse
+                            </b>
+                            <a href="#deepCopyHttpResponse"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>deepCopyHttpResponse:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(
+  response: HttpResponse&lt;any&gt;
+): HttpResponse&lt;any&gt; &#x3D;&gt; {
+  return new HttpResponse({
+    body: response.body,
+    headers: response.headers,
+    status: response.status,
+    statusText: response.statusText,
+    url: response.url
+  });
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hasExpired"></a>
+                        <span class="name">
+                            <b>
+                            hasExpired
+                            </b>
+                            <a href="#hasExpired"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>hasExpired:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(expiresAt: string) &#x3D;&gt; {
+  let date &#x3D; new Date();
+  let expiryDate &#x3D; new Date(expiresAt);
+  const currentTime &#x3D; date.getTime();
+  const expiryTime &#x3D; expiryDate.getTime();
+  if (expiryTime &gt; currentTime) {
+    return false;
+  } else {
+    return true;
+  }
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/sdk/features/caching/cache.store.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="deepCopyHttpResponse"></a>
+                        <span class="name">
+                            <b>
+                            deepCopyHttpResponse
+                            </b>
+                            <a href="#deepCopyHttpResponse"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>deepCopyHttpResponse:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(
+  response: HttpResponse&lt;any&gt;
+): HttpResponse&lt;any&gt; &#x3D;&gt; {
+  return new HttpResponse({
+    body: response.body,
+    headers: response.headers,
+    status: response.status,
+    statusText: response.statusText,
+    url: response.url
+  });
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hasExpired"></a>
+                        <span class="name">
+                            <b>
+                            hasExpired
+                            </b>
+                            <a href="#hasExpired"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>hasExpired:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>expiresAt &#x3D;&gt; {
+  let date &#x3D; new Date();
+  let expiryDate &#x3D; new Date(expiresAt);
+  const currentTime &#x3D; date.getTime();
+  const expiryTime &#x3D; expiryDate.getTime();
+  if (expiryTime &gt; currentTime) {
+    return false;
+  } else {
+    return true;
+  }
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/sdk/features/keycloak/keycloak.state.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="defaultToken"></a>
+                        <span class="name">
+                            <b>
+                            defaultToken
+                            </b>
+                            <a href="#defaultToken"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>defaultToken:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;&quot;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/environments/environment.prod.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="environment"></a>
+                        <span class="name">
+                            <b>
+                            environment
+                            </b>
+                            <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>environment:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  production: true,
+  apiBaseUrl: &quot;https://qa-hys-app.iyc.ishafoundation.org:3031/hys/v1/&quot;,
+  keycloakUrl: &quot;https://qa-keycloak.iyc.ishafoundation.org:8543/auth&quot;,
+  keycloakRealm: &quot;Isha&quot;,
+  keycloakClientId: &quot;starterApp&quot;
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/environments/environment.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="environment"></a>
+                        <span class="name">
+                            <b>
+                            environment
+                            </b>
+                            <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>environment:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  production: false,
+  apiBaseUrl: &quot;https://qa-hys-app.iyc.ishafoundation.org:3031/hys/v1/&quot;,
+  keycloakUrl: &quot;https://qa-keycloak.iyc.ishafoundation.org:8543/auth&quot;,
+  keycloakRealm: &quot;Isha&quot;,
+  keycloakClientId: &quot;starterApp&quot;
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/sdk/features/caching/cache.functions.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="generateRequestId"></a>
+                        <span class="name">
+                            <b>
+                            generateRequestId
+                            </b>
+                            <a href="#generateRequestId"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>generateRequestId:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(request: HttpRequest&lt;any&gt;): string &#x3D;&gt; {
+  let requestId &#x3D; null;
+  if (request.method &#x3D;&#x3D;&#x3D; &quot;GET&quot;) {
+    requestId &#x3D; request.url;
+  } else {
+    requestId &#x3D; &#x60;${request.url}${urlParamSeparator}${JSON.stringify(
+      request.body
+    )}&#x60;;
+  }
+  return requestId;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Takes in a request and outputs a unique Id using url and params</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getApiPath"></a>
+                        <span class="name">
+                            <b>
+                            getApiPath
+                            </b>
+                            <a href="#getApiPath"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>getApiPath:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(requestId: string): string &#x3D;&gt; {
+  let url &#x3D; requestId.split(urlParamSeparator)[0];
+  let apiPath &#x3D; getPathFromUrl(url);
+  return apiPath;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Takes in a unique requestId and returns the API endpoint path</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getInvalidatePaths"></a>
+                        <span class="name">
+                            <b>
+                            getInvalidatePaths
+                            </b>
+                            <a href="#getInvalidatePaths"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>getInvalidatePaths:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(url: string): cacheableItem[] &#x3D;&gt; {
+  let path &#x3D; getPathFromUrl(url);
+  let invalidatePaths &#x3D; [];
+  let invalidateItems &#x3D; cacheWhitelist.filter(item &#x3D;&gt; {
+    if (item.invalidatedBy.length) {
+      if (item.invalidatedBy.includes(path)) {
+        return true;
+      }
+    }
+  });
+  return invalidateItems;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Takes in a url and returns the path that
+a successful response to that url should invalidate</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getPathFromUrl"></a>
+                        <span class="name">
+                            <b>
+                            getPathFromUrl
+                            </b>
+                            <a href="#getPathFromUrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>getPathFromUrl:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(url: string): string &#x3D;&gt; {
+  let path &#x3D; null;
+  path &#x3D; url.replace(baseUrl, &quot;&quot;);
+  return path;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Takes in a URL and returns the API endpoint path</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getRequestExpiryTime"></a>
+                        <span class="name">
+                            <b>
+                            getRequestExpiryTime
+                            </b>
+                            <a href="#getRequestExpiryTime"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>getRequestExpiryTime:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(request: HttpRequest&lt;any&gt;): number &#x3D;&gt; {
+  const url &#x3D; request.url;
+  const match &#x3D; cacheWhitelist.find(item &#x3D;&gt; {
+    return url.endsWith(item.apiPath);
+  });
+  if (match) {
+    return match.expiresIn;
+  } else return defaultExpiry;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Takes in a request and returns the expiry time
+for that request as defined in the cacheWhitelist</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isRequestCacheable"></a>
+                        <span class="name">
+                            <b>
+                            isRequestCacheable
+                            </b>
+                            <a href="#isRequestCacheable"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>isRequestCacheable:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(request: HttpRequest&lt;any&gt;): boolean &#x3D;&gt; {
+  let url &#x3D; request.url;
+  let cacheable &#x3D; false;
+  let cacheItem &#x3D; cacheWhitelist.find(item &#x3D;&gt; {
+    return url.endsWith(item.apiPath);
+  });
+  if (cacheItem) {
+    cacheable &#x3D; true;
+  }
+  return cacheable;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Takes in a request and returns boolean
+stating whether the request is cacheable or not</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="urlParamSeparator"></a>
+                        <span class="name">
+                            <b>
+                            urlParamSeparator
+                            </b>
+                            <a href="#urlParamSeparator"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>urlParamSeparator:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;ENDOFURL&quot;</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>In a requestId for post requests,
+this string is used to separate the url from request body</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/sdk/config/sitemap.config.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="homeLink"></a>
+                        <span class="name">
+                            <b>
+                            homeLink
+                            </b>
+                            <a href="#homeLink"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>homeLink:     <code><a href="../classes/Link.html" target="_self" >Link</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/Link.html" target="_self" >Link</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  label: &quot;Home&quot;,
+  path: &quot;/&quot;,
+  icon: &quot;home&quot;,
+  children: []
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sitemap"></a>
+                        <span class="name">
+                            <b>
+                            sitemap
+                            </b>
+                            <a href="#sitemap"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>sitemap:     <code><a href="../classes/Link.html" target="_self" >Link[]</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/Link.html" target="_self" >Link[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+  {
+    label: &quot;Masters&quot;,
+    path: null,
+    icon: &quot;list&quot;,
+    children: [
+      {
+        label: &quot;Programs&quot;,
+        path: &quot;/programs&quot;,
+        icon: &quot;list&quot;,
+        children: [
+          {
+            label: &quot;Add Program&quot;,
+            path: &quot;/programs/add-edit&quot;,
+            icon: &quot;add_box&quot;,
+            children: []
+          }
+        ]
+      },
+      {
+        label: &quot;Contacts&quot;,
+        path: &quot;/contacts&quot;,
+        icon: &quot;list&quot;,
+        children: []
+      },
+      {
+        label: &quot;Notes&quot;,
+        path: &quot;/notes&quot;,
+        icon: &quot;list&quot;,
+        children: []
+      },
+      {
+        label: &quot;Registrations&quot;,
+        path: &quot;/registrations&quot;,
+        icon: &quot;list&quot;,
+        children: []
+      },
+      {
+        label: &quot;Bays&quot;,
+        path: &quot;/bays&quot;,
+        icon: &quot;list&quot;,
+        children: []
+      },
+      {
+        label: &quot;Feedback Periods&quot;,
+        path: &quot;/feedback-periods&quot;,
+        icon: &quot;list&quot;,
+        children: []
+      },
+      {
+        label: &quot;Note Groups&quot;,
+        path: &quot;/note-groups&quot;,
+        icon: &quot;list&quot;,
+        children: []
+      },
+      {
+        label: &quot;Trainee Groups&quot;,
+        path: &quot;/trainee-groups&quot;,
+        icon: &quot;list&quot;,
+        children: []
+      },
+      {
+        label: &quot;Constant Types&quot;,
+        path: &quot;/constant-types&quot;,
+        icon: &quot;list&quot;,
+        children: []
+      }
+    ]
+  },
+  {
+    label: &quot;Note Transactions&quot;,
+    path: null,
+    icon: &quot;library_books&quot;,
+    children: [
+      {
+        path: &quot;/issued-notes&quot;,
+        label: &quot;Issued Notes&quot;,
+        icon: &quot;library_books&quot;,
+        children: []
+      },
+      {
+        path: &quot;/bulk-issued&quot;,
+        label: &quot;Bulk Issued Notes&quot;,
+        icon: &quot;library_books&quot;,
+        children: []
+      },
+      {
+        path: &quot;/received-notes&quot;,
+        label: &quot;Received Notes&quot;,
+        icon: &quot;library_books&quot;,
+        children: []
+      }
+    ]
+  },
+  {
+    label: &quot;Assessments&quot;,
+    path: null,
+    icon: &quot;assessment&quot;,
+    children: [
+      {
+        path: &quot;/recitations&quot;,
+        label: &quot;Recitations&quot;,
+        icon: &quot;assessment&quot;,
+        children: []
+      },
+      {
+        path: &quot;/chants&quot;,
+        label: &quot;Chants&quot;,
+        icon: &quot;assessment&quot;,
+        children: []
+      },
+      {
+        path: &quot;/pa&quot;,
+        label: &quot;PA&quot;,
+        icon: &quot;assessment&quot;,
+        children: []
+      },
+      {
+        path: &quot;/feedback&quot;,
+        label: &quot;Feedback&quot;,
+        icon: &quot;assessment&quot;,
+        children: []
+      }
+    ]
+  },
+  {
+    label: &quot;Reports&quot;,
+    path: null,
+    icon: &quot;assignment&quot;,
+    children: [
+      {
+        path: &quot;/trainees-report&quot;,
+        label: &quot;Trainees by Program Report&quot;,
+        icon: &quot;assignment&quot;,
+        children: []
+      },
+      {
+        path: &quot;/teachers-report&quot;,
+        label: &quot;Teachers Report&quot;,
+        icon: &quot;assignment&quot;,
+        children: []
+      },
+      {
+        path: &quot;/notes-issued-report&quot;,
+        label: &quot;Notes Issued - Note Report&quot;,
+        icon: &quot;assignment&quot;,
+        children: []
+      },
+      {
+        path: &quot;/output-recitation&quot;,
+        label: &quot;Output Recitation Report&quot;,
+        icon: &quot;assignment&quot;,
+        children: []
+      },
+      {
+        path: &quot;/chants-report&quot;,
+        label: &quot;Chant - Summary Report&quot;,
+        icon: &quot;assignment&quot;,
+        children: []
+      }
+    ]
+  }
+]</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/sdk/features/keycloak/keycloak.service.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="Keycloak"></a>
+                        <span class="name">
+                            <b>
+                            Keycloak
+                            </b>
+                            <a href="#Keycloak"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>Keycloak:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="keycloakClientId"></a>
+                        <span class="name">
+                            <b>
+                            keycloakClientId
+                            </b>
+                            <a href="#keycloakClientId"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>keycloakClientId:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>environment.keycloakClientId</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="keycloakRealm"></a>
+                        <span class="name">
+                            <b>
+                            keycloakRealm
+                            </b>
+                            <a href="#keycloakRealm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>keycloakRealm:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>environment.keycloakRealm</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="keycloakUrl"></a>
+                        <span class="name">
+                            <b>
+                            keycloakUrl
+                            </b>
+                            <a href="#keycloakUrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>keycloakUrl:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>environment.keycloakUrl</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-variables';
+            var COMPODOC_CURRENT_PAGE_URL = 'variables.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,852 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ng-starter-app-seven documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ng-starter-app-seven documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>SidenavComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/sdk/features/navigation_og/sidenav/sidenav.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+    <p class="comment">
+        <h3>Example</h3>
+    </p>
+    <div class="io-description">
+    </div>
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-sidenav</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./sidenav.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./sidenav.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#childLinks">childLinks</a>
+                            </li>
+                            <li>
+                                <a href="#clickedLink">clickedLink</a>
+                            </li>
+                            <li>
+                                <a href="#homeLink">homeLink</a>
+                            </li>
+                            <li>
+                                <a href="#isLinkChild">isLinkChild</a>
+                            </li>
+                            <li>
+                                <a href="#isPathInLink">isPathInLink</a>
+                            </li>
+                            <li>
+                                <a href="#navLinks">navLinks</a>
+                            </li>
+                            <li>
+                                <a href="#onMiniSidenavLinkClick">onMiniSidenavLinkClick</a>
+                            </li>
+                            <li>
+                                <a href="#onSidenavLinkClick">onSidenavLinkClick</a>
+                            </li>
+                            <li>
+                                <a href="#resetClickedLink">resetClickedLink</a>
+                            </li>
+                            <li>
+                                <a href="#setClickedLink">setClickedLink</a>
+                            </li>
+                            <li>
+                                <a href="#showSidebar">showSidebar</a>
+                            </li>
+                            <li>
+                                <a href="#sidebarActiveLink">sidebarActiveLink</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#currentPath">currentPath</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="currentPath"></a>
+                        <code>currentPath</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="childLinks"></a>
+                        <span class="name">
+                            <b>
+                            childLinks
+                            </b>
+                            <a href="#childLinks"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>childLinks:     <code><a href="../classes/Link.html" target="_self" >Link[]</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/Link.html" target="_self" >Link[]</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="clickedLink"></a>
+                        <span class="name">
+                            <b>
+                            clickedLink
+                            </b>
+                            <a href="#clickedLink"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>clickedLink:     <code><a href="../classes/Link.html" target="_self" >Link</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/Link.html" target="_self" >Link</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Link()</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="homeLink"></a>
+                        <span class="name">
+                            <b>
+                            homeLink
+                            </b>
+                            <a href="#homeLink"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>homeLink:     <code><a href="../classes/Link.html" target="_self" >Link</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/Link.html" target="_self" >Link</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>homeLink</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isLinkChild"></a>
+                        <span class="name">
+                            <b>
+                            isLinkChild
+                            </b>
+                            <a href="#isLinkChild"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>isLinkChild:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(parentLink: Link, link: Link) &#x3D;&gt; {
+    const parentLinkId &#x3D; &#x60;${parentLink.label}${parentLink.path}&#x60;;
+    const childLinkId &#x3D; &#x60;${link.label}${link.path}&#x60;;
+    if (parentLinkId &#x3D;&#x3D;&#x3D; childLinkId) {
+      return true;
+    } else if (parentLink.children.length) {
+      const parentLinkString &#x3D; JSON.stringify(parentLink);
+      if (
+        parentLinkString.includes(&#x60;&quot;label&quot;:&quot;${link.label}&quot;&#x60;) &amp;&amp;
+        parentLinkString.includes(&#x60;path&quot;:&quot;${link.path}&quot;&#x60;)
+      ) {
+        return true;
+      }
+    }
+    return false;
+  }</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Returns true if link2 is contained within link1</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isPathInLink"></a>
+                        <span class="name">
+                            <b>
+                            isPathInLink
+                            </b>
+                            <a href="#isPathInLink"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>isPathInLink:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(path: string, link: Link) &#x3D;&gt; {
+    const linkString &#x3D; JSON.stringify(link);
+    if (linkString.includes(&#x60;path&quot;:&quot;${path}&quot;&#x60;)) {
+      return true;
+    } else return false;
+  }</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navLinks"></a>
+                        <span class="name">
+                            <b>
+                            navLinks
+                            </b>
+                            <a href="#navLinks"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>navLinks:     <code><a href="../classes/Link.html" target="_self" >Link[]</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/Link.html" target="_self" >Link[]</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onMiniSidenavLinkClick"></a>
+                        <span class="name">
+                            <b>
+                            onMiniSidenavLinkClick
+                            </b>
+                            <a href="#onMiniSidenavLinkClick"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>onMiniSidenavLinkClick:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(link: Link) &#x3D;&gt; {
+    this.setClickedLink(link);
+    this.showSidebar &#x3D; true;
+  }</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onSidenavLinkClick"></a>
+                        <span class="name">
+                            <b>
+                            onSidenavLinkClick
+                            </b>
+                            <a href="#onSidenavLinkClick"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>onSidenavLinkClick:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(link: Link) &#x3D;&gt; {
+    if (link.path !&#x3D;&#x3D; null) {
+      this.showSidebar &#x3D; false;
+    }
+    if (this.isLinkChild(link, this.clickedLink)) {
+      this.resetClickedLink();
+    } else {
+      this.setClickedLink(link);
+    }
+  }</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="resetClickedLink"></a>
+                        <span class="name">
+                            <b>
+                            resetClickedLink
+                            </b>
+                            <a href="#resetClickedLink"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>resetClickedLink:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {
+    this.clickedLink &#x3D; new Link();
+  }</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setClickedLink"></a>
+                        <span class="name">
+                            <b>
+                            setClickedLink
+                            </b>
+                            <a href="#setClickedLink"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>setClickedLink:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(link: Link) &#x3D;&gt; {
+    this.clickedLink &#x3D; link;
+    this.childLinks &#x3D; link.children;
+  }</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showSidebar"></a>
+                        <span class="name">
+                            <b>
+                            showSidebar
+                            </b>
+                            <a href="#showSidebar"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>showSidebar:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sidebarActiveLink"></a>
+                        <span class="name">
+                            <b>
+                            sidebarActiveLink
+                            </b>
+                            <a href="#sidebarActiveLink"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>sidebarActiveLink:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(link: Link) &#x3D;&gt; {
+    const linkPath &#x3D; link.path;
+    if (linkPath &#x3D;&#x3D;&#x3D; this.currentPath) {
+      return true;
+    } else if (
+      this.isPathInLink(this.currentPath, link) &amp;&amp;
+      link !&#x3D;&#x3D; this.clickedLink
+    ) {
+      return true;
+    }
+    return false;
+  }</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Takes in a link and returns true if its path
+or that of its children contain the currentPath.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./sidenav.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">#sidebar {
+  padding-top: 10px;
+  top: var(--topnav-height);
+  position: fixed;
+  background: var(--sidenav-black);
+  height: 100vh;
+  overflow: hidden;
+  width: var(--mini-sidenav-width);
+}
+@media screen and (max-width: 480px) {
+  :root {
+    --mini-sidenav-width: 0px;
+  }
+  #sidebar {
+    visibility: hidden;
+  }
+}
+
+.nav-links-container {
+  overflow-y: scroll;
+  height: 100vh;
+  .nav-link {
+    i {
+      font-size: var(--sidenav-icon-size);
+    }
+    vertical-align: -webkit-baseline-middle;
+    cursor: pointer;
+    text-align: left;
+    padding: 2px;
+    margin: 0px 0px 5px 0px;
+    &amp;:hover {
+      background-color: var(--isha-orange-transparent);
+    }
+  }
+}
+
+.label-container {
+  display: table;
+  margin: 0px 0px 5px 0px;
+  i {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: var(--sidenav-icon-size);
+  }
+  .nav-label {
+    left: 30px;
+    font-size: 18px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+.mini-nav-links {
+  .mini-nav-link {
+    i {
+      color: white;
+      font-size: var(--sidenav-icon-size);
+    }
+    cursor: pointer;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 2px;
+    margin: 0px 0px 5px 0px;
+  }
+}
+.activated {
+  background-color: var(--isha-orange);
+}
+
+#mobile-sidenav-puller {
+  position: fixed;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  cursor: pointer;
+  z-index: 99999;
+  width: 25px;
+  bottom: 20px;
+  left: 0px;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 480px) {
+  #mobile-sidenav-puller {
+    visibility: visible;
+  }
+}
+</code></pre>
+    </div>
+
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><!-- Sidebar with hierarchical list of all routes --><p-sidebar [(visible)]="showSidebar" [style]="{background: \'var(--sidenav-black)\', border: \'solid var(--sidenav-black) 1px\', color: \'white\', width:\'27em\', top: \'var(--topnav-height)\', padding: \'10px\', margin: \'0px\'}"  [showCloseIcon]="false" [modal]="false" styleClass="ui-sidebar-md" (mouseleave)="showSidebar=false" [style.overflow-y]="scroll">  <div class="nav-links-container nav-links">    <div [routerLink]="homeLink.path" [class.activated]="sidebarActiveLink(homeLink)" (click)="onSidenavLinkClick(homeLink)"      class="nav-link">      <span class="label-container ">        <i class="material-icons">          {{homeLink.icon}}        </i>&nbsp;        <span class="nav-label">{{homeLink.label}}</span>      </span>    </div>    <div *ngFor="let link of navLinks">      <div [routerLink]="link.path" [class.activated]="sidebarActiveLink(link)" (click)="onSidenavLinkClick(link)" class="nav-link">        <span class="label-container ">          <i class="material-icons ">            {{link.icon}}          </i>          &nbsp;          <span class="nav-label ">{{link.label}}</span>        </span>      </div>      <div *ngIf="link.label === clickedLink.label && link.children.length">        <div *ngFor="let link of childLinks">          <div [routerLink]="link.path" [class.activated]="sidebarActiveLink(link)" (click)="onSidenavLinkClick(link)" class="nav-link">            <span class="label-container ">              &nbsp;&nbsp;&nbsp;              <i class="material-icons ">keyboard_arrow_right</i>              <i class="material-icons ">                {{link.icon}}              </i>&nbsp;              <span class="nav-label ">{{link.label}}</span>            </span>          </div>        </div>      </div>    </div>  </div></p-sidebar><!-- Mini sidebar that is unexpanded --><nav id="sidebar" class="mini-nav-links">  <div [pTooltip]="homeLink.label">    <div [routerLink]="homeLink.path" [class.activated]="sidebarActiveLink(homeLink)" class="mini-nav-link">      <i class="material-icons">        {{homeLink.icon}}      </i>    </div>  </div>  <div *ngFor="let link of navLinks">    <div [pTooltip]="link.label">      <div [routerLink]="link.path" [class.activated]="sidebarActiveLink(link)" (click)="onMiniSidenavLinkClick(link)" class="mini-nav-link">        <i class="material-icons">          {{link.icon}}        </i>      </div>    </div>  </div></nav><!-- Sidebar puller on mobile view --><div id="mobile-sidenav-puller">  <div (click)="showSidebar=true" *ngIf="!showSidebar">    <i class="material-icons" >arrow_forward</i>  </div>  <div (click)="showSidebar=false" *ngIf="showSidebar">    <i class="material-icons" *ngIf="showSidebar">arrow_backward</i>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'TopnavComponent', 'selector': 'app-topnav'},{'name': 'TopnavComponent', 'selector': 'app-topnav'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'SidenavComponent-1'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SidenavComponent-1.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

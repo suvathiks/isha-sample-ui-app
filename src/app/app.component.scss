@@ -1,0 +1,82 @@
+.loading-modal-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #2d2e2e;
+  opacity: 1;
+}
+.center-block {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.loading-text {
+  color: rgba(255,255,255, .2);
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#main-content {
+  margin: var(--topnav-height) 10px 0px var(--mini-sidenav-width);
+  padding: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  #main-content {
+    margin-left: 0;
+  }
+}
+
+.loading-animation {
+  -webkit-animation: flickerAnimation 2s infinite;
+  -moz-animation: flickerAnimation 2s infinite;
+  -o-animation: flickerAnimation 2s infinite;
+  animation: flickerAnimation 2s infinite;
+  padding: 20px;
+}
+
+@keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}

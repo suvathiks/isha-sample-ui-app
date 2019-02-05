@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+// Importing theme for Angular Material
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+// Importing styles for ag-grid..
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+
+// Importing styles for form notifications...
+@import "./app/sdk/features/master-form/form-notifications/notification.style.scss";
+
+// Importing styles for common modules in SDK
+@import "/app/sdk/config/sdk.styles.scss"

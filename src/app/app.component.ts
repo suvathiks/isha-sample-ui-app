@@ -2,7 +2,10 @@ import { Component, HostListener, OnInit } from "@angular/core";
 import { Select, Store } from "@ngxs/store";
 import { Observable } from "rxjs";
 import { Router, NavigationEnd } from "@angular/router";
+import { ConstantType, ConstantValue } from "./models/constant.model";
+import { ConstantState } from "./state/constants/constants.state";
 import { KeycloakState } from "./sdk/features/keycloak/keycloak.state";
+import { FetchConstants } from "./state/constants/constants.actions";
 import { Login } from "./sdk/features/keycloak/keycloak.actions";
 
 @Component({
@@ -10,8 +13,14 @@ import { Login } from "./sdk/features/keycloak/keycloak.actions";
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"]
 })
-export class AppComponent {
-  title = "ng-starter-app-seven";
+export class AppComponent implements OnInit {
+  title = "HYS App";
+  @Select(ConstantState.constantsLoaded)
+  constantsLoaded$: Observable<boolean>;
+  constantsLoaded: boolean = false;
+  @Select(ConstantState.isFetchingConstants)
+  isFetchingConstants$: Observable<boolean>;
+  isFetchingConstants: boolean = false;
   @Select(KeycloakState.loggedIn)
   loggedIn$: Observable<boolean>;
   loggedIn: boolean = false;
@@ -25,14 +34,23 @@ export class AppComponent {
   authenticate = () => {
     this.store.dispatch(new Login());
   };
+  fetchConstants = () => {
+    this.store.dispatch(new FetchConstants());
+  };
   /**
    * This will evaluate whether all conditions necessary to
    * let user into the app are fulfilled.
    */
   evaluateAppLoaded = () => {
     if (this.loggedIn && !this.loggingOut) {
+      if (!this.constantsLoaded && !this.isFetchingConstants) {
+        // Fetching constants if they're not loaded and they're not being fetched
+        this.fetchConstants();
+      }
+      if (this.constantsLoaded) {
         this.appLoaded = true;
       } else this.appLoaded = false;
+    } else this.appLoaded = false;
     this.evaluateLoadingText();
   };
   /**
@@ -40,6 +58,9 @@ export class AppComponent {
    * to show the user as the app is loading.
    */
   evaluateLoadingText = () => {
+    if (!this.constantsLoaded) {
+      this.appLoadingText = "Fetching Constants...";
+    }
     if (!this.loggedIn) {
       this.appLoadingText = "Authenticating...";
     }
@@ -61,6 +82,14 @@ export class AppComponent {
     });
     this.loggingOut$.subscribe(value => {
       this.loggingOut = value;
+      this.evaluateAppLoaded();
+    });
+    this.isFetchingConstants$.subscribe(value => {
+      this.isFetchingConstants = value;
+      this.evaluateAppLoaded();
+    });
+    this.constantsLoaded$.subscribe(value => {
+      this.constantsLoaded = value;
       this.evaluateAppLoaded();
     });
   }

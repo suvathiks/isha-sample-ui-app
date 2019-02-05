@@ -1,9 +1,9 @@
 import { HttpHeaders } from "@angular/common/http";
 import { environment } from "./../../../environments/environment";
-import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
+// import { Injectable } from "@angular/core";
+// import { Observable } from "rxjs";
 // import { Select, Store } from "@ngxs/store";
-import { HttpClient } from "@angular/common/http";
+// import { HttpClient } from "@angular/common/http";
 
 // Default HTTP headerOptions
 export const httpOptions = {
@@ -18,12 +18,12 @@ export const httpOptions = {
  */
 export const baseUrl = environment.apiBaseUrl;
 
-// /**
-//  * Takes in the apiPath and returns the full URL
-//  */
-// export const makeUrl = (path: string) => {
-//   return `${baseUrl}${path}`;
-// };
+/**
+ * Takes in the apiPath and returns the full URL
+ */
+export const makeUrl = (path: string) => {
+  return `${baseUrl}${path}`;
+};
 
 // /**
 //  * This is the one place where all endpoints in the application are listed.

@@ -18,5 +18,9 @@ Follow instructions below to enable it.
 
 1. Configure the `sdk/config/sitemap.config.ts` file to list out all routes on the UI in a hierarchical way. Sample can be found in the file.
 2. Copy the code in `src/app/app.component.html` into the template of your bootstrap component for the navigation module to be available throughout the app.
+3. If you haven't already, import the material icons stylesheet in the index.html file by adding this line - <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+4. Also add stylesheets necessary for primeng -   <link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/themes/nova-light/theme.css" />
+  <link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/primeng.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 Once the above steps are complete, a sidenav, a topnav and breadcrumbs will be automatically generated. You may additionally customize them by tweaking their respective templates files.
