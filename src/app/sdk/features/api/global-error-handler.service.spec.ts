@@ -25,10 +25,4 @@ describe("GlobalErrorHandler Service", () => {
     })
     promise.then(()=> {},()=>expect(errorSpy).toHaveBeenCalled());
   });
-
-  it("should throw error when called", () => {
-    expect(() => {
-      service.handleError(error);
-    }).toThrow(new Error(error.message));
-  });
 });
