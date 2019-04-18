@@ -9,17 +9,19 @@ import { minute, hour, day, week, month, year } from "./table.constants";
 export const updateColumnWidth = (colWidth: ColWidth): void => {
   const table = colWidth.table;
   const colId = colWidth.colId;
-
   const newWidth = colWidth.width;
-  let tableWidths = JSON.parse(localStorage.getItem(table));
-  if (tableWidths) {
-    tableWidths[colId] = newWidth;
-  } else {
-    tableWidths = {};
-    tableWidths[colId] = newWidth;
+  
+  if(newWidth){  
+    let tableWidths = JSON.parse(localStorage.getItem(table));
+    if (tableWidths) {
+      tableWidths[colId] = newWidth;
+    } else {
+      tableWidths = {};
+      tableWidths[colId] = newWidth;
+    }
+    tableWidths = JSON.stringify(tableWidths);
+    localStorage.setItem(table, tableWidths);
   }
-  tableWidths = JSON.stringify(tableWidths);
-  localStorage.setItem(table, tableWidths);
 };
 
 /**

@@ -11,7 +11,7 @@ import { Column, ColWidth, SearchParams } from "./../../table.model";
 import {
   setColumnWidthsFromLocalStorage,
   updateColumnWidth,
-  customWidthsExist,
+  customWidthsExist
 } from "./../../table.functions";
 import { pageSizeOptions } from "./../../table.constants";
 
@@ -110,11 +110,15 @@ export class DataTableComponent {
         this.tableId,
         this.columns
       );
-    } else this.autoSizeAll();
+    } else this.autoSizeAll(); // You can also use sizeColumnsToFit depending on use case
   }
   autoSizeAll() {
     let allColumnIds = this.gridColumnApi.getAllColumns().map(col => col.colId);
     this.gridColumnApi.autoSizeColumns(allColumnIds);
+  }
+  sizeColumnsToFit() {
+    let allColumnIds = this.gridColumnApi.getAllColumns().map(col => col.colId);
+    this.gridColumnApi.sizeColumnsToFit(allColumnIds);
   }
   showLoadingOverlay() {
     if (this.gridApi !== undefined) {
