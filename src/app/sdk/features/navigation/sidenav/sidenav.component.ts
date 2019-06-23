@@ -1,110 +1,151 @@
-import { Component, OnInit, Input } from "@angular/core";
-import { sitemap, homeLink, Link } from "./../../../config/sitemap.config";
-import { Router, NavigationEnd } from "@angular/router";
-import _ from "lodash";
+import { Component, OnInit, Input } from '@angular/core';
+import { sitemap, homeLink, Link } from './../../../config/sitemap.config';
+import { Router, NavigationEnd } from '@angular/router';
+import { Observable } from 'rxjs';
+import { isEqual } from 'lodash';
+
 
 /**
  * @param {Link} currentLink The link object whose path is the currentPath
- * @param {boolean} showSidebar Boolean to control whether the sidebar is shown or not
+ * @param {boolean} showSidenav Boolean to control whether the sidenav is shown or not
  * @param {Link[]} navLinks all navigation links
  * @param {Link} clickedLink Link that was last clicked on, used to show its children and all its parents expanded
- * @param {Link[]} childLinks Children links of the clickedLink
  * @param {Link} homeLink Link to home page
  */
 @Component({
-  selector: "app-sidenav",
-  templateUrl: "./sidenav.component.html",
-  styleUrls: ["./sidenav.component.scss"]
+    selector: 'app-sidenav',
+    templateUrl: './sidenav.component.html',
+    styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit {
-  @Input()
-  currentPath: string;
-  showSidebar: boolean = false;
-  navLinks: Link[];
-  clickedLink: Link = new Link();
-  childLinks: Link[];
-  homeLink: Link = homeLink;
+    navLinks: Link[] = [];
+    microSidenavWidth = getComputedStyle(document.body).getPropertyValue('--micro-sidenav-width');
+    miniSidenavWidth = getComputedStyle(document.body).getPropertyValue('--mini-sidenav-width');
+    showMicroSidenav = false;
+    currentUrl = '';
+    showSidenav = false;
+    clickedLinks: Link[] = [];
+    homeLink: Link = homeLink;
 
-  isPathInLink = (path: string, link: Link) => {
-    const linkString = JSON.stringify(link);
-    if (linkString.includes(`path":"${path}"`)) {
-      return true;
-    } else return false;
-  };
+    /**
+     * Takes the given link and pushes into the list of clicked links.
+     * The clicked links array will be used to determine which links need to
+     * be shown with expanded list of child links.
+     */
+    setClickedLink = (link: Link) => {
+        this.clickedLinks.push(link);
+    };
 
-  setClickedLink = (link: Link) => {
-    this.clickedLink = link;
-    this.childLinks = link.children;
-  };
+    /**
+     * Removes the given link from the array of clicked links
+     */
+    removeClickedLink = link => {
+        this.clickedLinks = this.clickedLinks.filter(l => {
+            return !isEqual(link, l);
+        });
+    };
 
-  resetClickedLink = () => {
-    this.clickedLink = new Link();
-  };
+    onSidenavLinkClick = (link: Link) => {
+        if (link.path !== null) {
+            this.showSidenav = false;
+        }
+        if (this.clickedLinks.includes(link)) {
+            this.removeClickedLink(link);
+        } else {
+            this.setClickedLink(link);
+        }
+    };
 
-  onSidenavLinkClick = (link: Link) => {
-    if (link.path !== null) {
-      this.showSidebar = false;
+    onMiniSidenavLinkClick = (link: Link) => {
+        this.clickedLinks = [];
+        this.setClickedLink(link);
+        if (link.path !== null) {
+            this.showSidenav = false;
+        } else {
+            this.showSidenav = true;
+        }
+    };
+
+    urlContainsPath = (path: string) => {
+        return this.currentUrl.endsWith(path) ? true : false;
+    };
+
+    /**
+     * Takes in a link and returns true if its path
+     * or that of its children contain the currentPath.
+     */
+    sidenavActiveLink = (link: Link) => {
+        const linkPath = link.path;
+        if (this.urlContainsPath(linkPath)) {
+            return true;
+        }
+        return false;
+    };
+
+    /**
+     * Used for the minisidenav.
+     * Takes in a link and returns true if its path
+     * or that of its children contain the currentPath.
+     */
+    sidenavMiniActiveLink = (link: Link) => {
+        const linkPath = link.path;
+        if (this.urlContainsPath(linkPath)) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+
+    toggleMicroSidenav = () => {
+        if (this.showMicroSidenav) {
+            document.documentElement.style.setProperty('--mini-sidenav-width', this.miniSidenavWidth);
+            this.showMicroSidenav = false;
+        } else {
+            document.documentElement.style.setProperty('--mini-sidenav-width', this.microSidenavWidth);
+            this.showMicroSidenav = true;
+        }
+        this.setSidenavModeToLocalStorage();
+    };
+
+    constructor(private router: Router) {
+        // Detecting url change
+        router.events.subscribe((nav: NavigationEnd) => {
+            if (nav.url !== undefined) {
+                // Getting current path from window.location.pathname for more accuracy
+                this.currentUrl = window.location.href;
+            }
+        });
+        this.navLinks = sitemap.map(item => item);
     }
-    if (this.isLinkChild(link, this.clickedLink)) {
-      this.resetClickedLink();
-    } else {
-      this.setClickedLink(link);
+
+    /**
+     * Retrieve the showMicroSidenav from localStorage
+     */
+    getSidenavModeFromLocalStorage = () => {
+        const showMicroSidenavFromLocalStorage = localStorage.getItem('showMicroSidenav');
+        if (showMicroSidenavFromLocalStorage === 'true' || showMicroSidenavFromLocalStorage === 'false') {
+            this.showMicroSidenav = showMicroSidenavFromLocalStorage === 'true';
+        }
+        if (this.showMicroSidenav) {
+            document.documentElement.style.setProperty('--mini-sidenav-width', this.microSidenavWidth);
+        } else {
+            document.documentElement.style.setProperty('--mini-sidenav-width', this.miniSidenavWidth);
+        }
+    };
+
+    /**
+     * Set the showMicroSidenav to localStorage
+     */
+    setSidenavModeToLocalStorage = () => {
+        localStorage.setItem('showMicroSidenav', JSON.stringify(this.showMicroSidenav));
+    };
+
+    ngOnInit() {
+        // Getting the sidenav mode from localStorage
+        this.getSidenavModeFromLocalStorage();
+        // if (this.authResources) {
+        //     this.navLinks = this.filterAuthorizedResources();
+        // }
     }
-  };
-
-  onMiniSidenavLinkClick = (link: Link) => {
-    this.setClickedLink(link);
-    this.showSidebar = true;
-  };
-
-  /**
-   * Returns true if link2 is contained within link1
-   */
-  isLinkChild = (parentLink: Link, link: Link) => {
-    const parentLinkId = `${parentLink.label}${parentLink.path}`;
-    const childLinkId = `${link.label}${link.path}`;
-    if (parentLinkId === childLinkId) {
-      return true;
-    } else if (parentLink.children.length) {
-      const parentLinkString = JSON.stringify(parentLink);
-      if (
-        parentLinkString.includes(`"label":"${link.label}"`) &&
-        parentLinkString.includes(`path":"${link.path}"`)
-      ) {
-        return true;
-      }
-    }
-    return false;
-  };
-  /**
-   * Takes in a link and returns true if its path
-   * or that of its children contain the currentPath.
-   */
-  sidebarActiveLink = (link: Link) => {
-    const linkPath = link.path;
-    if (linkPath === this.currentPath) {
-      return true;
-    } else if (
-      this.isPathInLink(this.currentPath, link) &&
-      link !== this.clickedLink
-    ) {
-      return true;
-    }
-    return false;
-  };
-
-  constructor(private router: Router) {
-    // Detecting url change
-    router.events.subscribe((_: NavigationEnd) => {
-      if (_.url !== undefined) {
-        // Getting current path from window.location.pathname for more accuracy
-        this.currentPath = window.location.pathname;
-      }
-    });
-  }
-
-  ngOnInit() {
-    this.navLinks = sitemap.map(item => item);
-  }
-  ngOnChanges(changes) {}
+    ngOnChanges(changes) {}
 }

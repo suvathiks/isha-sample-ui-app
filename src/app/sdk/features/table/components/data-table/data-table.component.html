@@ -1,4 +1,4 @@
-<table style="width: 100%">
+<!-- <table style="width: 100%; height: 100px;">
   <tr>
     <td class="third-block" id="search-controls">
       <span class="ui-float-label search-input">
@@ -7,9 +7,10 @@
       </span>
       <span class="page-size-control">
         <div>
-          <p-dropdown [style]="{'padding':'0px', 'margin-top': '-3px'}" autoWidth autoDisplayFirst [options]="pageSizeOptions " (onChange)="fetchData() "
-            [(ngModel)]="searchParams.pageSize
-                              " [placeholder]="searchParams.pageSize " [showClear]="false "></p-dropdown>
+
+        <p-dropdown [style]="{'padding':'0px', 'margin-top': '-3px'}" autoDisplayFirst [options]="pageSizeOptions " (onChange)="fetchData() "
+          [(ngModel)]="searchParams.pageSize
+                            " [placeholder]="searchParams.pageSize " [showClear]="false "></p-dropdown>
         </div>
       </span>
     </td>
@@ -19,13 +20,71 @@
       <p-button routerLink={{addRoute}} label={{addLabel}} class="add-button"></p-button>
     </td>
   </tr>
-</table>
-<ag-grid-angular class=" ag-theme-balham " id="ag-grid-style" [style.--table-height]="tableHeight" [rowData]="rows" [columnDefs]="columns
-  " (firstDataRendered)="onFirstDataRendered($event) "
-  (sortChanged)="onSortChanged($event)
-  " (columnResized)="onColumnResize($event) " (dragStopped)="onColumnReorder($event)" [rowHeight]="rowHeight " (gridReady)="onGridReady($event) "
-  [overlayLoadingTemplate]="overlayLoadingTemplate" [overlayNoRowsTemplate]="overlayNoRowsTemplate" [frameworkComponents]="frameworkComponents">
+</table> -->
+
+<!-- In order to render CSV properly, make sure that the data being passed to the table
+is already rednered, and doesn't rely on cellRenderer attribute in the column definition. 
+The CSV data won't render properly if the tables rely on async cellrenderers. -->
+<div *ngIf="csvExportEnabled && !staticTable" style="float: right;">
+  <i 
+    *ngIf="!csvDownloadReady && !isFetchingCSVDownload" 
+    (click)="fetchCSVData()" 
+    style="font-size: 3em;color:steelblue; padding: 2px 2px 2px 5px;cursor: pointer;" 
+    class="fa fa-download"
+    >
+  </i>
+  <i 
+    *ngIf="isFetchingCSVDownload" 
+    style="font-size: 3em;color:steelblue; padding: 2px 2px 2px 5px;cursor: wait;"
+    class="fa fa-hourglass-half"
+  >
+  </i>
+  <i 
+    *ngIf="csvDownloadReady" 
+    (click)="onCSVExport()" 
+    style="font-size: 3em;color:seagreen; padding: 2px 2px 2px 5px;cursor: pointer;" 
+    class="fa fa-file-csv"
+    >
+  </i>
+</div>
+<div *ngIf="csvExportEnabled && staticTable" style="float: right;">
+    <i 
+    (click)="onCSVExport()" 
+    style="font-size: 3em;color:seagreen; padding: 2px 2px 2px 5px;cursor: pointer;" 
+    class="fa fa-file-csv"
+    >
+  </i>
+</div>
+<ag-grid-angular 
+  class="ag-theme-fresh" 
+  id="ag-grid-style" 
+  [ngStyle]="{'height': calculateTableHeight()}"  
+  [rowData]="rows" 
+  [columnDefs]="columns"
+  (firstDataRendered)="onFirstDataRendered($event)"
+  (rowDataChanged)="onRowDataChanged($event)"
+  (sortChanged)="onSortChanged($event)"
+  (columnResized)="onColumnResize($event)" 
+  (dragStopped)="onColumnReorder($event)" 
+  [rowHeight]="rowHeight" 
+  [getRowHeight]="getRowHeight"
+  (gridReady)="onGridReady($event)"
+  [overlayLoadingTemplate]="overlayLoadingTemplate" 
+  [overlayNoRowsTemplate]="overlayNoRowsTemplate" 
+  [frameworkComponents]="frameworkComponents"
+  [isFullWidthCell]="isFullWidthCell" 
+  [fullWidthCellRenderer]="fullWidthCellRenderer" 
+  [fullWidthCellRendererParams]="fullWidthCellRendererParams"
+  >
 </ag-grid-angular>
-<app-paginator [totalRecords]="totalRecords" [pageSize]="searchParams.pageSize " [currentPage]="searchParams.pageNumber
-  " [searchQuery]="currentSearchQuery" (onPageChange)="returnNewPageNumber($event[0]) ">
+
+<app-paginator
+  [staticTable]="staticTable"
+  [totalRecords]="totalRecords" 
+  [pageSize]="searchParams.pageSize" 
+  [currentPage]="searchParams.pageNumber" 
+  [searchQuery]="currentSearchQuery" 
+  (onPageChange)="returnNewPageNumber($event[0])" 
+  (onPageSizeChange)="onPageSizeChange($event[0])"
+>
 </app-paginator>

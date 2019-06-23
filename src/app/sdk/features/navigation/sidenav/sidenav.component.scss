@@ -1,86 +1,154 @@
-#sidebar {
-  padding-top: 10px;
-  top: var(--topnav-height);
-  position: fixed;
-  background: var(--sidenav-black);
-  height: 100vh;
-  overflow: hidden;
-  width: var(--mini-sidenav-width);
+#miniSidenav {
+    padding: 10px 0px 0px 5px;
+    top: var(--topnav-height);
+    position: fixed;
+    background: var(--sidenav-black);
+    height: 100vh;
+    overflow: hidden;
+    width: var(--mini-sidenav-width);
 }
+
+#microSidenavToggle {
+    position: fixed;
+    padding: 10px 10px 10px 0px;
+    left: 10;
+    background: var(--sidenav-black-transparent);
+    bottom: 30px;
+    width: 30px;
+    height: auto;
+    border-radius: 0px 3px 3px 0px;
+    float: right;
+    cursor: pointer;
+    i {
+        padding: 1px 3px 1px 1px;
+        font-size: 1.2em;
+        color: rgba(255, 255, 255, 0.5);
+        &:hover {
+            color: white;
+        }
+    }
+}
+
+@media screen and (max-height: 450px) {
+    #microSidenavToggle {
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
+}
+
 @media screen and (max-width: 480px) {
-  :root {
-    --mini-sidenav-width: 0px;
-  }
-  #sidebar {
-    visibility: hidden;
-  }
+    :root {
+        --mini-sidenav-width: 0px;
+        --mini-sidenav-width: 0px;
+    }
+    #sidenav {
+        visibility: hidden;
+    }
+    #miniSidenav {
+        visibility: hidden;
+    }
 }
 
 .nav-links-container {
-  overflow-y: scroll;
-  height: 100vh;
-  .nav-link {
-    i {
-      font-size: var(--sidenav-icon-size);
+    overflow-y: scroll;
+    height: 100%;
+    .nav-link {
+        cursor: pointer;
+        font-size: 1.1em;
+        text-align: left;
+        padding: 2px 2px 2px 0px;
+        margin: 0px 0px 5px 0px;
+        i {
+            width: var(--sidenav-icon-width);
+            text-align: center;
+            font-size: var(--sidenav-icon-size);
+            color: var(--isha-orange);
+        }
+        &:hover {
+            background-color: var(--isha-orange-transparent);
+        }
     }
-    vertical-align: -webkit-baseline-middle;
-    cursor: pointer;
-    text-align: left;
-    padding: 2px;
-    margin: 0px 0px 5px 0px;
-    &:hover {
-      background-color: var(--isha-orange-transparent);
-    }
-  }
 }
 
 .label-container {
-  display: table;
-  margin: 0px 0px 5px 0px;
-  i {
-    display: table-cell;
-    vertical-align: middle;
-    font-size: var(--sidenav-icon-size);
-  }
-  .nav-label {
-    left: 30px;
-    font-size: 18px;
-    display: table-cell;
-    vertical-align: middle;
-  }
-}
-.mini-nav-links {
-  .mini-nav-link {
+    display: table;
     i {
-      color: white;
-      font-size: var(--sidenav-icon-size);
+        width: var(--sidenav-icon-width);
+        text-align: center;
+        font-size: var(--sidenav-icon-size);
+        display: table-cell;
+        vertical-align: middle;
     }
+    .nav-label {
+        left: calc(var(--sidenav-icon-width) + 5px);
+        display: table-cell;
+        vertical-align: middle;
+        font-weight: bold;
+    }
+}
+.micro-nav-link {
+    color: white;
     cursor: pointer;
-    font-size: 1.2em;
     text-align: center;
     padding: 2px;
     margin: 0px 0px 5px 0px;
-  }
+    i {
+        font-size: var(--sidenav-icon-size);
+        color: var(--isha-orange);
+    }
+    &:hover {
+        background-color: var(--isha-orange);
+        i {
+            color: var(--sidenav-black);
+        }
+    }
 }
+.mini-nav-link {
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    text-align: left;
+    padding: 2px 2px 2px 2px;
+    margin: 0px 0px 5px 0px;
+    i {
+        width: var(--sidenav-icon-width);
+        margin-right: 2px;
+        text-align: center;
+        font-size: var(--sidenav-icon-size);
+        color: var(--isha-orange);
+    }
+    &:hover {
+        background-color: var(--isha-orange);
+        i {
+            color: var(--sidenav-black);
+        }
+    }
+}
+
 .activated {
-  background-color: var(--isha-orange);
+    background-color: var(--isha-orange);
+    i {
+        color: var(--sidenav-black) !important;
+    }
+    font-weight: bold;
 }
 
 #mobile-sidenav-puller {
-  position: fixed;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  cursor: pointer;
-  z-index: 99999;
-  width: 25px;
-  bottom: 20px;
-  left: 0px;
-  visibility: hidden;
+    position: fixed;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    z-index: 99999;
+    width: 25px;
+    bottom: 20px;
+    left: 0px;
+    visibility: hidden;
 }
 
 @media screen and (max-width: 480px) {
-  #mobile-sidenav-puller {
-    visibility: visible;
-  }
+    #mobile-sidenav-puller {
+        visibility: visible;
+    }
 }

@@ -1,0 +1,2464 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Bill",
+      "lastName": "Gates",
+      "email": "bill@microsoft.com"
+    },
+    {
+      "id": 2,
+      "firstName": "Mark",
+      "lastName": "Zuckerberg",
+      "email": "mark@facebook.com"
+    },
+    {
+      "id": 3,
+      "firstName": "Jeff",
+      "lastName": "Bezos",
+      "email": "jeff@amazon.com"
+    }
+  ],
+  "companies": [
+    {
+      "id": 1,
+      "name": "Microsoft"
+    },
+    {
+      "id": 2,
+      "name": "Facebook"
+    },
+    {
+      "id": 3,
+      "name": "Amazon"
+    }
+  ],
+  "constants": {
+    "genders": [
+      {
+        "rowKey": "GNDR/MALE",
+        "constantTypeCode": "GNDR",
+        "constantCode": "MALE",
+        "constant": "Male",
+        "description": "Male",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "GNDR/FEMALE",
+        "constantTypeCode": "GNDR",
+        "constantCode": "FEMALE",
+        "constant": "Female",
+        "description": "Female",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "GNDR/OTHER",
+        "constantTypeCode": "GNDR",
+        "constantCode": "OTHER",
+        "constant": "Other",
+        "description": "Other",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      }
+    ],
+    "programTypes": [
+      {
+        "rowKey": "PRGTP/HYTT",
+        "constantTypeCode": "PRGTP",
+        "constantCode": "HYTT",
+        "constant": "Hatha Yoga Teacher Training",
+        "description": "Hata Yoga Teacher Training",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "PRGTP/UPGRADE",
+        "constantTypeCode": "PRGTP",
+        "constantCode": "UPGRADE",
+        "constant": "Upgrade Program",
+        "description": "Upgrade Program",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "PRGTP/NN-PRGRM",
+        "constantTypeCode": "PRGTP",
+        "constantCode": "NN-PRGRM",
+        "constant": "Non-Program",
+        "description": "Non-Program",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "PRGTP/BSF_PRGRM",
+        "constantTypeCode": "PRGTP",
+        "constantCode": "BSF_PRGRM",
+        "constant": "BSF Program",
+        "description": "BSF Program",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      }
+    ],
+    "countries": [
+      {
+        "rowKey": "CNTRY/NR",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "NR",
+        "constant": "Nauru",
+        "description": "Nauru",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/KM",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "KM",
+        "constant": "Comoros",
+        "description": "Comoros",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/UMI",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "UMI",
+        "constant": "United States Minor Outlying Islands",
+        "description": "United States Minor Outlying Islands",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/INVALID",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "INVALID",
+        "constant": "Invalid Country",
+        "description": "Invalid Country",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/AF",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "AF",
+        "constant": "Afganistan",
+        "description": "Afganistan",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/AL",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "AL",
+        "constant": "Albania",
+        "description": "Albania",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/DZ",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "DZ",
+        "constant": "Algeria",
+        "description": "Algeria",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/AS",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "AS",
+        "constant": "American Samoa",
+        "description": "American Samoa",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/AD",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "AD",
+        "constant": "Andorra",
+        "description": "Andorra",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/AO",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "AO",
+        "constant": "Angola",
+        "description": "Angola",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/AI",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "AI",
+        "constant": "Anguilla",
+        "description": "Anguilla",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/AG",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "AG",
+        "constant": "Antigua and Barbuda",
+        "description": "Antigua and Barbuda",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/AR",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "AR",
+        "constant": "Argentina",
+        "description": "Argentina",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/AM",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "AM",
+        "constant": "Armenia",
+        "description": "Armenia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/AW",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "AW",
+        "constant": "Aruba",
+        "description": "Aruba",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/AU",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "AU",
+        "constant": "Australia",
+        "description": "Australia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/AT",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "AT",
+        "constant": "Austria",
+        "description": "Austria",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/AZ",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "AZ",
+        "constant": "Azerbaijan",
+        "description": "Azerbaijan",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/BS",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "BS",
+        "constant": "Bahamas",
+        "description": "Bahamas",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/BH",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "BH",
+        "constant": "Bahrain",
+        "description": "Bahrain",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/BD",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "BD",
+        "constant": "Bangladesh",
+        "description": "Bangladesh",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/BB",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "BB",
+        "constant": "Barbados",
+        "description": "Barbados",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/BY",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "BY",
+        "constant": "Belarus",
+        "description": "Belarus",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/BE",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "BE",
+        "constant": "Belgium",
+        "description": "Belgium",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/BZ",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "BZ",
+        "constant": "Belize",
+        "description": "Belize",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/BJ",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "BJ",
+        "constant": "Benin",
+        "description": "Benin",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/BM",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "BM",
+        "constant": "Bermuda",
+        "description": "Bermuda",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/BT",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "BT",
+        "constant": "Bhutan",
+        "description": "Bhutan",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/BO",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "BO",
+        "constant": "Bolivia",
+        "description": "Bolivia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/BA",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "BA",
+        "constant": "Bosniaand Herzegovina",
+        "description": "Bosniaand Herzegovina",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/BW",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "BW",
+        "constant": "Botswana",
+        "description": "Botswana",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/BR",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "BR",
+        "constant": "Brazil",
+        "description": "Brazil",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/IO",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "IO",
+        "constant": "British Indian Ocean Territory",
+        "description": "British Indian Ocean Territory",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/VG",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "VG",
+        "constant": "British Virgin Islands",
+        "description": "British Virgin Islands",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/BN",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "BN",
+        "constant": "Brunei",
+        "description": "Brunei",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/BG",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "BG",
+        "constant": "Bulgaria",
+        "description": "Bulgaria",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/BF",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "BF",
+        "constant": "Burkina Faso",
+        "description": "Burkina Faso",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/BI",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "BI",
+        "constant": "Burundi",
+        "description": "Burundi",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/KH",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "KH",
+        "constant": "Cambodia",
+        "description": "Cambodia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/CM",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "CM",
+        "constant": "Cameroon",
+        "description": "Cameroon",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/CA",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "CA",
+        "constant": "Canada",
+        "description": "Canada",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/CV",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "CV",
+        "constant": "Cape Verde",
+        "description": "Cape Verde",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/BQ",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "BQ",
+        "constant": "Caribbean Netherlands",
+        "description": "Caribbean Netherlands",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/KY",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "KY",
+        "constant": "Cayman Islands",
+        "description": "Cayman Islands",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/CF",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "CF",
+        "constant": "Central African Republic",
+        "description": "Central African Republic",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/TD",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "TD",
+        "constant": "Chad",
+        "description": "Chad",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/CL",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "CL",
+        "constant": "Chile",
+        "description": "Chile",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/CN",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "CN",
+        "constant": "China",
+        "description": "China",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/CO",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "CO",
+        "constant": "Colombia",
+        "description": "Colombia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/CD",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "CD",
+        "constant": "Congo (DRC)",
+        "description": "Congo (DRC)",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/CG",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "CG",
+        "constant": "Congo (Republic)",
+        "description": "Congo (Republic)",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/CK",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "CK",
+        "constant": "Cook Islands",
+        "description": "Cook Islands",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/CR",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "CR",
+        "constant": "Costa Rica",
+        "description": "Costa Rica",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/CI",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "CI",
+        "constant": "Cote d'Ivoire",
+        "description": "Cote d'Ivoire",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/HR",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "HR",
+        "constant": "Croatia",
+        "description": "Croatia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/CU",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "CU",
+        "constant": "Cuba",
+        "description": "Cuba",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/CW",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "CW",
+        "constant": "Curacao",
+        "description": "Curacao",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/CY",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "CY",
+        "constant": "Cyprus",
+        "description": "Cyprus",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/CZ",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "CZ",
+        "constant": "Czech Republic",
+        "description": "Czech Republic",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/DK",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "DK",
+        "constant": "Denmark",
+        "description": "Denmark",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/DJ",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "DJ",
+        "constant": "Djibouti",
+        "description": "Djibouti",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/DM",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "DM",
+        "constant": "Dominica",
+        "description": "Dominica",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/DO",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "DO",
+        "constant": "Dominican Republic",
+        "description": "Dominican Republic",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/EC",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "EC",
+        "constant": "Ecuador",
+        "description": "Ecuador",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/EG",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "EG",
+        "constant": "Egypt",
+        "description": "Egypt",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/SV",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "SV",
+        "constant": "El Salvador",
+        "description": "El Salvador",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/GQ",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "GQ",
+        "constant": "Equatorial Guinea",
+        "description": "Equatorial Guinea",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/ER",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "ER",
+        "constant": "Eritrea",
+        "description": "Eritrea",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/EE",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "EE",
+        "constant": "Estonia",
+        "description": "Estonia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/ET",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "ET",
+        "constant": "Ethiopia",
+        "description": "Ethiopia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/FK",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "FK",
+        "constant": "Falkland Islands",
+        "description": "Falkland Islands",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/FO",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "FO",
+        "constant": "Faroe Islands",
+        "description": "Faroe Islands",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/FJ",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "FJ",
+        "constant": "Fiji",
+        "description": "Fiji",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/FI",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "FI",
+        "constant": "Finland",
+        "description": "Finland",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/FR",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "FR",
+        "constant": "France",
+        "description": "France",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/GF",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "GF",
+        "constant": "French Guiana",
+        "description": "Male",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/PF",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "PF",
+        "constant": "French Polynesia",
+        "description": "French Polynesia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/GA",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "GA",
+        "constant": "Gabon",
+        "description": "Gabon",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/GM",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "GM",
+        "constant": "Gambia",
+        "description": "Gambia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/GE",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "GE",
+        "constant": "Georgia",
+        "description": "Georgia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/DE",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "DE",
+        "constant": "Germany",
+        "description": "Germany",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/GH",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "GH",
+        "constant": "Ghana",
+        "description": "Ghana",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/GI",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "GI",
+        "constant": "Gibraltar",
+        "description": "Gibraltar",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/GR",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "GR",
+        "constant": "Greece",
+        "description": "Greece",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/GL",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "GL",
+        "constant": "Greenland",
+        "description": "Greenland",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/GD",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "GD",
+        "constant": "Grenada",
+        "description": "Grenada",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/GP",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "GP",
+        "constant": "Guadeloupe",
+        "description": "Guadeloupe",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/GU",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "GU",
+        "constant": "Guam",
+        "description": "Guam",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/GT",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "GT",
+        "constant": "Guatemala",
+        "description": "Guatemala",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/GN",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "GN",
+        "constant": "Guinea",
+        "description": "Guinea",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/GW",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "GW",
+        "constant": "Guinea-Bissau",
+        "description": "Guinea-Bissau",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/GY",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "GY",
+        "constant": "Guyana",
+        "description": "Guyana",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/HT",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "HT",
+        "constant": "Haiti",
+        "description": "Haiti",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/HN",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "HN",
+        "constant": "Honduras",
+        "description": "Honduras",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/HK",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "HK",
+        "constant": "Hong Kong",
+        "description": "Hong Kong",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/HU",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "HU",
+        "constant": "Hungary",
+        "description": "Hungary",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/IS",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "IS",
+        "constant": "Iceland",
+        "description": "Iceland",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/IN",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "IN",
+        "constant": "India",
+        "description": "India",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/ID",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "ID",
+        "constant": "Indonesia",
+        "description": "Indonesia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/IR",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "IR",
+        "constant": "Iran",
+        "description": "Iran",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/IQ",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "IQ",
+        "constant": "Iraq",
+        "description": "Iraq",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/IE",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "IE",
+        "constant": "Ireland",
+        "description": "Ireland",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/IL",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "IL",
+        "constant": "Israel",
+        "description": "Israel",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/IT",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "IT",
+        "constant": "Italy",
+        "description": "Italy",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/JM",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "JM",
+        "constant": "Jamaica",
+        "description": "Jamaica",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/JP",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "JP",
+        "constant": "Japan",
+        "description": "Japan",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/JO",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "JO",
+        "constant": "Jordan",
+        "description": "Jordan",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/KZ",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "KZ",
+        "constant": "Kazakhstan",
+        "description": "Kazakhstan",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/KE",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "KE",
+        "constant": "Kenya",
+        "description": "Kenya",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/KI",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "KI",
+        "constant": "Kiribati",
+        "description": "Kiribati",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/KW",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "KW",
+        "constant": "Kuwait",
+        "description": "Kuwait",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/KG",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "KG",
+        "constant": "Kyrgyzstan",
+        "description": "Kyrgyzstan",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/LA",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "LA",
+        "constant": "Laos",
+        "description": "Laos",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/LV",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "LV",
+        "constant": "Latvia",
+        "description": "Latvia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/LB",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "LB",
+        "constant": "Lebanon",
+        "description": "Lebanon",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/LS",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "LS",
+        "constant": "Lesotho",
+        "description": "Lesotho",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/LR",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "LR",
+        "constant": "Liberia",
+        "description": "Liberia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/LY",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "LY",
+        "constant": "Libya",
+        "description": "Libya",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/LI",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "LI",
+        "constant": "Liechtenstein",
+        "description": "Liechtenstein",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/LT",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "LT",
+        "constant": "Lithuania",
+        "description": "Lithuania",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/LU",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "LU",
+        "constant": "Luxembourg",
+        "description": "Luxembourg",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/MK",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "MK",
+        "constant": "Macedonia",
+        "description": "Macedonia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/MG",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "MG",
+        "constant": "Madagascar",
+        "description": "Madagascar",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/MW",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "MW",
+        "constant": "Malawi",
+        "description": "Malawi",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/MY",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "MY",
+        "constant": "Malaysia",
+        "description": "Malaysia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/MV",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "MV",
+        "constant": "Maldives",
+        "description": "Maldives",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/ML",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "ML",
+        "constant": "Mali",
+        "description": "Mali",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/MT",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "MT",
+        "constant": "Malta",
+        "description": "Malta",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/MH",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "MH",
+        "constant": "Marshall Islands",
+        "description": "Marshall Islands",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/MQ",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "MQ",
+        "constant": "Martinique",
+        "description": "Martinique",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/MR",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "MR",
+        "constant": "Mauritania",
+        "description": "Mauritania",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/MU",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "MU",
+        "constant": "Mauritius",
+        "description": "Mauritius",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/MX",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "MX",
+        "constant": "Mexico",
+        "description": "Mexico",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/FM",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "FM",
+        "constant": "Micronesia",
+        "description": "Micronesia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/MD",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "MD",
+        "constant": "Moldova",
+        "description": "Moldova",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/MC",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "MC",
+        "constant": "Monaco",
+        "description": "Monaco",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/MN",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "MN",
+        "constant": "Mongolia",
+        "description": "Mongolia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/ME",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "ME",
+        "constant": "Montenegro",
+        "description": "Montenegro",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/MS",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "MS",
+        "constant": "Montserrat",
+        "description": "Montserrat",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/MA",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "MA",
+        "constant": "Morocco",
+        "description": "Morocco",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/MZ",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "MZ",
+        "constant": "Mozambique",
+        "description": "Mozambique",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/MM",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "MM",
+        "constant": "Myanmar (Burma)",
+        "description": "Myanmar (Burma)",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/NA",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "NA",
+        "constant": "Namibia",
+        "description": "Namibia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/NP",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "NP",
+        "constant": "Nepal",
+        "description": "Nepal",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/NL",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "NL",
+        "constant": "Netherlands",
+        "description": "Netherlands",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/NC",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "NC",
+        "constant": "New Caledonia",
+        "description": "New Caledonia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/NZ",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "NZ",
+        "constant": "New Zealand",
+        "description": "New Zealand",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/NI",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "NI",
+        "constant": "Nicaragua",
+        "description": "Nicaragua",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/NG",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "NG",
+        "constant": "Nigeria",
+        "description": "Nigeria",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/NU",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "NU",
+        "constant": "Niue",
+        "description": "Niue",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/NF",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "NF",
+        "constant": "Norfolk Island",
+        "description": "Norfolk Island",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/KP",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "KP",
+        "constant": "North Korea",
+        "description": "North Korea",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/MP",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "MP",
+        "constant": "Northern Mariana Islands",
+        "description": "Northern Mariana Islands",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/NO",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "NO",
+        "constant": "Norway",
+        "description": "Norway",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/OM",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "OM",
+        "constant": "Oman",
+        "description": "Oman",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/PK",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "PK",
+        "constant": "Pakistan",
+        "description": "Pakistan",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/PW",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "PW",
+        "constant": "Palau",
+        "description": "Palau",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/PS",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "PS",
+        "constant": "Palestine",
+        "description": "Palestine",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/PA",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "PA",
+        "constant": "Panama",
+        "description": "Panama",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/PG",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "PG",
+        "constant": "Papua New Guinea",
+        "description": "Papua New Guinea",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/PY",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "PY",
+        "constant": "Paraguay",
+        "description": "Paraguay",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/PE",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "PE",
+        "constant": "Peru",
+        "description": "Peru",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/PH",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "PH",
+        "constant": "Philippines",
+        "description": "Philippines",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/PL",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "PL",
+        "constant": "Poland",
+        "description": "Poland",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/PT",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "PT",
+        "constant": "Portugal",
+        "description": "Portugal",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/PR",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "PR",
+        "constant": "Puerto Rico",
+        "description": "Puerto Rico",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/QA",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "QA",
+        "constant": "Qatar",
+        "description": "Qatar",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/RE",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "RE",
+        "constant": "Reunion",
+        "description": "Reunion",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/RO",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "RO",
+        "constant": "Romania",
+        "description": "Romania",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/RU",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "RU",
+        "constant": "Russia",
+        "description": "Russia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/RW",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "RW",
+        "constant": "Rwanda",
+        "description": "Rwanda",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/BL",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "BL",
+        "constant": "Saint Barthelemy",
+        "description": "Saint Barthelemy",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/SH",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "SH",
+        "constant": "Saint Helena",
+        "description": "Saint Helena",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/KN",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "KN",
+        "constant": "Saint Kitts and Nevis",
+        "description": "Saint Kitts and Nevis",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/LC",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "LC",
+        "constant": "Saint Lucia",
+        "description": "Saint Lucia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/MF",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "MF",
+        "constant": "Saint Martin",
+        "description": "Saint Martin",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/PM",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "PM",
+        "constant": "Saint Pierre and Miquelon",
+        "description": "Saint Pierre and Miquelon",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/VC",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "VC",
+        "constant": "Saint Vincent and the Grenadines",
+        "description": "Saint Vincent and the Grenadines",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/WS",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "WS",
+        "constant": "Samoa",
+        "description": "Samoa",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/SM",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "SM",
+        "constant": "San Marino",
+        "description": "San Marino",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/ST",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "ST",
+        "constant": "Sao Tome and Principe",
+        "description": "Sao Tome and Principe",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/SA",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "SA",
+        "constant": "Saudi Arabia",
+        "description": "Saudi Arabia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/SN",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "SN",
+        "constant": "Senegal",
+        "description": "Senegal",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/RS",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "RS",
+        "constant": "Serbia",
+        "description": "Serbia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/SC",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "SC",
+        "constant": "Seychelles",
+        "description": "Seychelles",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/SL",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "SL",
+        "constant": "Sierra Leone",
+        "description": "Sierra Leone",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/SG",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "SG",
+        "constant": "Singapore",
+        "description": "Singapore",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/SX",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "SX",
+        "constant": "Sint Maarten",
+        "description": "Sint Maarten",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/SK",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "SK",
+        "constant": "Slovakia",
+        "description": "Slovakia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/SI",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "SI",
+        "constant": "Slovenia",
+        "description": "Slovenia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/SB",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "SB",
+        "constant": "Solomon Islands",
+        "description": "Solomon Islands",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/SO",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "SO",
+        "constant": "Somalia",
+        "description": "Somalia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/ZA",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "ZA",
+        "constant": "South Africa",
+        "description": "South Africa",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/KR",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "KR",
+        "constant": "South Korea",
+        "description": "South Korea",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/SS",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "SS",
+        "constant": "South Sudan",
+        "description": "South Sudan",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/ES",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "ES",
+        "constant": "Spain",
+        "description": "Spain",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/LK",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "LK",
+        "constant": "Sri Lanka",
+        "description": "Sri Lanka",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/SD",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "SD",
+        "constant": "Sudan",
+        "description": "Sudan",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/SR",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "SR",
+        "constant": "Suriname",
+        "description": "Suriname",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/SZ",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "SZ",
+        "constant": "Swaziland",
+        "description": "Swaziland",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/SE",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "SE",
+        "constant": "Sweden",
+        "description": "Sweden",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/CH",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "CH",
+        "constant": "Switzerland",
+        "description": "Switzerland",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/SY",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "SY",
+        "constant": "Syria",
+        "description": "Syria",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/TW",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "TW",
+        "constant": "Taiwan",
+        "description": "Taiwan",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/TJ",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "TJ",
+        "constant": "Tajikistan",
+        "description": "Tajikistan",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/TZ",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "TZ",
+        "constant": "Tanzania",
+        "description": "Tanzania",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/TH",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "TH",
+        "constant": "Thailand",
+        "description": "Thailand",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/MO",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "MO",
+        "constant": "Macau",
+        "description": "Macau",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/TL",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "TL",
+        "constant": "Timor-Leste",
+        "description": "Timor-Leste",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/TG",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "TG",
+        "constant": "Togo",
+        "description": "Togo",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/TK",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "TK",
+        "constant": "Tokelau",
+        "description": "Tokelau",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/TO",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "TO",
+        "constant": "Tonga",
+        "description": "Tonga",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/TT",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "TT",
+        "constant": "Trinidad and Tobago",
+        "description": "Trinidad and Tobago",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/TN",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "TN",
+        "constant": "Tunisia",
+        "description": "Tunisia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/TR",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "TR",
+        "constant": "Turkey",
+        "description": "Turkey",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/TM",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "TM",
+        "constant": "Turkmenistan",
+        "description": "Turkmenistan",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/TC",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "TC",
+        "constant": "Turks and Caicos Islands",
+        "description": "Turks and Caicos Islands",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/TV",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "TV",
+        "constant": "Tuvalu",
+        "description": "Tuvalu",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/VI",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "VI",
+        "constant": "U.S. Virgin Islands",
+        "description": "U.S. Virgin Islands",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/UG",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "UG",
+        "constant": "Uganda",
+        "description": "Uganda",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/UA",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "UA",
+        "constant": "Ukraine",
+        "description": "Ukraine",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/AE",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "AE",
+        "constant": "United Arab Emirates",
+        "description": "United Arab Emirates",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/GB",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "GB",
+        "constant": "United Kingdom",
+        "description": "United Kingdom",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/US",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "US",
+        "constant": "United States",
+        "description": "United States",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/UY",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "UY",
+        "constant": "Uruguay",
+        "description": "Uruguay",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/UZ",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "UZ",
+        "constant": "Uzbekistan",
+        "description": "Uzbekistan",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/VU",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "VU",
+        "constant": "Vanuatu",
+        "description": "Vanuatu",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/VA",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "VA",
+        "constant": "Vatican City",
+        "description": "Vatican City",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/VE",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "VE",
+        "constant": "Venezuela",
+        "description": "Venezuela",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/VN",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "VN",
+        "constant": "Vietnam",
+        "description": "Vietnam",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/WF",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "WF",
+        "constant": "Wallis and Futuna",
+        "description": "Wallis and Futuna",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/YE",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "YE",
+        "constant": "Yemen",
+        "description": "Yemen",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/ZM",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "ZM",
+        "constant": "Zambia",
+        "description": "Zambia",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/ZW",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "ZW",
+        "constant": "Zimbabwe",
+        "description": "Zimbabwe",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      },
+      {
+        "rowKey": "CNTRY/NE",
+        "constantTypeCode": "CNTRY",
+        "constantCode": "NE",
+        "constant": "Niger",
+        "description": "Niger",
+        "modifiedAt": "2018-11-23T10:40:59Z",
+        "ownerId": 627,
+        "active": 1
+      }
+    ]
+  }
+}

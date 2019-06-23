@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: "https://qa-hys-app.iyc.ishafoundation.org:3031/hys/v1/",
+  apiBaseUrl: "http://localhost:4000/", // Make sure that you start the json-server to get API running
   keycloakUrl: "https://qa-keycloak.iyc.ishafoundation.org:8543/auth",
   keycloakRealm: "Isha",
   keycloakClientId: "starterApp"

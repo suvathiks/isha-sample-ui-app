@@ -30,8 +30,7 @@ export const makeUrl = (path: string) => {
 //  * Everywhere that these endpoints are needed, they are imported from here.
 //  */
 export const endpoints = {
-  constantTypes: { fetch: "hysConstant/pullTypes" },
-  constantValues: { fetch: "hysConstant/pullValues" },
+  constants: { fetch: "constants" },
   programs: {
     fetch: "programs/tableProgramSearch",
     create: "programs/create",

@@ -1,42 +1,47 @@
 // Global CSS Variables
 :root {
-  --topnav-height: 45px;
-  --generic-padding: 5px;
-  --search-input-height: 50px;
-  --paginator-height: 50px;
-  --mini-sidenav-width: 40px;
-  --breadcrumb-height: 25px;
-  --isha-orange: #ff851b;
-  --isha-orange-transparent: rgba(255, 119, 0, 0.5);
-  --sidenav-black: rgba(45, 46, 46);
-  --sidenav-icon-size: 25px;
-  --warning-text-color: #9f6000;
+    --topnav-height: 50px;
+    --logout-button-size: 1.5em;
+    --generic-padding: 5px;
+    --search-input-height: 50px;
+    --paginator-height: 50px;
+    --breadcrumb-height: 25px;
+    --isha-orange: #ff8b21;
+    --isha-orange-transparent: rgba(255, 139, 33, 0.8);
+    --isha-orange-transparent-mild: rgba(255, 139, 33, 0.2);
+    --sidenav-black: rgba(45, 46, 46, 1);
+    --sidenav-black-transparent: rgba(45, 46, 46, 0.7);
+    --sidenav-icon-size: 30px;
+    --mini-sidenav-width: 170px;
+    --micro-sidenav-width: 50px;
+    --sidenav-icon-width: 30px;
+    --warning-text-color: #9f6000;
 }
 
 // Setting some global style defaults
 * {
-  margin: 0px;
+    margin: 0px;
 }
 
 // Custom Scrollbar
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+    width: 10px;
+    height: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: rgba(200, 200, 200, 0.1);
+    background: rgba(200, 200, 200, 0.1);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background: darkgrey;
+    border-radius: 5px;
+    background: darkgrey;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: slategrey;
+    background: slategrey;
 }

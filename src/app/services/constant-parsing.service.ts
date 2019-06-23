@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Select, Store } from "@ngxs/store";
-import { ConstantValue } from "./../models/constant.model";
+import { Constant } from "./../models/constant.model";
 import { keyTextValue } from "../models/shared.model";
 import { optionRenderer } from "./../shared/functions/parsing.functions";
 import _ from "lodash";
@@ -10,7 +10,7 @@ import _ from "lodash";
 })
 export class ConstantParsingService {
   parseConstant(
-    constantValues: ConstantValue[],
+    constantValues: Constant[],
     constantTypeCode: string,
     constantCode: string
   ): string {
@@ -21,7 +21,7 @@ export class ConstantParsingService {
     return optionRenderer(constantValueOptions, constantCode);
   }
   getConstantValues = (
-    options: ConstantValue[],
+    options: Constant[],
     code: string
   ): keyTextValue[] => {
     let constantValues = options.filter(o => {

@@ -1,57 +1,78 @@
 #table-footer-wrapper {
-  display: table;
-  width: 100%;
-  height: var(--paginator-height);
+    display: table;
+    width: 100%;
+    height: var(--paginator-height);
 }
 #records-info {
-  display: table-cell;
-  width: 33%;
-  padding: 5px;
-  text-align: left;
-  color: var(--sidenav-black);
+    display: table-cell;
+    width: 33%;
+    padding: 5px;
+    text-align: left;
+    color: var(--sidenav-black);
 }
 
 #pagination-controls {
-  display: table-cell;
-  text-align: center;
-  width: 33%;
-  padding: 2px;
+    display: table-cell;
+    text-align: center;
+    width: 43%;
+    padding: 2px;
 }
 
 #last-block {
-  display: table-cell;
-  width: 33%;
-  visibility: visible;
+    display: table-cell;
+    width: 23%;
+    visibility: visible;
+    max-width: 300px;
 }
 
 .terminal-buttons {
-  font-weight: bold;
-  background-color: rgba(256, 0, 0, 0.1);
-  margin-right: 5px;
+    font-weight: bold;
+    background-color: rgba(256, 0, 0, 0.1);
+    margin-right: 5px;
 }
-@media only screen and (max-width: 768px) {
-  #records-info {
-    width: 40%;
-  }
-  #pagination-controls {
-    width: 60%;
-  }
-  #last-block {
-    width: 0px;
-    visibility: hidden;
-  }
+
+@media only screen and (max-width: 1360px) {
+    #records-info {
+        display: table-row;
+        width: 30%;
+        padding: 5px inherit 5px inherit;
+    }
+    #pagination-controls {
+        display: table-row;
+        width: 40%;
+        padding: 5px inherit 5px inherit;
+    }
+    #last-block {
+        display: table-row;
+        width: 30%;
+        position: absolute;
+        padding: 5px inherit 5px inherit;
+    }
+    #table-footer-wrapper {
+        height: calc(var(--paginator-height) + 100px);
+        padding: 5px;
+        margin-bottom: 10px;
+    }
 }
-@media screen and (max-width: 480px) {
-  #records-info {
-    display: table-row;
-    width: 100%;
-  }
-  #pagination-controls {
-    display: table-row;
-    width: 100%;
-  }
-  #last-block {
-    width: 0px;
-    visibility: hidden;
-  }
+@media screen and (max-width: 992px) {
+    #records-info {
+        display: table-row;
+        width: 100%;
+        padding: 5px inherit 5px inherit;
+    }
+    #pagination-controls {
+        display: table-row;
+        width: 100%;
+        padding: 5px inherit 5px inherit;
+    }
+    #last-block {
+        display: table-row;
+        width: 100%;
+        padding: 5px inherit 5px inherit;
+    }
+    #table-footer-wrapper {
+        height: calc(var(--paginator-height) + 100px);
+        padding: 5px;
+        margin-bottom: 10px;
+    }
 }

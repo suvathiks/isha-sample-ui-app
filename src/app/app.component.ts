@@ -2,7 +2,6 @@ import { Component, HostListener, OnInit } from "@angular/core";
 import { Select, Store } from "@ngxs/store";
 import { Observable } from "rxjs";
 import { Router, NavigationEnd } from "@angular/router";
-import { ConstantType, ConstantValue } from "./models/constant.model";
 import { ConstantState } from "./state/constants/constants.state";
 import { KeycloakState } from "./sdk/features/keycloak/keycloak.state";
 import { FetchConstants } from "./state/constants/constants.actions";

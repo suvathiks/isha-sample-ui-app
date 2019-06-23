@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { makeUrl, endpoints } from "./../../sdk/config/api.config";
-import { ConstantType, ConstantValue } from "./../../models/constant.model";
+import { Constant } from "./../../models/constant.model";
 import { of } from "rxjs";
 import { catchError } from "rxjs/operators";
 
@@ -10,17 +10,10 @@ import { catchError } from "rxjs/operators";
 })
 export class ConstantsService {
   constructor(private http: HttpClient) {}
-  fetchConstantTypes() {
-    const url = makeUrl(endpoints.constantTypes.fetch);
-    return this.http.post(url, null).pipe(catchError((err) => {
-       return of(err)
-      }
-      )
-    );
-  }
-  fetchConstantValues() {
-    const url = makeUrl(endpoints.constantValues.fetch);
-    return this.http.post(url, null).pipe(
+  fetchConstants() {
+    const url = makeUrl(endpoints.constants.fetch);
+    console.log('from constants service', {url});
+    return this.http.get(url).pipe(
         catchError((err) => {
           return of(err);
         })

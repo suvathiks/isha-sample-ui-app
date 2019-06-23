@@ -1,11 +1,4 @@
-export class ConstantType {
-  active: 0 | 1;
-  constantType: string;
-  constantTypeCode: string;
-  description: string;
-}
-
-export class ConstantValue {
+export class Constant {
   active: 0 | 1;
   constant: string;
   constantCode: string;

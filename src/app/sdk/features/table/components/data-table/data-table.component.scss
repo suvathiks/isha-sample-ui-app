@@ -1,117 +1,119 @@
 .title {
-  padding: 0;
-  text-align: center;
+    padding: 0;
+    text-align: center;
 }
 #search-controls {
-  display: table;
-  span {
-    display: table-cell;
-  }
+    display: table;
+    span {
+        display: table-cell;
+    }
 }
 .page-size-control {
-  div {
-    margin-left: 2px;
-    height: 1.3em;
-  }
+    div {
+        margin-left: 2px;
+        height: 1.3em;
+    }
 }
 
 #search-input {
-  padding: 4px;
+    padding: 4px;
 }
 @media screen and (max-width: 768px) {
-  #search-input {
-    width: 10em;
-  }
+    #search-input {
+        width: 10em;
+    }
 }
 
 .third-block {
-  padding: 0px;
-  margin: 0px;
-  width: 33%;
+    padding: 0px;
+    margin: 0px;
+    width: 33%;
 }
 
 .add-button {
-  float: right;
+    float: right;
 }
 
 #ag-grid-style {
-  // See the component file for the injection of --table-height into the DOM element
-  width: 100%;
-  // Calculating height based on 100vh - (topnav height + search input height + paginator height)
-  height: calc(100vh - (50px + 50px + 45px));
-  min-height: 300px;
+    font-size: 1.1em; // Font size of cell text
+    // See the component file for the injection of --table-height into the DOM element
+    width: 100%;
+    min-height: 300px;
 }
 
 :host {
-  // This is all stuff that
-  ::ng-deep {
-    .page-size-control .ui-dropdown-label {
-      padding: 0px 10px;
-      width: 4em;
-      margin-right: 10px;
-      height: 1.3em;
-    }
-    .no-rows-message {
-      width: 200px;
-      padding: 10px;
-      margin-left: auto;
-      margin-right: auto;
-      font-size: 1.1em;
-      font-weight: bold;
-      border: solid var(--warning-text-color) 1px;
-      border-radius: 2px;
-      color: var(--warning-text-color);
-    }
-    .loading-animation {
-      -webkit-animation: flickerAnimation 2s infinite;
-      -moz-animation: flickerAnimation 2s infinite;
-      -o-animation: flickerAnimation 2s infinite;
-      animation: flickerAnimation 2s infinite;
-    }
+    // This is all stuff that
+    ::ng-deep {
+        // Importing custom table styles...
+        @import './../../table-css.style.scss';
 
-    @keyframes flickerAnimation {
-      0% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0.2;
-      }
-      100% {
-        opacity: 1;
-      }
+        .page-size-control .ui-dropdown-label {
+            padding: 0px 10px;
+            width: 4em;
+            margin-right: 10px;
+            height: 1.3em;
+        }
+        .no-rows-message {
+            width: 200px;
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            // font-size: 1.5em;
+            font-weight: bold;
+            border: solid var(--warning-text-color) 1px;
+            border-radius: 2px;
+            color: var(--warning-text-color);
+        }
+        .loading-animation {
+            -webkit-animation: flickerAnimation 2s infinite;
+            -moz-animation: flickerAnimation 2s infinite;
+            -o-animation: flickerAnimation 2s infinite;
+            animation: flickerAnimation 2s infinite;
+        }
+
+        @keyframes flickerAnimation {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.2;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @-o-keyframes flickerAnimation {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.2;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @-moz-keyframes flickerAnimation {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.2;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes flickerAnimation {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.2;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
     }
-    @-o-keyframes flickerAnimation {
-      0% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0.2;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-    @-moz-keyframes flickerAnimation {
-      0% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0.2;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-    @-webkit-keyframes flickerAnimation {
-      0% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0.2;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-  }
 }

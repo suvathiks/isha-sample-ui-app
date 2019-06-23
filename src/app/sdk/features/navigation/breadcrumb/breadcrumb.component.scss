@@ -1,25 +1,33 @@
 .crumb-label {
-  display: table-cell;
-  vertical-align: middle;
-  cursor: default;
+    display: table-cell;
+    vertical-align: middle;
+    cursor: default;
+}
+
+.crumb-divider {
+    display: table-cell;
+    vertical-align: middle;
+    cursor: default;
+    font-size: 1.3em;
+    padding-right: 5px;
 }
 
 .crumb-link {
-  cursor: pointer;
-  &:hover {
-    text-shadow: rgba(0, 0, 0, 0.5) 0.001em 0.001em 0.001em;
-  }
+    cursor: pointer;
+    &:hover {
+        text-shadow: rgba(0, 0, 0, 0.5) 0.001em 0.001em 0.001em;
+    }
 }
 
 .last-crumb {
-  background-color: var(--isha-orange-transparent);
-  font-weight: bold;
-  padding: 0px 10px;
-  margin: 0px;
-  border-radius: 2px;
-  cursor: default;
-  &:hover {
-    color: black;
-    text-shadow: none;
-  }
+    background-color: var(--isha-orange-transparent);
+    font-weight: bold;
+    padding: 0px 10px;
+    margin: 0px;
+    border-radius: 2px;
+    cursor: default;
+    &:hover {
+        color: black;
+        text-shadow: none;
+    }
 }

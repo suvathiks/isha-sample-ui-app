@@ -1,8 +1,14 @@
 <mat-toolbar id="topnav">
-  <img id="logo" class="topnav-item" src="assets/logo/logo.png" routerLink="/" alt="Logo" />
-  <img id="logo-min" class="topnav-item" src="assets/logo/logoMin.png" routerLink="/" alt="Logo Mini" />
-  <app-breadcrumb [currentPath]="currentPath" id="topnav-breadcrumb" class="topnav-item"></app-breadcrumb>
-  <span id="logout-button" class="topnav-item">
-    <i class="material-icons logout" (click)="logout()">logout</i>
-  </span>
+    <img id="logo" src="assets/logo/logo.png" routerLink="/" alt="Logo" />
+    <img id="logo-min" src="assets/logo/logoMin.png" routerLink="/" alt="Logo Mini" />
+    <app-breadcrumb id="topnav-breadcrumb" class="topnav-item"></app-breadcrumb>
+    <div id="session">
+        <!-- <div id="user-icon"><i class="fa fa-user-circle"></i></div> -->
+        <div id="user-info">
+            <div id="name"> {{username}}</div>
+        </div>
+        <div id="logout-button" pTooltip="Logout" tooltipPosition="bottom" showDelay="1000">
+            <i id="logout-icon" class="fa fa-power-off" (click)="logout()"></i>
+        </div>
+    </div>
 </mat-toolbar>

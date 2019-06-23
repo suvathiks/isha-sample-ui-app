@@ -1,70 +1,82 @@
-<!-- Sidebar with hierarchical list of all routes -->
-<p-sidebar [(visible)]="showSidebar" [style]="{background: 'var(--sidenav-black)', border: 'solid var(--sidenav-black) 1px', color: 'white', width:'27em', top: 'var(--topnav-height)', padding: '10px', margin: '0px'}"
-  [showCloseIcon]="false" [modal]="false" styleClass="ui-sidebar-md" (mouseleave)="showSidebar=false" [style.overflow-y]="scroll">
-  <div class="nav-links-container nav-links">
-    <div [routerLink]="homeLink.path" [class.activated]="sidebarActiveLink(homeLink)" (click)="onSidenavLinkClick(homeLink)"
-      class="nav-link">
-      <span class="label-container ">
-        <i class="material-icons">
-          {{homeLink.icon}}
-        </i>&nbsp;
-        <span class="nav-label">{{homeLink.label}}</span>
-      </span>
-    </div>
-    <div *ngFor="let link of navLinks">
-      <div [routerLink]="link.path" [class.activated]="sidebarActiveLink(link)" (click)="onSidenavLinkClick(link)" class="nav-link">
-        <span class="label-container ">
-          <i class="material-icons ">
-            {{link.icon}}
-          </i>
-          &nbsp;
-          <span class="nav-label ">{{link.label}}</span>
-        </span>
-      </div>
-      <div *ngIf="link.label === clickedLink.label && link.children.length">
-        <div *ngFor="let link of childLinks">
-          <div [routerLink]="link.path" [class.activated]="sidebarActiveLink(link)" (click)="onSidenavLinkClick(link)" class="nav-link">
-            <span class="label-container ">
-              &nbsp;&nbsp;&nbsp;
-              <i class="material-icons ">keyboard_arrow_right</i>
-              <i class="material-icons ">
-                {{link.icon}}
-              </i>&nbsp;
-              <span class="nav-label ">{{link.label}}</span>
-            </span>
-          </div>
+<!-- Sidenav with hierarchical list of all routes -->
+<p-sidebar
+    [(visible)]="showSidenav"
+    [style]="{
+        background: 'var(--sidenav-black)',
+        border: 'solid var(--sidenav-black) 1px',
+        color: 'white',
+        width: '27em',
+        height: '100vh',
+        overflow: 'scroll',
+        top: 'var(--topnav-height)',
+        padding: '10px 10px 10px 5px',
+        margin: '0px'
+    }"
+    [showCloseIcon]="false"
+    [modal]="false"
+    styleClass="ui-sidenav-md"
+    (mouseleave)="showSidenav = false"
+>
+    <div>
+        <div *ngFor="let link of navLinks" class="nav-links-container nav-links">
+            <div [routerLink]="link.path" [class.activated]="sidenavActiveLink(link)" (click)="onSidenavLinkClick(link)" class="nav-link">
+                <span class="label-container ">
+                    <i [ngClass]="'fa fa-' + link.icon" aria-hidden="true"></i>
+                    &nbsp;
+                    <span class="nav-label ">{{ link.label }}</span>
+                </span>
+            </div>
+            <div *ngIf="clickedLinks.includes(link) && link.children.length">
+                <div *ngFor="let link of link.children">
+                    <div
+                        [routerLink]="link.path"
+                        (click)="onSidenavLinkClick(link)"
+                        class="nav-link"
+                        [class.activated]="sidenavActiveLink(link)"
+                    >
+                        <span class="label-container ">
+                            &nbsp;&nbsp;&nbsp;
+                            <i class="fa fa-angle-right"></i>
+                            <i [ngClass]="'fa fa-' + link.icon" aria-hidden="true"></i>&nbsp;
+                            <span class="nav-label ">{{ link.label }}</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+        <br />
+        <br />
     </div>
-  </div>
 </p-sidebar>
 
-<!-- Mini sidebar that is unexpanded -->
-<nav id="sidebar" class="mini-nav-links">
-  <div [pTooltip]="homeLink.label">
-    <div [routerLink]="homeLink.path" [class.activated]="sidebarActiveLink(homeLink)" class="mini-nav-link">
-      <i class="material-icons">
-        {{homeLink.icon}}
-      </i>
+<!-- Mini sidenav that is unexpanded. -->
+<nav id="miniSidenav">
+    <div *ngFor="let link of navLinks">
+        <div [pTooltip]="showMicroSidenav ? link.label : null">
+            <div
+                [routerLink]="link.path"
+                (click)="onMiniSidenavLinkClick(link)"
+                [ngClass]="{ 'mini-nav-link': !showMicroSidenav, 'micro-nav-link': showMicroSidenav }"
+                [class.activated]="sidenavMiniActiveLink(link)"
+            >
+                <span class="label-container">
+                    <i [ngClass]="'fa fa-' + link.icon" aria-hidden="true"></i>
+                    <span *ngIf="!showMicroSidenav" class="nav-label">&nbsp;{{ link.label }}</span>
+                </span>
+            </div>
+        </div>
     </div>
-  </div>
-  <div *ngFor="let link of navLinks">
-    <div [pTooltip]="link.label">
-      <div [routerLink]="link.path" [class.activated]="sidebarActiveLink(link)" (click)="onMiniSidenavLinkClick(link)" class="mini-nav-link">
-        <i class="material-icons">
-          {{link.icon}}
-        </i>
-      </div>
+    <div id="microSidenavToggle" (click)="toggleMicroSidenav()" [pTooltip]="showMicroSidenav ? 'Show labels' : 'Hide labels'" showDelay="1000">
+        <i class="fa" [ngClass]="{ 'fa-arrow-right': showMicroSidenav, 'fa-arrow-left': !showMicroSidenav }"></i>
     </div>
-  </div>
 </nav>
 
-<!-- Sidebar puller on mobile view -->
+<!-- Sidenav puller on mobile view -->
 <div id="mobile-sidenav-puller">
-  <div (click)="showSidebar=true" *ngIf="!showSidebar">
-    <i class="material-icons">arrow_forward</i>
-  </div>
-  <div (click)="showSidebar=false" *ngIf="showSidebar">
-    <i class="material-icons" *ngIf="showSidebar">arrow_backward</i>
-  </div>
+    <div (click)="showSidenav = true" *ngIf="!showSidenav">
+        <i class="fa fa-arrow-right"></i>
+    </div>
+    <div (click)="showSidenav = false" *ngIf="showSidenav">
+        <i class="fa fa-arrow-left"></i>
+    </div>
 </div>

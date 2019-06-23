@@ -1,0 +1,23 @@
+.ag-theme-fresh .ag-root {
+    border: 1px solid black;
+    border-radius: 2px;
+}
+.ag-theme-fresh .ag-row-odd {
+    background: rgba(150, 150, 150, 0.1);
+}
+.ag-theme-fresh .ag-header {
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    font-size: 1.1em;
+    color: white;
+    font-weight: bold;
+    background: var(--sidenav-black);
+}
+.ag-theme-fresh .ag-header-cell {
+    border-right: 1px solid white;
+    padding-left: 10px;
+}
+.ag-theme-fresh .ag-cell {
+    padding-left: 10px;
+}

@@ -47,6 +47,10 @@ export class KeycloakState {
   static loggingOut(state: KeycloakStateModel) {
     return state.loggingOut;
   }
+  @Selector()
+  static username(state:KeycloakStateModel) {
+    return state.keycloakName;
+  }
 
   @Action(Login)
   login({ getState }: StateContext<KeycloakStateModel>) {

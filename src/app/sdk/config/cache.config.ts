@@ -11,13 +11,7 @@ export const defaultExpiry = 3600;
 export const cacheWhitelist: cacheableItem[] = [
   {
     name: "constantTypes",
-    apiPath: endpoints.constantTypes.fetch,
-    invalidatedBy: [],
-    expiresIn: 3600 * 24 * 7 * 4
-  },
-  {
-    name: "constantValues",
-    apiPath: endpoints.constantValues.fetch,
+    apiPath: endpoints.constants.fetch,
     invalidatedBy: [],
     expiresIn: 3600 * 24 * 7 * 4
   },
