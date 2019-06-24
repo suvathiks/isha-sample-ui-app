@@ -2,19 +2,16 @@ import { Component, Input, OnInit } from "@angular/core";
 import { Select, Store } from "@ngxs/store";
 import { Observable } from "rxjs";
 import {
-  ProgramsService,
+  ContactsService,
   SearchParams,
   fetchResponse
-} from "./../../../../services/api/programs.service";
-import { Program } from "./../../../../models/program.model";
+} from "./../../../../services/api/contacts.service";
+import { Contact } from "./../../../../models/contact.model";
 import { SdkTableColumn } from "./../../../../sdk/features/table/table.model";
-import { ProgramState } from "./../../../../state/programs/program.state";
+import { ContactState } from "./../../../../state/contacts/contacts.state";
 import { ConstantState } from "./../../../../state/constants/constants.state";
-import { FetchPrograms } from "./../../../../state/programs/program.actions";
-import {
-  programType,
-  country
-} from "./../../../../shared/constants/constantTypeCodes";
+import { FetchContacts } from "./../../../../state/contacts/contacts.actions";
+import { country } from "./../../../../shared/constants/constantTypeCodes";
 import {
   parseDate,
   parseDateTime
@@ -26,24 +23,24 @@ import { Router } from "@angular/router";
 import { EditButtonRenderer } from "./../cell-renderers/cell-renderers.component";
 
 @Component({
-  selector: "app-programs",
-  templateUrl: "./programs.component.html",
-  styleUrls: ["./programs.component.scss"]
+  selector: "app-contacts",
+  templateUrl: "./contacts.component.html",
+  styleUrls: ["./contacts.component.scss"]
 })
-export class ProgramsComponent {
+export class ContactsComponent {
   @Select(ConstantState.constantValues)
   constantValues$: Observable<Constant[]>;
-  @Select(ProgramState.programs)
+  @Select(ContactState.contacts)
   rows$: Observable<any[]>;
   rows: any[];
-  @Select(ProgramState.totalRecords)
+  @Select(ContactState.totalRecords)
   totalRecords$: Observable<number>;
-  @Select(ProgramState.isFetching)
+  @Select(ContactState.isFetching)
   loading$: Observable<boolean>;
   constantValues: Constant[] = [];
-  tableId = "Program Master";
-  addRoute = "/programs/add-edit";
-  addLabel = "Add Program";
+  tableId = "Contact Master";
+  addRoute = "/contacts/add-edit";
+  addLabel = "Add Contact";
   searchParams = new SearchParams();
   tableHeight: string = "80vh";
   rowHeight: number = 36;
@@ -61,24 +58,20 @@ export class ProgramsComponent {
   };
   columns: SdkTableColumn[] = [
     {
-      field: "programName",
-      headerName: `Name`,
-      pinned: "left",
+      field: "firstName",
+      headerName: `First Name`,
       sortable: true,
       resizable: true
     },
     {
-      field: "programType",
-      headerName: "Type",
-      cellRenderer: params => {
-        return this.parseConstant(programType, params.value);
-      },
+      field: "lastName",
+      headerName: `Last Name`,
       sortable: true,
       resizable: true
     },
     {
-      field: "startDate",
-      headerName: "Start",
+      field: "dob",
+      headerName: "Date of Birth",
       cellRenderer: params => {
         return parseDate(params.value);
       },
@@ -86,17 +79,16 @@ export class ProgramsComponent {
       resizable: true
     },
     {
-      field: "endDate",
-      headerName: "End",
-      cellRenderer: params => {
-        return parseDate(params.value);
-      },
+      field: "email",
+      headerName: "Email",
       sortable: true,
       resizable: true
     },
     {
-      field: "venue",
-      headerName: "Venue"
+      field: "phone",
+      headerName: "Phone",
+      sortable: true,
+      resizable: true
     },
     {
       field: "city",
@@ -118,24 +110,13 @@ export class ProgramsComponent {
       },
       sortable: true,
       resizable: true
-    },
-    {
-      field: "modifiedAt",
-      headerName: "Last Modified",
-      cellRenderer: params => {
-        return parseLastModified(params.value);
-      },
-      tooltipValueGetter: params => {
-        return parseDateTime(params.value);
-      },
-      sortable: true,
-      resizable: true
     }
   ];
-  fetchPrograms(searchParams) {
-    this.store.dispatch(new FetchPrograms(searchParams));
+  fetchContacts(searchParams) {
+    this.store.dispatch(new FetchContacts(searchParams));
   }
   parseConstant(constantTypeCode, constantCode): string {
+    console.log('from parseConstant', {constantTypeCode, constantCode, result: this.constantService.parseConstant(this.constantValues, constantTypeCode, constantCode)});
     return this.constantService.parseConstant(
       this.constantValues,
       constantTypeCode,
@@ -145,7 +126,7 @@ export class ProgramsComponent {
 
   constructor(
     private store: Store,
-    private programsService: ProgramsService,
+    private contactsService: ContactsService,
     private constantService: ConstantParsingService,
     private router: Router
   ) {
@@ -161,5 +142,7 @@ export class ProgramsComponent {
     }
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.fetchContacts(this.searchParams);
+  }
 }

@@ -6,49 +6,48 @@ import { MessageService } from "primeng/api";
 import { Store, Select } from "@ngxs/store";
 import { ComponentCanDeactivate } from "./can-deactivate.guard";
 import {
-  ProgramState,
-  ProgramStateModel,
-  defaultProgramState,
-  formIdProgram
-} from "./../../../../state/programs/program.state";
-import { Program } from "./../../../../models/program.model";
+  ContactState,
+  ContactStateModel,
+  defaultContactState,
+  formIdContact
+} from "./../../../../state/contacts/contacts.state";
+import { Contact } from "./../../../../models/contact.model";
 import { ConstantParsingService } from "./../../../../services/constant-parsing.service";
 import { ConstantState } from "./../../../../state/constants/constants.state";
 import {
-  programType,
   country
 } from "./../../../../shared/constants/constantTypeCodes";
 import { Constant } from "./../../../../models/constant.model";
-import { ProgramFormCreator } from "./program.form";
+import { ContactFormCreator } from "./contact.form";
 import {FormCloseChecker} from './../../../../sdk/features/master-form/services/form-close-checker.service';
 
 
-export const formRouteProgram = "/programs/add-edit";
-export const formCloseNavigationRouteProgram = "/programs";
+export const formRouteContact = "/contacts/add-edit";
+export const formCloseNavigationRouteContact = "/contacts";
 
 @Component({
-  selector: "app-add-program",
-  templateUrl: "./add-program.component.html",
-  styleUrls: ["./add-program.component.scss"]
+  selector: "app-add-contact",
+  templateUrl: "./add-contact.component.html",
+  styleUrls: ["./add-contact.component.scss"]
 })
-export class AddEditProgramComponent implements OnInit {
-  formId: string = formIdProgram;
-  formCloseNavigationRoute: string = formCloseNavigationRouteProgram;
-  programForm: FormGroup = this.programFormCreator.generateProgramForm(
-    new Program()
+export class AddEditContactComponent implements OnInit {
+  formId: string = formIdContact;
+  formCloseNavigationRoute: string = formCloseNavigationRouteContact;
+  contactForm: FormGroup = this.contactFormCreator.generateContactForm(
+    new Contact()
   );
   submittingForm: boolean = false;
   formSubmitted: boolean = false;
   showNotification: string;
   notificationMessage: string;
-  @Select(ProgramState.state) programState$: Observable<ProgramStateModel>;
-  programState: ProgramStateModel = new ProgramStateModel();
+  @Select(ContactState.state) contactState$: Observable<ContactStateModel>;
+  contactState: ContactStateModel = new ContactStateModel();
   @Select(ConstantState.constantValues)
   constantValues$: Observable<Constant[]>;
   constantValues: Constant[] = [];
-  editingProgramForm: Program;
+  editingContactForm: Contact;
   recordId: number | "NEW";
-  programOptions;
+  contactOptions;
   countryOptions;
   fieldParams = {};
 
@@ -75,7 +74,7 @@ export class AddEditProgramComponent implements OnInit {
    * Checks whether form can be closed safely
    */
   formCanClose(): boolean {
-    return this.formCloseChecker.formCanClose(this.programForm, this.formSubmitted);
+    return this.formCloseChecker.formCanClose(this.contactForm, this.formSubmitted);
   }
 
   ngOnInit(): void {}
@@ -85,34 +84,29 @@ export class AddEditProgramComponent implements OnInit {
     private messageService: MessageService,
     private store: Store,
     private constantService: ConstantParsingService,
-    private programFormCreator: ProgramFormCreator,
+    private contactFormCreator: ContactFormCreator,
     private formCloseChecker: FormCloseChecker,
   ) {
-    this.programState$.subscribe(latestState => {
-      this.editingProgramForm = latestState.programForm.model;
+    this.contactState$.subscribe(latestState => {
+      this.editingContactForm = latestState.contactForm.model;
       this.submittingForm = latestState.submittingForm;
       this.formSubmitted = latestState.formSubmitted;
-      this.recordId = this.editingProgramForm.programId;
+      this.recordId = this.editingContactForm.id;
       this.showNotification = latestState.showNotification;
       this.notificationMessage = latestState.notificationMessage;
-      this.programState = latestState;
+      this.contactState = latestState;
     });
-    this.programForm = this.programFormCreator.generateProgramForm(
-      this.editingProgramForm
+    this.contactForm = this.contactFormCreator.generateContactForm(
+      this.editingContactForm
     );
 
     this.constantValues$.subscribe(value => {
       this.constantValues = value;
-      let programOptions = this.constantService.getConstantValues(
-        this.constantValues,
-        programType
-      );
       let countries = this.constantService.getConstantValues(
         this.constantValues,
         country
       );
       this.countryOptions = this.prepareDropdownOptions(countries);
-      this.programOptions = this.prepareDropdownOptions(programOptions);
     });
   }
 

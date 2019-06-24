@@ -31,9 +31,7 @@ export const makeUrl = (path: string) => {
 //  */
 export const endpoints = {
   constants: { fetch: "constants" },
-  programs: {
-    fetch: "programs/tableProgramSearch",
-    create: "programs/create",
-    update: "programs/update"
+  contacts: {
+    fetch: "contacts",
   }
 };

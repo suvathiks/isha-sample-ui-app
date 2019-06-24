@@ -68,7 +68,7 @@ export class MasterFormComponent implements OnInit {
     this.store.dispatch(new SetForm(formId, recordId));
   }
 
-  submitProgram(form) {
+  submitContact(form) {
     (<any>Object).values(this.Form.controls).forEach(control => {
       control.markAsDirty();
     });

@@ -18,14 +18,14 @@ export const sitemap: Link[] = [
     icon: "certificate",
     children: [
       {
-        label: "Programs",
-        path: "programs/",
+        label: "Contacts",
+        path: "contacts/",
         icon: "certificate",
         children: []
       },
       {
-        label: "Add Program",
-        path: "programs/add-edit",
+        label: "Add Contact",
+        path: "contacts/add-edit",
         icon: "plus",
         children: []
       }
@@ -34,14 +34,14 @@ export const sitemap: Link[] = [
   {
     label: "Example Form",
 
-    path: "programs/add-edit",
+    path: "contacts/add-edit",
     icon: "plus",
     children: []
   },
   {
     label: "Example Table",
 
-    path: "programs/",
+    path: "contacts/",
     icon: "file-alt",
     children: []
   },

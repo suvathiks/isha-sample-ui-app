@@ -2,16 +2,16 @@
     <p-dialog header="Title" [minHeight]="auto" [(visible)]="displayDialog" draggable="false" resizable="false">
         Unsaved changes will be lost, Do you want to continue ?
         <p-footer>
-            <p-button label="Yes" (click)="cancelForm('/programs')"></p-button>
+            <p-button label="Yes" (click)="cancelForm('/contacts')"></p-button>
             <p-button label="No" (click)="displayDialog = false;"></p-button>
         </p-footer>
     </p-dialog>
     <p-panel>
         <p-header>
             <div class="ui-helper-clearfix">
-                <span class="ui-panel-title" style="font-size:16px;display:inline-block;margin-top:2px">Add/ Edit Program</span>
+                <span class="ui-panel-title" style="font-size:16px;display:inline-block;margin-top:2px">Add/ Edit Contact</span>
                 <button style="float:right; margin-left: 5px;" pButton type="button" (click)="cancelForm()" label="Cancel"></button>
-                <button style="float:right; height: 33px;" pButton type="submit" (click)="submitProgram()" label="{{submittingForm ? 'Saving...' : 'Save'}}"></button>
+                <button style="float:right; height: 33px;" pButton type="submit" (click)="submitContact()" label="{{submittingForm ? 'Saving...' : 'Save'}}"></button>
             </div>
         </p-header>
         <ng-template [ngTemplateOutlet]="formRef"></ng-template>

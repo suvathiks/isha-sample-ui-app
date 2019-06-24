@@ -16,9 +16,9 @@ export const cacheWhitelist: cacheableItem[] = [
     expiresIn: 3600 * 24 * 7 * 4
   },
   {
-    name: "programs",
-    apiPath: endpoints.programs.fetch,
-    invalidatedBy: [endpoints.programs.create, endpoints.programs.update],
+    name: "contacts",
+    apiPath: endpoints.contacts.fetch,
+    invalidatedBy: [],
     expiresIn: 3600
   }
 ];

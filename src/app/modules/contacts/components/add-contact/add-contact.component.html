@@ -1,14 +1,14 @@
 <app-master-form
     [formId]="formId"
     [recordId]="recordId"
-    [Form]="programForm"
+    [Form]="ContactForm"
     [formSubmitted]="formSubmitted"
     [submittingForm]="submittingForm"
     [showNotification]="showNotification"
     [notificationMessage]="notificationMessage"
     [formCloseNavigationRoute]="formCloseNavigationRoute">
 <ng-template #formRef>
-        <form class="form-tag" [formGroup]="programForm" novalidate ngxsForm="programs.programForm" >
+        <form class="form-tag" [formGroup]="ContactForm" novalidate ngxsForm="Contacts.ContactForm" >
         </form>
     </ng-template>
 </app-master-form>

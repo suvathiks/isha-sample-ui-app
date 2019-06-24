@@ -3,32 +3,34 @@ import { HttpClient } from "@angular/common/http";
 import { of } from "rxjs";
 import { catchError } from "rxjs/operators";
 import { makeUrl, endpoints } from "./../../sdk/config/api.config";
-import { Program } from "./../../models/program.model";
+import { Contact } from "./../../models/contact.model";
 
 @Injectable({
   providedIn: "root"
 })
-export class ProgramsService {
+export class ContactsService {
   constructor(private http: HttpClient) {}
 
-  fetchPrograms(searchParams) {
-    const url = makeUrl(endpoints.programs.fetch);
-    return this.http.post(url, searchParams).pipe(catchError((err, caught) => of(err))
-    );
+  fetchContacts(searchParams) {
+    const url = makeUrl(endpoints.contacts.fetch);
+    return this.http
+      .get(url)
+      .pipe(catchError((err, caught) => of(err)));
   }
 
-  createProgram(programData: Program) {
-    let url = makeUrl(endpoints.programs.create);
-    return this.http.post(url, programData).pipe(catchError((err, caught) => of(err))
-    );
+  createContact(contactData: Contact) {
+    let url = makeUrl(endpoints.contacts.fetch);
+    return this.http
+      .post(url, contactData)
+      .pipe(catchError((err, caught) => of(err)));
   }
 
-  updateProgram(programData: Program) {
-    let url = makeUrl(endpoints.programs.update);
-    return this.http.post(url, programData).pipe(
-     catchError((err, caught) => {
-       return of(err)}
-      )
+  updateContact(contactData: Contact) {
+    let url = makeUrl(endpoints.contacts.fetch);
+    return this.http.put(url, contactData).pipe(
+      catchError((err, caught) => {
+        return of(err);
+      })
     );
   }
 }
@@ -37,32 +39,32 @@ export class SearchParams {
   searchQuery: string = "";
   pageNumber: number = 1;
   pageSize: number = 50;
-  sortField: string = "programId";
+  sortField: string = "contactId";
   sortOrder: string = "DESC";
   activeStatusFilter: string = "ACTIVE";
   filter: any = null;
-  programId: number | null = null;
+  contactId: number | null = null;
   ownerId: number | null = null;
   dontSendPhoto: boolean = false;
 }
 
 export interface fetchResponse {
   totalRecords?: number;
-  programs?: Program[];
+  contacts?: Contact[];
   ok: boolean;
   message: string;
 }
 
 export interface addResponse {
   message: string;
-  programId?: number;
+  contactId?: number;
   code?: number;
   detailedMessage?: string;
 }
 
 export interface updateResponse {
   message: string;
-  programId?: number;
+  contactId?: number;
   code?: number;
   detailedMessage?: string;
 }

@@ -7,7 +7,7 @@ import { SdkModule } from "./sdk/sdk.module";
 import { NgxsModule } from "@ngxs/store";
 import { NgxsReduxDevtoolsPluginModule } from "@ngxs/devtools-plugin";
 import { HomeModule } from "./modules/home/home.module";
-import { ProgramState } from "./state/programs/program.state";
+import { ContactState } from "./state/contacts/contacts.state";
 import { environment } from "../environments/environment";
 import { ConstantParsingService } from "./services/constant-parsing.service";
 import { HttpClientModule } from '@angular/common/http';
@@ -19,7 +19,7 @@ import { ConstantState } from './state/constants/constants.state';
     BrowserModule,
     AppRoutingModule,
     NgxsReduxDevtoolsPluginModule.forRoot(),
-    NgxsModule.forRoot([ConstantState, ProgramState], {
+    NgxsModule.forRoot([ConstantState, ContactState], {
       developmentMode: !environment.production
     }),
     // HttpClientModule,

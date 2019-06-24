@@ -3,13 +3,13 @@ import { CommonModule } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NgxsFormPluginModule } from "@ngxs/form-plugin";
 import { AgGridModule } from "ag-grid-angular";
-import { PendingChangesGuard } from "./components/add-program/can-deactivate.guard";
+import { PendingChangesGuard } from "./components/add-contact/can-deactivate.guard";
 
-import { ProgramsComponent } from "./components/programs/programs.component";
-import { AddEditProgramComponent } from "./components/add-program/add-program.component";
+import { ContactsComponent } from "./components/contacts/contacts.component";
+import { AddEditContactComponent } from "./components/add-contact/add-contact.component";
 import { TableModule } from "./../../sdk/features/table/table.module";
-import { ProgramsRoutingModule } from "./programs.routing";
-import { ProgramsStylingModule } from "./programs.styling.imports";
+import { ContactsRoutingModule } from "./contacts.routing";
+import { ContactsStylingModule } from "./contacts.styling.imports";
 import { MessageService } from "primeng/api";
 import { FormFieldComponent } from "./components/form-fields/form-fields.component";
 import { MasterFormModule } from "./../../sdk/features/master-form/master-form.module";
@@ -17,8 +17,8 @@ import { EditButtonRenderer } from "./components/cell-renderers/cell-renderers.c
 
 @NgModule({
   declarations: [
-    ProgramsComponent,
-    AddEditProgramComponent,
+    ContactsComponent,
+    AddEditContactComponent,
     FormFieldComponent,
     EditButtonRenderer
   ],
@@ -30,9 +30,9 @@ import { EditButtonRenderer } from "./components/cell-renderers/cell-renderers.c
     NgxsFormPluginModule,
     TableModule,
     AgGridModule.withComponents([EditButtonRenderer]),
-    ProgramsStylingModule,
-    ProgramsRoutingModule
+    ContactsStylingModule,
+    ContactsRoutingModule
   ],
   providers: [PendingChangesGuard, MessageService]
 })
-export class ProgramsModule {}
+export class ContactsModule {}

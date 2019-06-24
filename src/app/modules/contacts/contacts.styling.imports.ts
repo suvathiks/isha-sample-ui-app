@@ -44,4 +44,4 @@ import { MatFormFieldModule } from "@angular/material/form-field";
   ]
 })
 /**@ignore */
-export class ProgramsStylingModule {}
+export class ContactsStylingModule {}

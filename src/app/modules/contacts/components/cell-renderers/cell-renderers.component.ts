@@ -2,9 +2,9 @@ import { Component } from "@angular/core";
 import { ICellRendererAngularComp } from "ag-grid-angular";
 import { Store } from "@ngxs/store";
 import { SetForm } from "./../../../../sdk/features/master-form/master-form.actions";
-import { formIdProgram } from "./../../../../state/programs/program.state";
+import { formIdContact } from "./../../../../state/contacts/contacts.state";
 import { Router } from "@angular/router";
-import { formRouteProgram } from "./../add-program/add-program.component";
+import { formRouteContact } from "./../add-contact/add-contact.component";
 
 @Component({
   selector: "edit-button",
@@ -16,12 +16,12 @@ import { formRouteProgram } from "./../add-program/add-program.component";
 })
 export class EditButtonRenderer {
   private params: any;
-  private formId: string = formIdProgram;
-  private formRoute: string = formRouteProgram;
+  private formId: string = formIdContact;
+  private formRoute: string = formRouteContact;
   private recordId: number | "NEW" = "NEW";
   agInit(params: any): void {
     this.params = params;
-    this.recordId = this.params.data.programId;
+    this.recordId = this.params.data.contactId;
   }
 
   public onEdit(): void {

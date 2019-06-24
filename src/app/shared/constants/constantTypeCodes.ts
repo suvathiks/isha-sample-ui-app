@@ -1,4 +1,4 @@
-export const programType = "PRGTP";
+export const contactType = "PRGTP";
 export const country = "CNTRY";
 export const noteCategory = "NTSCAT";
 export const noteSubCategory = "NTSSBCAT";
@@ -17,8 +17,8 @@ export const majorError = "MGRERRS";
 export const paType = "PATYPE";
 export const paNature = "PANATURE";
 export const paStatus = "PASTATUS";
-export const nonProgramType = "NN-PRGRM";
-export const programRole = "RGTG";
+export const nonContactType = "NN-PRGRM";
+export const contactRole = "RGTG";
 export const batch = "HYSBTH";
 export const status = "STTS";
 export const skillSet = "SKLL_STS";

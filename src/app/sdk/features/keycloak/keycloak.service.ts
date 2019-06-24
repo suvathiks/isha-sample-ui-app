@@ -23,9 +23,9 @@ declare let Keycloak: any;
   providedIn: "root"
 })
 export class KeycloakService {
-  public keycloakAuth;
+  public keycloakAuth: any;
+  private timer: any;
   init(): Promise<any> {
-    console.log("Authenticating...");
     this.keycloakAuth = new Keycloak(keycloakConfig);
     return this.keycloakAuth
       .init({ onLoad: "login-required", checkLoginIframe: false })
@@ -35,7 +35,7 @@ export class KeycloakService {
       })
       .error(() => {
         console.log("Authentication failed");
-        // this.updateLoadingText("Authentication failed!");
+        this.loginFail();
       });
   }
   loginSuccess(): void {
@@ -45,6 +45,9 @@ export class KeycloakService {
     const keycloakUid = this.keycloakAuth.idTokenParsed.jti;
     this.store.dispatch(new LoginSuccess(token, email, keycloakUid, name));
   }
+  /**
+   * Checks if the token is refreshed, and then updates it if it is.
+   */
   refreshToken = () => {
     this.keycloakAuth
       .updateToken(30)
@@ -73,6 +76,11 @@ export class KeycloakService {
   logOut(): void {
     this.keycloakAuth.logout();
   }
-  public constructor(private store: Store, private zone: NgZone) {
+  ngOnDestroy() {
+    clearInterval(this.timer);
+  }
+  public constructor(private store: Store) {
+    let timer = setInterval(this.refreshToken, 10000);
+    this.timer = timer;
   }
 }

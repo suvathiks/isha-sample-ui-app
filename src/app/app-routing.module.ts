@@ -4,8 +4,8 @@ import { Routes, RouterModule } from "@angular/router";
 export const routes: Routes = [
   { path: "", loadChildren: "./modules/home/home.module#HomeModule" },
   {
-    path: "programs",
-    loadChildren: "./modules/programs/programs.module#ProgramsModule"
+    path: "contacts",
+    loadChildren: "./modules/contacts/contacts.module#ContactsModule"
   },
   {
     path: "",
