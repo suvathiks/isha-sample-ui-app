@@ -12,6 +12,11 @@ import { environment } from "./../../../../environments/environment";
 const keycloakUrl = environment.keycloakUrl;
 const keycloakRealm = environment.keycloakRealm;
 const keycloakClientId = environment.keycloakClientId;
+const keycloakConfig = {
+  url: keycloakUrl,
+  realm: keycloakRealm,
+  clientId: keycloakClientId
+};
 declare let Keycloak: any;
 
 @Injectable({
@@ -21,29 +26,17 @@ export class KeycloakService {
   public keycloakAuth: any;
   private timer: any;
   init(): Promise<any> {
-    return new Promise((resolve, reject) => {
-      this.zone.runOutsideAngular(() => {
-        const config = {
-          url: keycloakUrl,
-          realm: keycloakRealm,
-          clientId: keycloakClientId
-        };
-        this.keycloakAuth = new Keycloak(config);
-        this.keycloakAuth
-          .init({ onLoad: "login-required" })
+        this.keycloakAuth = new Keycloak(keycloakConfig);
+        return this.keycloakAuth
+          .init({ onLoad: "login-required", checkLoginIframe: false  })
           .success(() => {
             console.log("Authenticated successfully");
             this.loginSuccess();
-
-            resolve();
           })
           .error(() => {
             console.log("Authentication failed");
             this.loginFail();
-            reject();
           });
-      });
-    });
   }
   loginSuccess(): void {
     const token = this.keycloakAuth.token;
@@ -52,6 +45,9 @@ export class KeycloakService {
     const keycloakUid = this.keycloakAuth.idTokenParsed.jti;
     this.store.dispatch(new LoginSuccess(token, email, keycloakUid, name));
   }
+  /**
+   * Checks if the token is refreshed, and then updates it if it is.
+   */
   refreshToken = () => {
     this.keycloakAuth
       .updateToken(30)
@@ -83,7 +79,7 @@ export class KeycloakService {
   ngOnDestroy() {
     clearInterval(this.timer);
   }
-  public constructor(private store: Store, private zone: NgZone) {
+  public constructor(private store: Store) {
     let timer = setInterval(this.refreshToken, 10000);
     this.timer = timer;
   }
