@@ -17,7 +17,7 @@ import {
   addResponse,
   updateResponse
 } from "./../../services/api/contacts.service";
-import { HttpErrorResponse } from "@angular/common/http";
+import { HttpErrorResponse, HttpResponse } from "@angular/common/http";
 import { ContactFormCreator } from "../../modules/contacts/components/add-contact/contact.form";
 
 type NgxsForm = {
@@ -97,13 +97,19 @@ export class ContactState {
     });
     this.contactsService
       .fetchContacts(searchParams)
-      .subscribe((res) => {
+      .subscribe((res: HttpResponse<any>) => {
+        if (res.ok) {
           setState({
             ...state,
-            contacts: res,
-            totalRecords: res.length,
+            contacts: res.body,
+            totalRecords: parseInt(res.headers.get('X-Total-Count'), 10),
             isFetching: false
           });
+        } else {
+          patchState({
+            isFetching: false
+          });
+        }
       });
   }
 

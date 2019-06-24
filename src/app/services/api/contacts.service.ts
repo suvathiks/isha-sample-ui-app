@@ -12,9 +12,14 @@ export class ContactsService {
   constructor(private http: HttpClient) {}
 
   fetchContacts(searchParams) {
-    const url = makeUrl(endpoints.contacts.fetch);
+    console.log("from fetchContacts", { searchParams });
+    // ?_page=7&_limit=20
+    const url =
+      makeUrl(endpoints.contacts.fetch) +
+      `?_page=${searchParams.pageNumber}&_limit=${searchParams.pageSize}`;
+
     return this.http
-      .get(url)
+      .get(url, { observe: "response" })
       .pipe(catchError((err, caught) => of(err)));
   }
 

@@ -116,7 +116,6 @@ export class ContactsComponent {
     this.store.dispatch(new FetchContacts(searchParams));
   }
   parseConstant(constantTypeCode, constantCode): string {
-    console.log('from parseConstant', {constantTypeCode, constantCode, result: this.constantService.parseConstant(this.constantValues, constantTypeCode, constantCode)});
     return this.constantService.parseConstant(
       this.constantValues,
       constantTypeCode,

@@ -1,20 +1,6 @@
-import { SdkTableColumn, ColWidth, AppListParams } from './table.model';
+import { SdkTableColumn, ColWidth } from './table.model';
 import { minute, hour, day, week, month, year } from './table.constants';
-import { ListParams } from './table.model';
-
-/**
- * Parses the SDK's search query terms into application specific param terms
- * @param listParams
- */
-export const parseListParams = (listParams: ListParams): AppListParams => {
-    const page = listParams.pageNumber - 1;
-    const size = listParams.pageSize;
-    const sortField = listParams.sortField;
-    const sortOrder = listParams.sortOrder;
-    const sort = sortField && sortOrder ? [`${sortField},${sortOrder}`] : [];
-    const newListParams = { page, size, sort };
-    return newListParams;
-};
+import { SearchParams } from './table.model';
 
 /**
  * Takes in column width of newly resized column and
@@ -79,7 +65,7 @@ export const customWidthsExist = (table: string): boolean => {
 };
 
 export const parseDateTime = (dateTime: string) => {
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const months = ['Jan', 'Feb', 'Mar', 'apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const newDate = new Date(dateTime);
     const m = newDate.getMonth(); // returns 6 (note that this number is one less than the number of the month in isoformat)
     const d = newDate.getDate(); // returns 15

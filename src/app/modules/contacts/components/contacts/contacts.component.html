@@ -7,7 +7,7 @@
   [totalRecords]="totalRecords$ | async" 
   [tableHeightStatic]="tableHeight" 
   [rowHeight]="rowHeight" 
+  (fetchDataCallback)="fetchContacts($event[0])"
+  [searchParams]="searchParams" 
   [frameworkComponents]="frameworkComponents">
 </app-data-table>
-<!-- (fetchDataCallback)="fetchContacts($event[0])" -->
-<!-- [searchParams]="searchParams"  -->

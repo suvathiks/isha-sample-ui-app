@@ -12,7 +12,6 @@ export class ConstantsService {
   constructor(private http: HttpClient) {}
   fetchConstants() {
     const url = makeUrl(endpoints.constants.fetch);
-    console.log('from constants service', {url});
     return this.http.get(url).pipe(
         catchError((err) => {
           return of(err);

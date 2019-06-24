@@ -1,8 +1,8 @@
 import { Component, Input, Output, EventEmitter, HostBinding } from '@angular/core';
 import { Observable } from 'rxjs';
 import { DomSanitizer } from '@angular/platform-browser';
-import { SdkTableColumn, ColWidth, ListParams } from './../../table.model';
-import { setColumnWidthsFromLocalStorage, updateColumnWidth, customWidthsExist, parseListParams } from './../../table.functions';
+import { SdkTableColumn, ColWidth, SearchParams } from './../../table.model';
+import { setColumnWidthsFromLocalStorage, updateColumnWidth, customWidthsExist } from './../../table.functions';
 import { pageSizeOptions } from './../../../../config/table.config';
 import { get } from 'lodash';
 
@@ -18,14 +18,14 @@ export class DataTableComponent {
     private gridColumnApi;
     overlayLoadingTemplate = `<div class="loading-animation">Loading...</div>`;
     overlayNoRowsTemplate = `<div></div>`;
-    private originalListParams;
+    private originalSearchParams;
     private pageSizeOptions: Array<Object> = pageSizeOptions;
     staticTable = true;
     @Input() frameworkComponents: Object;
     @Input() tableId = '';
     @Input() addRoute = '';
     @Input() addLabel = '';
-    @Input() searchParams: ListParams = new ListParams();
+    @Input() searchParams: SearchParams = new SearchParams();
     @Output() fetchDataCallback: EventEmitter<any> = new EventEmitter();
     @Input() columns: SdkTableColumn[] = [];
     @Input() rows: any[] = [];
@@ -96,14 +96,11 @@ export class DataTableComponent {
             this.staticTable = false;
             // If a callback function exists, then show loadingOverlay and then emit that callback function
             this.showLoadingOverlay();
-            // this.currentSearchQuery = this.searchParams.searchQuery;
-            // parse the searchParams to application specific terms...
-            const parsedListParams = parseListParams(this.searchParams);
-            this.fetchDataCallback.emit([parsedListParams]);
+            this.fetchDataCallback.emit([this.searchParams]);
         }
     }
     onSortChanged = event => {
-        const originalSortObject = this.originalListParams;
+        const originalSortObject = this.originalSearchParams;
         const tableSortObject = event.api.getSortModel();
         let newSortField = '';
         let newSortOrder = '';
@@ -202,6 +199,6 @@ export class DataTableComponent {
 
     ngOnChanges() {}
     ngOnInit() {
-        this.originalListParams = JSON.parse(JSON.stringify(this.searchParams));
+        this.originalSearchParams = JSON.parse(JSON.stringify(this.searchParams));
     }
 }
