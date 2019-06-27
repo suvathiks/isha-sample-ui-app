@@ -5,15 +5,21 @@ let generateContacts = () => {
   let contacts = [];
 
   for (let id = 1; id <= 1000; id++) {
-    let firstName = faker.name.firstName();
-    let lastName = faker.name.lastName();
-    let dob = faker.date.past();
-    let email = faker.internet.email();
-    let phone = faker.phone.phoneNumber();
-    let city = faker.address.city();
-    let state = faker.address.state();
-    let country = faker.address.countryCode();
+    const firstName = faker.name.firstName();
+    const lastName = faker.name.lastName();
+    const dob = faker.date.past();
+    const email = { emailId: faker.internet.email() };
+    const phone = {
+      phoneNumber: faker.random.number({ min: 1000000000, max: 9999999999 }),
+      countryCode: getRandomPhoneCode()
+    };
+    const city = faker.address.city();
+    const state = faker.address.state();
+    const country = faker.address.countryCode();
 
+    // email.emailId = faker.internet.email();
+    // phone.countryCode = getRandomPhoneCode();
+    // phone.phoneNumber = faker.random.number("##########");
     contacts.push({
       id,
       firstName,
@@ -31,3 +37,8 @@ let generateContacts = () => {
 };
 
 module.exports = generateContacts;
+
+const getRandomPhoneCode = () => {
+  const phones = staticDB.phones;
+  return phones[Math.floor(Math.random() * phones.length)].phoneCode;
+};

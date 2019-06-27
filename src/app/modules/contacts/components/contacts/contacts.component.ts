@@ -81,12 +81,18 @@ export class ContactsComponent {
     {
       field: "email",
       headerName: "Email",
+      cellRenderer: params => {
+        return params.value.emailId;
+      },
       sortable: true,
       resizable: true
     },
     {
       field: "phone",
       headerName: "Phone",
+      cellRenderer: params => {
+        return `+${params.value.countryCode} ${params.value.phoneNumber}`;
+      },
       sortable: true,
       resizable: true
     },
