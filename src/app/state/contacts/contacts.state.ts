@@ -61,7 +61,7 @@ export const defaultContactState = {
 };
 
 @State<ContactStateModel>({
-  name: "contacts",
+  name: "Contacts",
   defaults: defaultContactState
 })
 export class ContactState {

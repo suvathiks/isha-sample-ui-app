@@ -14,16 +14,14 @@ import {
 import { Contact } from "./../../../../models/contact.model";
 import { ConstantParsingService } from "./../../../../services/constant-parsing.service";
 import { ConstantState } from "./../../../../state/constants/constants.state";
-import {
-  country
-} from "./../../../../shared/constants/constantTypeCodes";
+import { country } from "./../../../../shared/constants/constantTypeCodes";
 import { Constant } from "./../../../../models/constant.model";
 import { ContactFormCreator } from "./contact.form";
-import {FormCloseChecker} from './../../../../sdk/features/master-form/services/form-close-checker.service';
-
+import { FormCloseChecker } from "./../../../../sdk/features/master-form/services/form-close-checker.service";
 
 export const formRouteContact = "/contacts/add-edit";
 export const formCloseNavigationRouteContact = "/contacts";
+export const formTitle = "Contact Information";
 
 @Component({
   selector: "app-add-contact",
@@ -32,8 +30,9 @@ export const formCloseNavigationRouteContact = "/contacts";
 })
 export class AddEditContactComponent implements OnInit {
   formId: string = formIdContact;
+  formTitle: string = formTitle;
   formCloseNavigationRoute: string = formCloseNavigationRouteContact;
-  contactForm: FormGroup = this.contactFormCreator.generateContactForm(
+  ContactForm: FormGroup = this.contactFormCreator.generateContactForm(
     new Contact()
   );
   submittingForm: boolean = false;
@@ -47,7 +46,6 @@ export class AddEditContactComponent implements OnInit {
   constantValues: Constant[] = [];
   editingContactForm: Contact;
   recordId: number | "NEW";
-  contactOptions;
   countryOptions;
   fieldParams = {};
 
@@ -74,7 +72,10 @@ export class AddEditContactComponent implements OnInit {
    * Checks whether form can be closed safely
    */
   formCanClose(): boolean {
-    return this.formCloseChecker.formCanClose(this.contactForm, this.formSubmitted);
+    return this.formCloseChecker.formCanClose(
+      this.ContactForm,
+      this.formSubmitted
+    );
   }
 
   ngOnInit(): void {}
@@ -85,7 +86,7 @@ export class AddEditContactComponent implements OnInit {
     private store: Store,
     private constantService: ConstantParsingService,
     private contactFormCreator: ContactFormCreator,
-    private formCloseChecker: FormCloseChecker,
+    private formCloseChecker: FormCloseChecker
   ) {
     this.contactState$.subscribe(latestState => {
       this.editingContactForm = latestState.contactForm.model;
@@ -96,7 +97,7 @@ export class AddEditContactComponent implements OnInit {
       this.notificationMessage = latestState.notificationMessage;
       this.contactState = latestState;
     });
-    this.contactForm = this.contactFormCreator.generateContactForm(
+    this.ContactForm = this.contactFormCreator.generateContactForm(
       this.editingContactForm
     );
 

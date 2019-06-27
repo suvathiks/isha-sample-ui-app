@@ -22,6 +22,7 @@ export class DataTableComponent {
     private pageSizeOptions: Array<Object> = pageSizeOptions;
     staticTable = true;
     @Input() frameworkComponents: Object;
+    @Input() searchInputExists: boolean = false;
     @Input() tableId = '';
     @Input() addRoute = '';
     @Input() addLabel = '';
@@ -62,6 +63,9 @@ export class DataTableComponent {
         this.searchParams.pageSize = this.totalRecords;
         this.searchParams.pageNumber = 1;
         this.fetchData();
+    }
+    addButtonExists() {
+        return this.addRoute && this.addLabel;
     }
     /**
      * When happens when CSV export is clicked..

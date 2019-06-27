@@ -2,13 +2,206 @@
     [formId]="formId"
     [recordId]="recordId"
     [Form]="ContactForm"
+    [formTitle]="formTitle"
     [formSubmitted]="formSubmitted"
     [submittingForm]="submittingForm"
     [showNotification]="showNotification"
     [notificationMessage]="notificationMessage"
     [formCloseNavigationRoute]="formCloseNavigationRoute">
 <ng-template #formRef>
-        <form class="form-tag" [formGroup]="ContactForm" novalidate ngxsForm="Contacts.ContactForm" >
+        <form [formGroup]="ContactForm" novalidate ngxsForm="Contacts.contactForm" >
+            <mat-card-content>
+                <mat-accordion multi="true">
+                    <mat-expansion-panel [expanded]="true" disabled>
+                        <!-- <mat-form-field class="minimum-side-padding one-third-block" appearance="outline" [hideRequiredMarker]="false">
+                            <mat-label>Incident Date</mat-label>
+                            <input [ngClass]="{ 'filled': isFilled('incidentDate') }" matInput readonly required [matDatepicker]="idpicker" placeholder="Choose a date"
+                                (focus)="idpicker.open()" formControlName="incidentDate" [max]="curDate">
+                            <mat-datepicker-toggle matSuffix [for]="idpicker"></mat-datepicker-toggle>
+                            <mat-datepicker #idpicker></mat-datepicker>
+                            <mat-error>Invalid Date</mat-error>
+                        </mat-form-field> -->
+                        <mat-form-field class="minimum-side-padding one-third-block" appearance="outline" [hideRequiredMarker]="false">
+                            <mat-label>First Name</mat-label>
+                            <input matInput required placeholder="First Name" formControlName="firstName">
+                            <mat-error>Invalid First Name</mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="minimum-side-padding one-third-block" appearance="outline" [hideRequiredMarker]="false">
+                            <mat-label>Last Name</mat-label>
+                            <input matInput required placeholder="Last Name" formControlName="lastName">
+                            <mat-error>Invalid Last Name</mat-error>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="minimum-side-padding one-third-block" appearance="outline">
+                            <mat-select placeholder="Country" formControlName="country" required>
+                                <ng-container *ngFor="let country of countryOptions">
+                                    <mat-option [value]="country.value">{{country.label}}</mat-option>
+                                </ng-container>
+                            </mat-select>
+                            <mat-error>Please select a country</mat-error>
+                        </mat-form-field>
+                        <br>
+                        <!-- <div class="angular-multiselect-one-third">
+                            <angular2-multiselect [settings]="dropdownSettings" [data]="incidentTypeOptions" formControlName="incidentTypes">
+                            </angular2-multiselect>
+                            <mat-error style="font-size: .9em;" *ngIf="riForm.controls['incidentTypes'].invalid && (riForm.controls['incidentTypes'].touched || riNgForm.submitted)">Invalid Incident Types</mat-error>
+                        </div>
+                        <br>
+                        <mat-form-field class="minimum-side-padding one-half-block" appearance="outline" [hideRequiredMarker]="false">
+                            <mat-label>Incident Description</mat-label>
+                            <textarea [ngClass]="{ 'filled': isFilled('incidentDescription') }" matInput placeholder="Please describe the incident in detail"
+                                cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="10" cdkAutosizeMaxRows="15" formControlName="incidentDescription"
+                                required></textarea>
+                            <mat-error>Invalid Incident Description</mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="minimum-side-padding one-half-block" appearance="outline" [hideRequiredMarker]="true">
+                            <mat-label>Action To Be Taken</mat-label>
+                            <textarea matInput placeholder="Suggested action to be taken" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="10"
+                                cdkAutosizeMaxRows="15" formControlName="action"></textarea>
+                        </mat-form-field>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel [expanded]="true" disabled>
+                        <mat-expansion-panel-header>
+                            Agitator Information
+                        </mat-expansion-panel-header>
+                        <mat-form-field class="minimum-side-padding one-third-block" appearance="outline">
+                            <mat-label>First Name</mat-label>
+                            <input [ngClass]="{ 'filled': isFilled('personFirstName') }" matInput required placeholder="First Name" formControlName="personFirstName">
+                            <mat-error>Invalid Firstname</mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="minimum-side-padding one-third-block" appearance="outline">
+                            <mat-label>Last Name</mat-label>
+                            <input [ngClass]="{ 'filled': isFilled('personLastName') }" matInput required placeholder="Last Name" formControlName="personLastName">
+                            <mat-error>Invalid Lastname</mat-error>
+                        </mat-form-field>
+                        <mat-checkbox formControlName="isOverseas">Is Overseas</mat-checkbox>
+                        <br>
+                        <mat-form-field class="minimum-side-padding one-third-block" appearance="outline">
+                            <mat-select placeholder="Select Person Type" formControlName="personTypes" required>
+                                <ng-container *ngFor="let personType of personTypes">
+                                    <mat-option *ngIf="personType.active === true" [value]="personType">{{personType.name}}</mat-option>
+                                </ng-container>
+                            </mat-select>
+                            <mat-error>Please Select A Person Type</mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="minimum-side-padding one-third-block" appearance="outline">
+                            <mat-select placeholder="Select Gender" formControlName="personGender" required>
+                                <ng-container *ngFor="let gender of genderList">
+                                    <mat-option [value]="gender.value">{{gender.option}}</mat-option>
+                                </ng-container>
+                            </mat-select>
+                            <mat-error>Please Select The Gender</mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="minimum-side-padding one-third-block" appearance="outline" [hideRequiredMarker]="true">
+                            <mat-label>Date of Birth</mat-label>
+                            <input [ngClass]="{ 'filled': isFilled('personDob') }" matInput readonly [matDatepicker]="dobpicker" placeholder="Choose a date"
+                                (focus)="dobpicker.open()" formControlName="personDob" [max]="curDate" [min]="minDOB">
+                            <mat-datepicker-toggle matSuffix [for]="dobpicker"></mat-datepicker-toggle>
+                            <mat-datepicker #dobpicker></mat-datepicker>
+                            <mat-error>Invalid Date</mat-error>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="minimum-side-padding one-third-block" appearance="outline">
+                            <mat-label>Email ID</mat-label>
+                            <input [ngClass]="{ 'filled': isFilled('personEmail') }" matInput placeholder="Email ID" formControlName="personEmail">
+                            <mat-error>Invalid Email</mat-error>
+                        </mat-form-field>
+                        <form [formGroup]="riForm.controls['personPhoneDetails']">
+                            <mat-form-field class="minimum-side-padding phone-code-field" appearance="outline">
+                                <mat-label>Country Code</mat-label>
+                                <mat-select placeholder="+XXX" formControlName="personPhoneCC">
+                                    <ng-container *ngFor="let code of phoneCodes">
+                                        <mat-option [value]="code.phoneCode">{{code.option}}</mat-option>
+                                    </ng-container>
+                                </mat-select>
+                            </mat-form-field>
+                            <mat-form-field class="minimum-side-padding phone-number-field" appearance="outline">
+                                <mat-label>Phone Number</mat-label>
+                                <input [ngClass]="{ 'filled': isFilledSubform('personPhoneDetails', 'personPhone') }" matInput placeholder="Phone Number"
+                                    formControlName="personPhone">
+                                <mat-error>Invalid country code/phone number combination</mat-error>
+                            </mat-form-field>
+                        </form>
+                        <hr>
+                        <div class="secondary-header">Emergency Contact</div>
+                        <mat-form-field class="minimum-side-padding one-third-block" appearance="outline">
+                            <mat-label> Name </mat-label>
+                            <input [ngClass]="{ 'filled': isFilled('emergencyContactName') }" matInput placeholder="Emergency Contact Name" formControlName="emergencyContactName">
+                            <mat-error>Invalid Name</mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="minimum-side-padding one-third-block" appearance="outline">
+                            <mat-label> Relation </mat-label>
+                            <input [ngClass]="{ 'filled': isFilled('emergencyContactRelation') }" matInput placeholder="Emergency Contact Relation" formControlName="emergencyContactRelation">
+                            <mat-error>Invalid Relation</mat-error>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="minimum-side-padding one-third-block" appearance="outline">
+                            <mat-label> Email ID </mat-label>
+                            <input [ngClass]="{ 'filled': isFilled('emergencyContactEmailId') }" matInput placeholder="Emergency Contact Email ID" formControlName="emergencyContactEmailId">
+                            <mat-error>Invalid Email ID</mat-error>
+                        </mat-form-field>
+                        <form [formGroup]="riForm.controls['emergencyContactPhoneDetails']">
+                            <mat-form-field class="minimum-side-padding phone-code-field" appearance="outline">
+                                <mat-label>Country Code</mat-label>
+                                <mat-select placeholder="+XXX" formControlName="emergencyContactPhoneCC">
+                                    <ng-container *ngFor="let code of phoneCodes">
+                                        <mat-option [value]="code.phoneCode">{{code.option}}</mat-option>
+                                    </ng-container>
+                                </mat-select>
+                            </mat-form-field>
+                            <mat-form-field class="minimum-side-padding phone-number-field" appearance="outline">
+                                <mat-label>Phone Number</mat-label>
+                                <input [ngClass]="{ 'filled': isFilledSubform('emergencyContactPhoneDetails','emergencyContactPhone') }" matInput placeholder="Emergency Contact Phone #"
+                                    formControlName="emergencyContactPhone">
+                                <mat-error>Invalid country code/phone number combination</mat-error>
+                            </mat-form-field>
+                        </form>
+                    </mat-expansion-panel>
+            
+                    <mat-expansion-panel [expanded]="true" disabled>
+                        <mat-expansion-panel-header>
+                            Reporter Information
+                        </mat-expansion-panel-header>
+                        <mat-form-field class="minimum-side-padding one-third-block" appearance="outline">
+                            <mat-label>Reporter Full Name</mat-label>
+                            <input [ngClass]="{ 'filled': isFilled('reporterName') }" matInput required placeholder="Reporter Full Name" formControlName="reporterName">
+                            <mat-error>Invalid Reporter Name</mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="minimum-side-padding one-third-block" appearance="outline">
+                            <mat-label>Reporter Email ID</mat-label>
+                            <input [ngClass]="{ 'filled': isFilled('reporterEmail') }" matInput required placeholder="Reporter Email ID" formControlName="reporterEmail">
+                            <mat-error>Invalid Reporter Email ID</mat-error>
+                        </mat-form-field>
+                        <br>
+                        <form [formGroup]="riForm.controls['reporterPhoneDetails']">
+                            <mat-form-field class="minimum-side-padding phone-code-field" appearance="outline">
+                                <mat-label>Country Code</mat-label>
+                                <mat-select required placeholder="+XXX" formControlName="reporterPhoneCC">
+                                    <ng-container *ngFor="let code of phoneCodes">
+                                        <mat-option [value]="code.phoneCode">{{code.option}}</mat-option>
+                                    </ng-container>
+                                </mat-select>
+                            </mat-form-field>
+                            <mat-form-field class="minimum-side-padding phone-number-field" appearance="outline">
+                                <mat-label>Phone Number</mat-label>
+                                <input required [ngClass]="{ 'filled': isFilledSubform('reporterPhoneDetails', 'reporterPhone')}" matInput placeholder="Reporter Phone #"
+                                    formControlName="reporterPhone" />
+                                <mat-error>Invalid country code/phone number combination</mat-error>
+                            </mat-form-field>
+                            <p class="mat-error" style="font-size: .9em;" *ngIf="showValidationError('reporterPhoneDetails', 'reporterPhone')">Reporter phone is required</p>
+                        </form>-->
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content> 
+            <!-- <mat-card-actions class="ims-card-actions">
+            
+                <button mat-raised-button type="button" color="warn" (click)="onClearClick()">clear</button>
+                <button mat-raised-button type="submit" color="accent" class="submit-btn">Report</button>
+                <button mat-raised-button type="button" color="primary" class="submit-btn" (click)="saveDraftReport()">Save</button>
+            </mat-card-actions>
+            <div class="loading-indicator" *ngIf="callInProgress">
+                <mat-spinner></mat-spinner>
+            </div> -->
         </form>
     </ng-template>
 </app-master-form>

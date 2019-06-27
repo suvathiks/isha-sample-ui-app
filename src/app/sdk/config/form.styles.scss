@@ -1,0 +1,63 @@
+.fluid {
+    width: 100%;
+}
+.one-third-block {
+    width: 33%;
+}
+.one-half-block {
+    width: 48%;
+}
+.one-fourth-block {
+    width: 25%;
+}
+.three-fourth-block {
+    width: 75%;
+}
+
+.phone-code-field {
+    width: 10%;
+}
+.phone-number-field {
+    width: 23%;
+}
+
+.angular-multiselect-one-third {
+    width: 33%;
+    padding: 0px 10px;
+    float: left;
+}
+
+@media only screen and (max-width: 1200px) {
+    .one-third-block {
+        width: 100%;
+    }
+    .one-half-block {
+        width: 100%;
+    }
+    .one-fourth-block {
+        width: 100%;
+    }
+    .three-fourth-block {
+        width: 100%;
+    }
+    .phone-code-field {
+        width: 100%;
+    }
+    .phone-number-field {
+        width: 100%;
+    }
+    .angular-multiselect-one-third {
+        width: 100%;
+    }
+}
+
+.minimum-side-padding {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.secondary-header {
+    color: black;
+    font-size: 1.1em;
+    padding: 5px 5px 20px 0px;
+}

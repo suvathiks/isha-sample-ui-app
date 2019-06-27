@@ -9,11 +9,11 @@ import { ContactsComponent } from "./components/contacts/contacts.component";
 import { AddEditContactComponent } from "./components/add-contact/add-contact.component";
 import { TableModule } from "./../../sdk/features/table/table.module";
 import { ContactsRoutingModule } from "./contacts.routing";
-import { ContactsStylingModule } from "./contacts.styling.imports";
 import { MessageService } from "primeng/api";
 import { FormFieldComponent } from "./components/form-fields/form-fields.component";
 import { MasterFormModule } from "./../../sdk/features/master-form/master-form.module";
 import { EditButtonRenderer } from "./components/cell-renderers/cell-renderers.component";
+import { StylingModule } from '../../shared/styling.imports';
 
 @NgModule({
   declarations: [
@@ -24,13 +24,13 @@ import { EditButtonRenderer } from "./components/cell-renderers/cell-renderers.c
   ],
   imports: [
     CommonModule,
+    StylingModule,
     MasterFormModule,
     FormsModule,
     ReactiveFormsModule,
     NgxsFormPluginModule,
     TableModule,
     AgGridModule.withComponents([EditButtonRenderer]),
-    ContactsStylingModule,
     ContactsRoutingModule
   ],
   providers: [PendingChangesGuard, MessageService]

@@ -11,6 +11,7 @@ import { MasterFormStylingModule } from "./master-form.styling.imports";
 import { MasterFormComponent } from "./components/master-form.component";
 import { FormNotification } from "./form-notifications/notification.service";
 import { FormCloseChecker } from "./services/form-close-checker.service";
+import { StylingModule } from '../../../shared/styling.imports';
 
 @NgModule({
   declarations: [MasterFormComponent],
@@ -19,7 +20,8 @@ import { FormCloseChecker } from "./services/form-close-checker.service";
     FormsModule,
     ReactiveFormsModule,
     NgxsFormPluginModule.forRoot(),
-    MasterFormStylingModule
+    MasterFormStylingModule,
+    StylingModule
   ],
   exports: [MasterFormComponent],
   providers: [

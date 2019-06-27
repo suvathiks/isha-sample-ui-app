@@ -33,6 +33,8 @@ export class MasterFormComponent implements OnInit {
   @Input()
   formId: string;
   @Input()
+  formTitle: String;
+  @Input()
   recordId: number | "NEW";
   @Input()
   Form: FormGroup;
@@ -68,7 +70,7 @@ export class MasterFormComponent implements OnInit {
     this.store.dispatch(new SetForm(formId, recordId));
   }
 
-  submitContact(form) {
+  submitForm() {
     (<any>Object).values(this.Form.controls).forEach(control => {
       control.markAsDirty();
     });
@@ -78,7 +80,7 @@ export class MasterFormComponent implements OnInit {
     }
     this.store.dispatch(new SubmitForm(this.formId));
   }
-  cancelForm(redirect: string) {
+  cancelForm() {
     this.router.navigate([this.formCloseNavigationRoute]);
   }
 

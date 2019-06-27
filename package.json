@@ -28,6 +28,7 @@
     "@ngxs/store": "^3.3.4",
     "ag-grid-angular": "^20.0.0",
     "ag-grid-community": "^20.0.0",
+    "angular2-multiselect-dropdown": "^4.2.6",
     "core-js": "^2.5.4",
     "keycloak-angular": "^6.0.0",
     "primeicons": "^1.0.0",
