@@ -202,9 +202,9 @@
             <div class="loading-indicator" *ngIf="callInProgress">
                 <mat-spinner></mat-spinner>
             </div> -->
-        <button mat-raised-button type="button" color="primary" class="submit-btn" style="margin: 10px;" (click)="submitForm()">
+        <button mat-raised-button style="margin: 10px; float: right;" type="button" color="primary" class="submit-btn" (click)="submitForm()">
             {{submittingForm ? 'Saving...' : 'Save'}}</button>
-        <button mat-raised-button (click)="cancelForm()" color="accent" class="submit-btn">Cancel</button>
+        <button mat-raised-button style="margin:10px; float: left;" (click)="cancelForm()" color="accent" class="submit-btn">Cancel</button>
         </form>
     </ng-template>
 </app-master-form>
