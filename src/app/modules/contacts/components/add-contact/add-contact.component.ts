@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener } from "@angular/core";
 import { Observable } from "rxjs";
-import { FormGroup } from "@angular/forms";
+import { FormGroup, FormControl } from "@angular/forms";
 import { Router } from "@angular/router";
 import { MessageService } from "primeng/api";
 import { Store, Select } from "@ngxs/store";
@@ -18,6 +18,7 @@ import { country } from "./../../../../shared/constants/constantTypeCodes";
 import { Constant } from "./../../../../models/constant.model";
 import { ContactFormCreator } from "./contact.form";
 import { FormCloseChecker } from "./../../../../sdk/features/master-form/services/form-close-checker.service";
+import { SubmitForm } from "../../../../sdk/features/master-form/master-form.actions";
 
 export const formRouteContact = "/contacts/add-edit";
 export const formCloseNavigationRouteContact = "/contacts";
@@ -108,6 +109,30 @@ export class AddEditContactComponent implements OnInit {
         country
       );
       this.countryOptions = this.prepareDropdownOptions(countries);
+    });
+  }
+  submitForm() {
+    (<any>Object).values(this.ContactForm.controls).forEach(control => {
+      control.markAsDirty();
+    });
+
+    if (this.ContactForm.status === "INVALID") {
+      this.validateAllFields(this.ContactForm);
+      return;
+    }
+    this.store.dispatch(new SubmitForm(this.formId));
+  }
+  cancelForm() {
+    this.router.navigate([this.formCloseNavigationRoute]);
+  }
+  validateAllFields(formGroup: FormGroup) {
+    Object.keys(formGroup.controls).forEach(field => {
+      const control = formGroup.get(field);
+      if (control instanceof FormControl) {
+        control.markAsTouched({ onlySelf: true });
+      } else if (control instanceof FormGroup) {
+        this.validateAllFields(control);
+      }
     });
   }
 

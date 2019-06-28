@@ -9,7 +9,7 @@
     [notificationMessage]="notificationMessage"
     [formCloseNavigationRoute]="formCloseNavigationRoute">
 <ng-template #formRef>
-        <form [formGroup]="ContactForm" novalidate ngxsForm="Contacts.contactForm" >
+        <form [formGroup]="ContactForm" (ngSubmit)="submitForm()" ngxsForm="Contacts.contactForm" >
             <mat-card-content>
                 <mat-accordion multi="true">
                     <mat-expansion-panel [expanded]="true" disabled>
@@ -202,6 +202,9 @@
             <div class="loading-indicator" *ngIf="callInProgress">
                 <mat-spinner></mat-spinner>
             </div> -->
+        <button mat-raised-button type="button" color="primary" class="submit-btn" style="margin: 10px;" (click)="submitForm()">
+            {{submittingForm ? 'Saving...' : 'Save'}}</button>
+        <button mat-raised-button (click)="cancelForm()" color="accent" class="submit-btn">Cancel</button>
         </form>
     </ng-template>
 </app-master-form>

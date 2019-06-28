@@ -160,8 +160,10 @@ export class ContactState {
     }
   }
   @Action(DisableNotification)
-  disableNotification({ patchState }: StateContext<ContactStateModel>) {
-    patchState({ showNotification: null, notificationMessage: '' });
+  disableNotification({ patchState }: StateContext<ContactStateModel>, {formId}: DisableNotification) {
+    if(formId === formIdContact) {
+      patchState({ showNotification: null, notificationMessage: '' });
+    }
   }
 
   @Action(SetForm)
