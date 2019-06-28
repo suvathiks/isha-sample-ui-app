@@ -10,9 +10,10 @@ import { HomeModule } from "./modules/home/home.module";
 import { ContactState } from "./state/contacts/contacts.state";
 import { environment } from "../environments/environment";
 import { ConstantParsingService } from "./services/constant-parsing.service";
-import { HttpClientModule } from '@angular/common/http';
-import { ConstantState } from './state/constants/constants.state';
-import {StylingModule} from './shared/styling.imports';
+import { HttpClientModule } from "@angular/common/http";
+import { ConstantState } from "./state/constants/constants.state";
+import { CDIState } from "./state/cdi/cdi.state";
+import { StylingModule } from "./shared/styling.imports";
 
 @NgModule({
   declarations: [],
@@ -21,7 +22,7 @@ import {StylingModule} from './shared/styling.imports';
     StylingModule,
     AppRoutingModule,
     NgxsReduxDevtoolsPluginModule.forRoot(),
-    NgxsModule.forRoot([ConstantState, ContactState], {
+    NgxsModule.forRoot([ConstantState, ContactState, CDIState], {
       developmentMode: !environment.production
     }),
     // HttpClientModule,

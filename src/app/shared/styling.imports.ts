@@ -19,7 +19,8 @@ import { MatCardModule } from "@angular/material/card";
 import {
   MatDatepickerModule,
   MatProgressSpinnerModule,
-  MatInputModule
+  MatInputModule,
+  MatNativeDateModule
 } from "@angular/material";
 import { AngularMultiSelectModule } from "angular2-multiselect-dropdown";
 
@@ -44,7 +45,9 @@ const imports = [
   MatDatepickerModule,
   AngularMultiSelectModule,
   MatProgressSpinnerModule,
-  MatButtonModule
+  MatButtonModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
 ];
 
 @NgModule({

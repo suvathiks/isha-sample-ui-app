@@ -34,3 +34,19 @@ export class Phone {
     this.phoneNumber = phoneNumber;
   }
 }
+
+export class EmailIdsObj {
+  emailIds: EmailId[];
+  constructor() {
+    this.emailIds = [];
+  }
+}
+
+export class EmailId {
+  emailId: string;
+  valid?: string;
+  errorMessage?: string;
+  constructor(emailId?: string) {
+    this.emailId = emailId;
+  }
+}

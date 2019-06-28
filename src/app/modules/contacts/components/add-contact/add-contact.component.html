@@ -32,6 +32,38 @@
                             <mat-error>Invalid Last Name</mat-error>
                         </mat-form-field>
                         <br>
+                        <mat-form-field class="minimum-side-padding one-third-block" appearance="outline" [hideRequiredMarker]="true">
+                            <mat-label>Date of Birth</mat-label>
+                            <input matInput readonly [matDatepicker]="dobpicker" placeholder="Choose a date"
+                                (focus)="dobpicker.open()" formControlName="dob" [max]="curDate" [min]="minDOB">
+                            <mat-datepicker-toggle matSuffix [for]="dobpicker"></mat-datepicker-toggle>
+                            <mat-datepicker #dobpicker></mat-datepicker>
+                            <mat-error>Invalid Date</mat-error>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="minimum-side-padding one-third-block" appearance="outline">
+                            <mat-label>Email ID</mat-label>
+                            <input matInput placeholder="Email ID" formControlName="email">
+                            <mat-error>Invalid Email</mat-error>
+                        </mat-form-field>
+                        <br>
+                        <form [formGroup]="ContactForm.controls['phoneDetails']">
+                            <mat-form-field class="minimum-side-padding phone-code-field" appearance="outline">
+                                <mat-label>Country Code</mat-label>
+                                <mat-select placeholder="+XXX" formControlName="countryCode">
+                                    <ng-container *ngFor="let code of phoneCodes">
+                                        <mat-option [value]="code.phoneCode">{{code.option}}</mat-option>
+                                    </ng-container>
+                                </mat-select>
+                            </mat-form-field>
+                            <mat-form-field class="minimum-side-padding phone-number-field" appearance="outline">
+                                <mat-label>Phone Number</mat-label>
+                                <input [ngClass]="{ 'filled': isFilledSubform('personPhoneDetails', 'personPhone') }" matInput placeholder="Phone Number"
+                                    formControlName="personPhone">
+                                <mat-error>Invalid country code/phone number combination</mat-error>
+                            </mat-form-field>
+                        </form>
+                        <br>
                         <mat-form-field class="minimum-side-padding one-third-block" appearance="outline">
                             <mat-select placeholder="Country" formControlName="country" required>
                                 <ng-container *ngFor="let country of countryOptions">

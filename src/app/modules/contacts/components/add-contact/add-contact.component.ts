@@ -17,8 +17,12 @@ import { ConstantState } from "./../../../../state/constants/constants.state";
 import { country } from "./../../../../shared/constants/constantTypeCodes";
 import { Constant } from "./../../../../models/constant.model";
 import { ContactFormCreator } from "./contact.form";
-import { FormCloseChecker } from "./../../../../sdk/features/master-form/services/form-close-checker.service";
+import { MasterFormService } from "./../../../../sdk/features/master-form/services/master-form.service";
 import { SubmitForm } from "../../../../sdk/features/master-form/master-form.actions";
+import {
+  currentDate,
+  minDOBDate
+} from "./../../../../shared/constants/constants";
 
 export const formRouteContact = "/contacts/add-edit";
 export const formCloseNavigationRouteContact = "/contacts";
@@ -47,6 +51,8 @@ export class AddEditContactComponent implements OnInit {
   constantValues: Constant[] = [];
   editingContactForm: Contact;
   recordId: number | "NEW";
+  curDate = new Date();
+  minDOB: Date = minDOBDate;
   countryOptions;
   fieldParams = {};
 
@@ -73,7 +79,7 @@ export class AddEditContactComponent implements OnInit {
    * Checks whether form can be closed safely
    */
   formCanClose(): boolean {
-    return this.formCloseChecker.formCanClose(
+    return this.masterFormService.formCanClose(
       this.ContactForm,
       this.formSubmitted
     );
@@ -87,7 +93,7 @@ export class AddEditContactComponent implements OnInit {
     private store: Store,
     private constantService: ConstantParsingService,
     private contactFormCreator: ContactFormCreator,
-    private formCloseChecker: FormCloseChecker
+    private masterFormService: MasterFormService,
   ) {
     this.contactState$.subscribe(latestState => {
       this.editingContactForm = latestState.contactForm.model;
@@ -112,28 +118,20 @@ export class AddEditContactComponent implements OnInit {
     });
   }
   submitForm() {
-    (<any>Object).values(this.ContactForm.controls).forEach(control => {
-      control.markAsDirty();
-    });
+    this.masterFormService.submitForm(this.ContactForm, this.formId);
+    // (<any>Object).values(this.ContactForm.controls).forEach(control => {
+    //   control.markAsDirty();
+    // });
 
-    if (this.ContactForm.status === "INVALID") {
-      this.validateAllFields(this.ContactForm);
-      return;
-    }
-    this.store.dispatch(new SubmitForm(this.formId));
+    // if (this.ContactForm.status === "INVALID") {
+    //   this.validateAllFields(this.ContactForm);
+    //   return;
+    // }
+    // this.store.dispatch(new SubmitForm(this.formId));
   }
   cancelForm() {
-    this.router.navigate([this.formCloseNavigationRoute]);
-  }
-  validateAllFields(formGroup: FormGroup) {
-    Object.keys(formGroup.controls).forEach(field => {
-      const control = formGroup.get(field);
-      if (control instanceof FormControl) {
-        control.markAsTouched({ onlySelf: true });
-      } else if (control instanceof FormGroup) {
-        this.validateAllFields(control);
-      }
-    });
+    this.masterFormService.cancelForm(this.formCloseNavigationRoute);
+    // this.router.navigate([this.formCloseNavigationRoute]);
   }
 
   // @HostListener allows us to also guard against browser refresh, close, etc.

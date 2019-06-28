@@ -21,7 +21,7 @@ import {
   SUCCESS_NOTIFICATION
 } from "./../master-form.actions";
 import { FormNotification } from "./../form-notifications/notification.service";
-import { FormCloseChecker } from "./../services/form-close-checker.service";
+import { MasterFormService } from "./../services/master-form.service";
 @Component({
   selector: "app-master-form",
   templateUrl: "./master-form.component.html",
@@ -70,19 +70,19 @@ export class MasterFormComponent implements OnInit {
     this.store.dispatch(new SetForm(formId, recordId));
   }
 
-  submitForm() {
-    (<any>Object).values(this.Form.controls).forEach(control => {
-      control.markAsDirty();
-    });
+  // submitForm() {
+  //   (<any>Object).values(this.Form.controls).forEach(control => {
+  //     control.markAsDirty();
+  //   });
 
-    if (this.Form.status === "INVALID") {
-      return;
-    }
-    this.store.dispatch(new SubmitForm(this.formId));
-  }
-  cancelForm() {
-    this.router.navigate([this.formCloseNavigationRoute]);
-  }
+  //   if (this.Form.status === "INVALID") {
+  //     return;
+  //   }
+  //   this.store.dispatch(new SubmitForm(this.formId));
+  // }
+  // cancelForm() {
+  //   this.router.navigate([this.formCloseNavigationRoute]);
+  // }
 
   ngOnInit(): void {}
 
@@ -120,7 +120,7 @@ export class MasterFormComponent implements OnInit {
     private store: Store,
     private messageService: MessageService,
     private formNotification: FormNotification,
-    private formCloseChecker: FormCloseChecker
+    private formCloseChecker: MasterFormService
   ) {
     this.setForm(this.formId, this.recordId);
   }

@@ -10,7 +10,7 @@ import { PendingChangesGuard } from "./services/can-deactivate.guard";
 import { MasterFormStylingModule } from "./master-form.styling.imports";
 import { MasterFormComponent } from "./components/master-form.component";
 import { FormNotification } from "./form-notifications/notification.service";
-import { FormCloseChecker } from "./services/form-close-checker.service";
+import { MasterFormService } from "./services/master-form.service";
 import { StylingModule } from '../../../shared/styling.imports';
 
 @NgModule({
@@ -28,7 +28,7 @@ import { StylingModule } from '../../../shared/styling.imports';
     FormGroupDirective,
     PendingChangesGuard,
     FormNotification,
-    FormCloseChecker
+    MasterFormService
   ]
 })
 export class MasterFormModule {}
