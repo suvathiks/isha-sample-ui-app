@@ -88,7 +88,7 @@ export class ContactsComponent {
       resizable: true
     },
     {
-      field: "phone",
+      field: "phoneDetails",
       headerName: "Phone",
       cellRenderer: params => {
         return `+${params.value.countryCode} ${params.value.phoneNumber}`;

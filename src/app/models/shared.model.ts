@@ -6,7 +6,7 @@ export interface keyTextValue {
 }
 
 export class Emails {
-  details: Email[];
+  details: Email[] = [];
   constructor() {
     this.details = [];
   }
@@ -14,7 +14,7 @@ export class Emails {
 
 export class Email {
   emailId: string;
-  constructor(emailId?) {
+  constructor(emailId=null) {
     this.emailId = emailId;
   }
 }
@@ -29,7 +29,7 @@ export class Phones {
 export class Phone {
   countryCode: string;
   phoneNumber: string;
-  constructor(phoneNumber?, countryCode?) {
+  constructor(phoneNumber = null, countryCode = null) {
     this.countryCode = countryCode;
     this.phoneNumber = phoneNumber;
   }
@@ -43,8 +43,8 @@ export class EmailIdsObj {
 }
 
 export class EmailId {
-  emailId: string;
-  valid?: string;
+  emailId: string = null;
+  valid?: string = null;
   errorMessage?: string;
   constructor(emailId?: string) {
     this.emailId = emailId;

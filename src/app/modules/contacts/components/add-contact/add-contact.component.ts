@@ -23,6 +23,8 @@ import {
   currentDate,
   minDOBDate
 } from "./../../../../shared/constants/constants";
+import { CDIState } from '../../../../state/cdi/cdi.state';
+import { FetchCountries } from '../../../../state/cdi/cdi.actions';
 
 export const formRouteContact = "/contacts/add-edit";
 export const formCloseNavigationRouteContact = "/contacts";
@@ -48,6 +50,9 @@ export class AddEditContactComponent implements OnInit {
   contactState: ContactStateModel = new ContactStateModel();
   @Select(ConstantState.constantValues)
   constantValues$: Observable<Constant[]>;
+  @Select(CDIState.phoneCodes)
+  phoneCodes$: Observable<any[]>;
+  phoneCodes = [];
   constantValues: Constant[] = [];
   editingContactForm: Contact;
   recordId: number | "NEW";
@@ -85,7 +90,9 @@ export class AddEditContactComponent implements OnInit {
     );
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.store.dispatch(new FetchCountries());
+  }
 
   constructor(
     public router: Router,
@@ -93,7 +100,7 @@ export class AddEditContactComponent implements OnInit {
     private store: Store,
     private constantService: ConstantParsingService,
     private contactFormCreator: ContactFormCreator,
-    private masterFormService: MasterFormService,
+    private masterFormService: MasterFormService
   ) {
     this.contactState$.subscribe(latestState => {
       this.editingContactForm = latestState.contactForm.model;
@@ -103,6 +110,9 @@ export class AddEditContactComponent implements OnInit {
       this.showNotification = latestState.showNotification;
       this.notificationMessage = latestState.notificationMessage;
       this.contactState = latestState;
+    });
+    this.phoneCodes$.subscribe(value => {
+      this.phoneCodes = value;
     });
     this.ContactForm = this.contactFormCreator.generateContactForm(
       this.editingContactForm

@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 import { map, catchError, retry } from 'rxjs/operators';
 import { handleError } from './../../services/api/api-utils.service';
 import { CDIService } from './../../services/cdi/cdi.service';
+import { sortBy } from 'lodash';
 
 export class CDIStateModel {
     countries: any[];
@@ -44,6 +45,7 @@ export class CDIState {
                         option: c.iso3 + ' (+' + sanitizePhoneCode(c.phoneCode) + ')'
                     };
                 });
+                phoneCodes = sortBy(phoneCodes, 'iso3');
                 phoneCodes = [{ iso3: null, name: null, phoneCode: null, option: 'Select' }].concat(phoneCodes);
                 patchState({ countries: res.body, phoneCodes, countriesFetched: true });
             });

@@ -18,14 +18,14 @@ export class CDIService {
     private validatePhoneURL = CDI_ENDPOINTS.validatePhone;
     constructor(private http: HttpClient) {}
 
-    listCountries(): Observable<HttpResponse<any>> {
+    listCountries(): Observable<any> {
         return this.http.get(this.listCountriesURL, { observe: 'response' }).pipe(catchError(handleError));
     }
-    validateEmail(email): Observable<HttpResponse<any>> {
+    validateEmail(email): Observable<any> {
         const emailIds = [{ emailId: email }];
         return this.http.post(this.validateEmailURL, { emailIds }, { observe: 'response' }).pipe(catchError(handleError));
     }
-    validatePhone(phone): Observable<HttpResponse<any>> {
+    validatePhone(phone): Observable<any> {
         const phoneNumbers = [{ number: phone }];
         return this.http.post(this.validatePhoneURL, { phoneNumbers }, { observe: 'response' }).pipe(catchError(handleError));
     }

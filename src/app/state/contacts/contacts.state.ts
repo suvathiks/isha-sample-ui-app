@@ -127,24 +127,24 @@ export class ContactState {
         const { id, ...newContact } = contact;
         this.contactsService
           .createContact(newContact)
-          .subscribe((data: addResponse) => {
-            processFormSubmitResponse(data);
+          .subscribe((res: HttpResponse<any>) => {
+            processFormSubmitResponse(res);
           });
         } else {
         this.contactsService
         .updateContact(contact)
-          .subscribe((val) => {
-            const data = val;
-            processFormSubmitResponse(data);
+          .subscribe((res: HttpResponse<any>) => {
+            processFormSubmitResponse(res);
           });
         }
-        const processFormSubmitResponse = data => {
-          if (data.contactId) {
+        const processFormSubmitResponse = res => {
+          console.log('res after contact creation', {res});
+          if (res.ok) {
             patchState({
               submittingForm: false,
               formSubmitted: true,
               submitSuccess: true,
-              notificationMessage: data.message,
+              notificationMessage: res.message,
               showNotification: SUCCESS_NOTIFICATION,
             });
           } else {
@@ -152,7 +152,7 @@ export class ContactState {
               submittingForm: false,
               formSubmitted: false,
               submitSuccess: false,
-              notificationMessage: data.message,
+              notificationMessage: res.message,
               showNotification: FAILURE_NOTIFICATION
             });
           }

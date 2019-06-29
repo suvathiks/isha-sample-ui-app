@@ -21,7 +21,7 @@ export class EditButtonRenderer {
   private recordId: number | "NEW" = "NEW";
   agInit(params: any): void {
     this.params = params;
-    this.recordId = this.params.data.contactId;
+    this.recordId = this.params.data.id;
   }
 
   public onEdit(): void {
