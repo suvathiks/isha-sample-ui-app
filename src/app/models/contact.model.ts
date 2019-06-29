@@ -6,7 +6,7 @@ export class Contact {
   lastName: string = "";
   dob: string = "";
   email: string = "";
-  phone: Phone = new Phone();
+  phoneDetails: Phone = new Phone();
   city: string = "";
   state: string = "";
   country: string = "";

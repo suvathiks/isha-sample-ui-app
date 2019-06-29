@@ -8,7 +8,7 @@ let generateContacts = () => {
     const firstName = faker.name.firstName();
     const lastName = faker.name.lastName();
     const dob = faker.date.past();
-    const email = { emailId: faker.internet.email() };
+    const email = faker.internet.email();
     const phoneDetails = {
       phoneNumber: faker.random.number({ min: 1000000000, max: 9999999999 }),
       countryCode: getRandomPhoneCode()
@@ -26,7 +26,7 @@ let generateContacts = () => {
       lastName,
       dob,
       email,
-      phone,
+      phoneDetails,
       city,
       state,
       country

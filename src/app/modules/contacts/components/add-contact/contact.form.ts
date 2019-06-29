@@ -25,8 +25,8 @@ export class ContactFormCreator {
       dob: [Contact.dob],
       phoneDetails: this.fb.group(
         {
-          countryCode: [Contact.phone.countryCode],
-          phoneNumber: [Contact.phone.phoneNumber]
+          countryCode: [Contact.phoneDetails.countryCode],
+          phoneNumber: [Contact.phoneDetails.phoneNumber]
         },
         {
           asyncValidator: [
