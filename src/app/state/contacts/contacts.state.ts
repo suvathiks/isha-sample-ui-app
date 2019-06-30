@@ -138,13 +138,13 @@ export class ContactState {
           });
         }
         const processFormSubmitResponse = res => {
-          console.log('res after contact creation', {res});
           if (res.ok) {
+            const notificationMessage = res.message ? res.message : 'Form submission successful!';
             patchState({
               submittingForm: false,
               formSubmitted: true,
               submitSuccess: true,
-              notificationMessage: res.message,
+              notificationMessage,
               showNotification: SUCCESS_NOTIFICATION,
             });
           } else {

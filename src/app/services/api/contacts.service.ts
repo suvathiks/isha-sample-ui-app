@@ -26,13 +26,13 @@ export class ContactsService {
   createContact(contactData: Contact) {
     let url = makeUrl(endpoints.contacts.fetch);
     return this.http
-      .post(url, contactData)
+      .post(url, contactData, { observe: "response" })
       .pipe(catchError((err, caught) => of(err)));
   }
 
   updateContact(contactData: Contact) {
-    let url = makeUrl(endpoints.contacts.fetch);
-    return this.http.put(url, contactData).pipe(
+    let url = makeUrl(endpoints.contacts.fetch) + `/${contactData.id}`;
+    return this.http.put(url, contactData, { observe: "response" }).pipe(
       catchError((err, caught) => {
         return of(err);
       })
