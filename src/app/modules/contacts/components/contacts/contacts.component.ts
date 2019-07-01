@@ -81,9 +81,6 @@ export class ContactsComponent {
     {
       field: "email",
       headerName: "Email",
-      cellRenderer: params => {
-        return params.value.emailId;
-      },
       sortable: true,
       resizable: true
     },

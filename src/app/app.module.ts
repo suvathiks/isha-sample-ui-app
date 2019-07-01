@@ -14,6 +14,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { ConstantState } from "./state/constants/constants.state";
 import { CDIState } from "./state/cdi/cdi.state";
 import { StylingModule } from "./shared/styling.imports";
+import {BulkUploadModule} from './modules/bulk-upload/bulk-upload.module';
 
 @NgModule({
   declarations: [],
@@ -25,6 +26,7 @@ import { StylingModule } from "./shared/styling.imports";
     NgxsModule.forRoot([ConstantState, ContactState, CDIState], {
       developmentMode: !environment.production
     }),
+    BulkUploadModule,
     // HttpClientModule,
     SdkModule // Includes all the sdk features from src/app/sdk
   ],

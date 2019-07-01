@@ -31,12 +31,6 @@ export const sitemap: Link[] = [
     ]
   },
   {
-    label: "Dual Table",
-    path: "dual-tables",
-    icon: "folder",
-    children: []
-  },
-  {
     label: "Example Search",
     path: "search",
     icon: "search",

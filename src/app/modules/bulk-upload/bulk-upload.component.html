@@ -1,0 +1,65 @@
+<mat-card color="primary">
+    <div>
+        <mat-card-content>
+        <mat-expansion-panel [expanded]="true" disabled>
+            <mat-expansion-panel-header>
+                Bulk Upload
+            </mat-expansion-panel-header>
+            <hr>
+            <button tyoe="button" style="color: white; background: steelblue;float: right;" mat-raised-button (click)="downloadCSVTemplate()">Sample CSV Template</button>
+            <button type="button" mat-raised-button (click)="uploadNewCSV()">Choose CSV File</button>
+            <input hidden id="fileUploadButton" #fileInput type="file" accept=".csv" class="upload" (change)="csv2Array($event)">
+            &nbsp; Upload the records in CSV file format
+            <hr>
+            <div *ngIf="showUploadButton">
+                <mat-card *ngIf="showResponse" style="text-align: center;">
+                    <h5>{{response.message}}</h5>
+                    <div>
+                        <span [ngStyle]="{'background': colorCodes['all'], 'color': colorCodes['all']}" style="padding: 5px 12px;">.</span> &nbsp;Total: <b>{{this.inputData.length}}</b>&nbsp;&nbsp;&nbsp;
+                        <span [ngStyle]="{'background': colorCodes['failed'], 'color': colorCodes['failed']}" style="padding: 5px 12px;"></span> &nbsp;Failed: <b>{{this.failedRecordIds.length}}</b>&nbsp;&nbsp;&nbsp;
+                        <span [ngStyle]="{'background': colorCodes['added'], 'color': colorCodes['added']}" style="padding: 5px 12px;"></span> &nbsp;Added Newly: <b>{{this.addedRecordIds.length}}</b>&nbsp;&nbsp;&nbsp;
+                        <span [ngStyle]="{'background': colorCodes['skipped'], 'color': colorCodes['skipped']}" style="padding: 5px 12px;"></span> &nbsp;Skipped: <b>{{this.skippedRecordIds.length}}</b>
+                    </div>
+                </mat-card>
+                <div>
+                    <mat-tab-group [selectedIndex]="indexOf(selectedRecordType)" (selectedTabChange)="onSelectionChange($event)">
+                        <mat-tab [label]="labelOf('all')">
+                            <ng-container *ngTemplateOutlet="table"></ng-container>
+                        </mat-tab>
+                        <mat-tab *ngIf="failedRecordIds.length" [label]="labelOf('failed')">
+                            <ng-container *ngTemplateOutlet="table"></ng-container>
+                        </mat-tab>
+                    </mat-tab-group>
+                </div>
+                <ng-template #table>
+                    <span style="padding: 5px 10px 3px 0px;">
+                        <i style="color: steelblue;" class="fa fa-info-circle"></i> Double click on a cell to start editing it's value
+                    </span>
+                    <div>
+                        <app-data-table 
+                            [tableId]="tableId" 
+                            [columns]="showUneditableColumns() ? uneditableColumns : columns" 
+                            [rows]="rows" 
+                            [totalRecords]="rows.length" 
+                            [tableHeightStatic]="tableHeightStatic"
+                            [csvExportEnabled]="csvExportEnabled"
+                            [csvExportFilename]="csvExportFilename()"
+                            [frameworkComponents]="frameworkComponents"
+                            >
+                            <!-- [csvColumns]="csvColumns()" -->
+                            <!-- [tableHeightClearanceInPx]="tableHeightClearanceInPx"  -->
+                        </app-data-table>
+                    </div>
+                </ng-template>
+            </div>
+            <mat-card-actions class="ims-card-actions" *ngIf="showUploadButton">
+                <button *ngIf="!showResponse" mat-raised-button (click)="onSubmit()" color="accent">Upload</button>
+                <button *ngIf="showResponse && failedRecordIds.length" mat-raised-button (click)="onSubmit()" color="accent">Upload Modified Failed Records</button>
+            </mat-card-actions>
+        </mat-expansion-panel>
+        </mat-card-content>
+    </div>
+</mat-card>
+<div class="loading-indicator" *ngIf="callInProgress">
+    <mat-spinner></mat-spinner>
+</div>
