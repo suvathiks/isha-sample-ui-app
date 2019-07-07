@@ -12,7 +12,6 @@ export class ContactFormCreator {
     private customAsyncValidators: CustomAsyncValidators
   ) {}
   generateContactForm = Contact => {
-    console.log('from generateContactForm', {Contact});
     const ContactForm = this.fb.group({
       id: [Contact.id],
       firstName: [Contact.firstName],

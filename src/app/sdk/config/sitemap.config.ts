@@ -31,9 +31,9 @@ export const sitemap: Link[] = [
     ]
   },
   {
-    label: "Example Search",
-    path: "search",
-    icon: "search",
+    label: "CSV Export",
+    path: "csv-export",
+    icon: "file-excel",
     children: []
   },
   {

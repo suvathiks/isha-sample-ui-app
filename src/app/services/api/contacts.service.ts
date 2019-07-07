@@ -12,13 +12,12 @@ export class ContactsService {
   constructor(private http: HttpClient) {}
 
   fetchContacts(searchParams) {
-    console.log("from fetchContacts", { searchParams });
     // ?_page=7&_limit=20
     const url =
       makeUrl(endpoints.contacts.fetch) +
       `?_page=${searchParams.pageNumber}&_limit=${
         searchParams.pageSize
-      }&_sort=${searchParams.sortField}&_order=${searchParams.sortOrder}`;
+      }&_sort=${searchParams.sortField}&_order=${searchParams.sortOrder}&q=${searchParams.searchQuery}`;
 
     return this.http
       .get(url, { observe: "response" })
@@ -45,7 +44,6 @@ export class ContactsService {
      * Here you need to have an actual API service
      * that responds to bulk upload requests in the following format.
      */
-    console.log('bulk-upload-input', {input: JSON.stringify(contactDataArray)});
     const response = {
       body: {
         message: "Some records failed!",

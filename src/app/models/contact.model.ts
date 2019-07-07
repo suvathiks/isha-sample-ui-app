@@ -13,4 +13,3 @@ export class Contact {
   active: 0 | 1 = 1;
 }
 const newContact = new Contact();
-console.log('new contact', {contact: newContact});

@@ -2,7 +2,7 @@
   <tr>
     <td *ngIf="searchInputExists else emptyTd" class="third-block" id="search-controls">
       <span class="ui-float-label search-input">
-        <input id="search-input" [(ngModel)]="searchParams.searchQuery" (keyup.enter)="callSearchQuery()" type="text" pInputText>
+        <input id="search-input" [(ngModel)]="searchParams.searchQuery" (keyup.enter)="fetchData()" type="text" pInputText>
         <label for="float-input">Search</label>
       </span>
     </td>

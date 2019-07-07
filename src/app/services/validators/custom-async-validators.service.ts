@@ -31,7 +31,6 @@ export class CustomAsyncValidators {
       const phoneControlIdentifier = phoneLabel + "Invalid";
       if (phoneToBeValidated.length > 1) {
         return this.cdiService.validatePhone(phoneToBeValidated).pipe(map(res => {
-          console.log('phone validation response from asyncCustom', {res});
           let validationResponse = res.body.phoneNumbers.find(
             e => e.number === phoneToBeValidated
           );
@@ -49,7 +48,6 @@ export class CustomAsyncValidators {
             // const phoneCodeControlIdentifier = phoneCodeLabel + 'Invalid';
             // form.controls[phoneCodeLabel].setErrors({ incorrect: true });
             form.controls[phoneLabel].setErrors({ incorrect: true });
-            console.log('phone number is BAAAAADDDDDD!!!!!', {validationResponse, required, notRequiredButOneExists, requiredAndBothExist});
             return { [phoneControlIdentifier]: true };
           } else {
             return null;
@@ -70,7 +68,6 @@ export class CustomAsyncValidators {
       | Promise<ValidationErrors | null>
       | Observable<ValidationErrors | null> => {
       if (control.value) {
-          console.log('from email validate async', {value: control.value});
         return this.cdiService.validateEmail(control.value).pipe(map(res => {
           let validationResponse = res.body.emailIds.find(
             e => e.emailId === control.value

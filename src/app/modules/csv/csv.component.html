@@ -1,14 +1,13 @@
 <app-data-table 
   [tableId]="tableId" 
-  [addLabel]="addLabel" 
-  [addRoute]="addRoute" 
   [columns]="columns" 
   [rows]="rows" 
   [totalRecords]="totalRecords$ | async" 
   [tableHeightStatic]="tableHeight" 
-  [rowHeight]="rowHeight" 
+  [rowHeight]="rowHeight"
   (fetchDataCallback)="fetchContacts($event[0])"
   [searchParams]="searchParams" 
-  [searchInputExists]="searchInputExists"
+  [csvExportEnabled]="csvExportEnabled"
+  [csvColumnHeaders]="csvColumnHeaders"
   [frameworkComponents]="frameworkComponents">
 </app-data-table>

@@ -12,7 +12,6 @@ import { ContactsRoutingModule } from "./contacts.routing";
 import { MessageService } from "primeng/api";
 import { FormFieldComponent } from "./components/form-fields/form-fields.component";
 import { MasterFormModule } from "./../../sdk/features/master-form/master-form.module";
-import { EditButtonRenderer } from "./components/cell-renderers/cell-renderers.component";
 import { StylingModule } from '../../shared/styling.imports';
 
 @NgModule({
@@ -20,7 +19,6 @@ import { StylingModule } from '../../shared/styling.imports';
     ContactsComponent,
     AddEditContactComponent,
     FormFieldComponent,
-    EditButtonRenderer
   ],
   imports: [
     CommonModule,
@@ -30,7 +28,6 @@ import { StylingModule } from '../../shared/styling.imports';
     ReactiveFormsModule,
     NgxsFormPluginModule,
     TableModule,
-    AgGridModule.withComponents([EditButtonRenderer]),
     ContactsRoutingModule
   ],
   providers: [PendingChangesGuard, MessageService]

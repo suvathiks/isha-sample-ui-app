@@ -5,32 +5,34 @@ import {
   ContactsService,
   SearchParams,
   fetchResponse
-} from "./../../../../services/api/contacts.service";
-import { Contact } from "./../../../../models/contact.model";
-import { SdkTableColumn } from "./../../../../sdk/features/table/table.model";
-import { ContactState, formIdContact, formRouteContact } from "./../../../../state/contacts/contacts.state";
-import { ConstantState } from "./../../../../state/constants/constants.state";
-import { FetchContacts } from "./../../../../state/contacts/contacts.actions";
-import { country } from "./../../../../shared/constants/constantTypeCodes";
+} from "./../../services/api/contacts.service";
+import { Contact } from "./../../models/contact.model";
+import { SdkTableColumn } from "./../../sdk/features/table/table.model";
+import { ContactState, formIdContact, formRouteContact } from "./../../state/contacts/contacts.state";
+import { ConstantState } from "./../../state/constants/constants.state";
+import { FetchContacts } from "./../../state/contacts/contacts.actions";
+import { country } from "./../../shared/constants/constantTypeCodes";
 import {
   parseDate,
   parseDateTime
-} from "./../../../../shared/functions/parsing.functions";
-import { parseLastModified } from "./../../../../sdk/features/table/table.functions";
-import { Constant } from "./../../../../models/constant.model";
-import { ConstantParsingService } from "./../../../../services/constant-parsing.service";
+} from "./../../shared/functions/parsing.functions";
+import { parseLastModified } from "./../../sdk/features/table/table.functions";
+import { Constant } from "./../../models/constant.model";
+import { ConstantParsingService } from "./../../services/constant-parsing.service";
 import { Router } from "@angular/router";
-import { EditButtonRenderer } from "./../../../../shared/cell-renderers/cell-renderers.component";
-import { SetForm } from '../../../../sdk/features/master-form/master-form.actions';
+import { EditButtonRenderer } from "./../../shared/cell-renderers/cell-renderers.component";
+import { SetForm } from '../../sdk/features/master-form/master-form.actions';
 
 @Component({
-  selector: "app-contacts",
-  templateUrl: "./contacts.component.html",
-  styleUrls: ["./contacts.component.scss"]
+  selector: "app-csv",
+  templateUrl: "./csv.component.html",
+  styleUrls: ["./csv.component.scss"]
 })
-export class ContactsComponent {
-  formId =  formIdContact;
+export class CsvComponent {
+  formId = formIdContact;
   formRoute = formRouteContact;
+  csvExportEnabled = true;
+  csvColumnHeaders = ['firstName', 'lastName', 'dob', 'email', 'phoneDetails', 'city', 'state','country'];
   @Select(ConstantState.constantValues)
   constantValues$: Observable<Constant[]>;
   @Select(ContactState.contacts)
@@ -45,7 +47,6 @@ export class ContactsComponent {
   addRoute = "/contacts/add-edit";
   addLabel = "Add Contact";
   searchParams = new SearchParams();
-  searchInputExists: boolean = true;
   tableHeight: string = "80vh";
   rowHeight: number = 36;
   editColumnEnabled: boolean = true;

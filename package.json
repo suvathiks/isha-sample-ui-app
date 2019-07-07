@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "mock-api": "json-server --watch api/db.js --port 4000",
+    "mock-api": "json-server --watch api/db.js --port 8080",
     "start": "ng serve -o",
     "build": "ng build",
     "test": "ng test",

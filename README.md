@@ -6,28 +6,33 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This is a ready-to-consume reference application that contains commonly used components in Angular written using best practices. This is intended to allow developers to set up a working production-ready application with minimal coding and minimal set up time.
 
+
 # Getting Started
 
-- Make sure Node.js is installed. Recommended version - v10.0.0.
+- Make sure Node.js is installed. Recommended version - v10.15.3.
 - Yarn is the recommended package manager. [Install latest version](https://yarnpkg.com/en/docs/install#debian-stable).
 - Make sure Angular-cli is installed. Use `yarn global add angular-cli`
-- Clone this repo locally and run `yarn install` from within the directory
-- Run `yarn start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Clone this repo locally and run `yarn install` in your terminal from within the directory
+- Run `yarn mock-api` in your terminal to run the mock API, which is needed for the application to run as intended. The API will run on `http://localhost:8080/`.
+- Open a new terminal instance and run `yarn start` to run the UI locally. It will run the UI on `http://localhost:4200/`. The app will automatically recompile and reload if you change any of the source files.
 
 # Features
 
-For a comprehensive and up-to-date listing of features, visit - https://docs.google.com/document/d/1Durdkqi23tCq6CFDptcCBbKdqiKZZ6w9i6EavfdXkO4/edit#
+For a comprehensive and up-to-date listing of features used in this application, visit - https://docs.google.com/document/d/1Durdkqi23tCq6CFDptcCBbKdqiKZZ6w9i6EavfdXkO4/edit?usp=sharing
 
 # Concepts
 
 To use this repository most effectively you will need to be familiar with these tools/concepts on top of being familiar with Angular 2+:-
+
 1. [Angular Feature Modules](https://angular.io/guide/feature-modules)
 2. [Lazy Loading of Feature Modules](https://angular.io/guide/lazy-loading-ngmodules)
 3. [Global State Management with NGXS](https://ngxs.gitbook.io/ngxs)
 
 # Usage
 
-There are two ways to use this repository. First is to use this as starter application for a new application in Angular. Second is to selectively import features into your existing project.
+There are two ways in which this repo can be used:-
+1)  **As a starting point for a new application** - In this case, you will clone the repo and change the configurations and modify the code in the application to fit the needs of the application you're developing.
+2) **As a reference application** - In this case, you can look into the application code to see how aspects of the UI are written and either replicate the patterns within your application or copy-paste specific code from it into your application.
 
 ## Option 1: Use this as a starter application
 

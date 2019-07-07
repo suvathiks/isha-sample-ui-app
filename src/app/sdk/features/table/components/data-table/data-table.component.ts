@@ -40,7 +40,7 @@ export class DataTableComponent {
     @Input() fullWidthCellRendererParams;
     @Input() csvExportEnabled = false;
     @Input() csvExportFilename: string = new Date().toString();
-    @Input() csvColumns: string[] = [];
+    @Input() csvColumnHeaders: string[] = [];
     private tableHeight = `100vh - var(--topnav-height) - var(--paginator-height) - var(--search-input-height) - var(--generic-padding)`;
     sortModel = [];
     currentSearchQuery = '';
@@ -81,8 +81,8 @@ export class DataTableComponent {
             skipPinnedTop: false,
             skipPinnedBottom: false,
             onlySelected: false,
-            allColumns: this.csvColumns.length === 0 ? true : false,
-            columnKeys: this.csvColumns.length > 0 ? this.csvColumns : null,
+            allColumns: this.csvColumnHeaders.length === 0 ? true : false,
+            columnKeys: this.csvColumnHeaders.length > 0 ? this.csvColumnHeaders : null,
             suppressQuotes: true,
             fileName: this.csvExportFilename,
             processCellCallback(cell) {
