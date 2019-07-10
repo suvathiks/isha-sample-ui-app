@@ -31,6 +31,7 @@ To use this repository most effectively you will need to be familiar with these 
 # Usage
 
 There are two ways in which this repo can be used:-
+
 1)  **As a starting point for a new application** - In this case, you will clone the repo and change the configurations and modify the code in the application to fit the needs of the application you're developing.
 2) **As a reference application** - In this case, you can look into the application code to see how aspects of the UI are written and either replicate the patterns within your application or copy-paste specific code from it into your application.
 
