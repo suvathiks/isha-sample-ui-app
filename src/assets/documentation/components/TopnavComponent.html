@@ -61,7 +61,7 @@
         <h3>Implements</h3>
     </p>
     <p class="comment">
-                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
     </p>
 
 
@@ -108,47 +108,6 @@
     </table>
 </section>
 
-    <section>
-    <h3 id="index">Index</h3>
-    <table class="table table-sm table-bordered index-table">
-        <tbody>
-
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Methods</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#logout">logout</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Inputs</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#currentPath">currentPath</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-
-
-
-
-        </tbody>
-    </table>
-</section>
 
     <section>
     <h3 id="constructor">Constructor</h3>
@@ -156,101 +115,18 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(store: Store)</code>
+<code>constructor()</code>
                     </td>
                 </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                            <div>
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>store</td>
-                                                  
-                                                        <td>
-                                                                    <code>Store</code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
-
-    <section>
-    <h3 id="inputs">Inputs</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-2">
-                        <a name="currentPath"></a>
-                        <code>currentPath</code>
-                    </td>
-                    <td class="col-md-10">
-                    </td>
-                </tr>
             </tbody>
         </table>
 </section>
 
 
 
-    <section>
-    
-        <h3 id="methods">
-            Methods
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="logout"></a>
-                        <span class="name">
-                            <b>
-                            logout
-                            </b>
-                            <a href="#logout"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-<code>logout()</code>
-                    </td>
-                </tr>
 
 
-
-
-                <tr>
-                    <td class="col-md-4">
-
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
 
 
 </div>
@@ -263,62 +139,114 @@
                     <code>./topnav.component.scss</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss">#topnav {
-  top: 0;
-  left: 0;
-  width: 100%;
-  margin: 0;
-  padding: 0px 0px 0px 2px;
-  height: var(--topnav-height);
-  z-index: 1;
-  position: fixed;
-  border-bottom: solid 1px rgba(0, 0, 0, 0.5);
-  background-color: white;
-  // overflow: visible;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    // padding: 0px 0px 0px 2px;
+    height: var(--topnav-height);
+    z-index: 1000;
+    position: fixed;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.5);
+    background: white;
 }
 #logo {
-  left: 0;
-  margin: 0;
-  visibility: visible;
-  cursor: pointer;
-  height: calc(var(--topnav-height) - var(--generic-padding));
-  padding: 2px;
+    // margin: 0 0 0 1;
+    visibility: visible;
+    cursor: pointer;
+    height: var(--topnav-height);
+    margin-right: 5px;
+    // height: calc(var(--topnav-height) - var(--generic-padding));
+    // padding: 1px;
 }
 #logo-min {
-  left: 0;
-  margin: 0;
-  height: var(--topnav-height);
-  width: auto;
-  padding: 2px;
-  visibility: hidden;
-  width: 0;
-  cursor: pointer;
-}
-#topnav-breadcrumb {
-  font-size: 0.7em;
-  vertical-align: bottom;
-  height: var(--breadcrumb-height);
-  margin-top: calc(var(--topnav-height)-var(--breadcrumb-height));
-}
-@media screen and (max-width: 480px) {
-  #logo {
+    left: 0;
+    margin: 0;
+    height: var(--topnav-height);
+    width: auto;
+    // padding: 2px;
     visibility: hidden;
     width: 0;
-  }
-  #logo-min {
+    cursor: pointer;
+}
+#topnav-breadcrumb {
+    font-size: 0.7em;
+    vertical-align: bottom;
+    height: var(--breadcrumb-height);
+    margin-top: calc(var(--topnav-height)-var(--breadcrumb-height));
+}
+#session {
+    display: flex;
+    flex-direction: row;
+    height: var(--topnav-height);
+    position: fixed;
+    right: 0px;
+}
+#user-info {
     visibility: visible;
-    width: initial;
-  }
+    text-align: left;
+    padding: 0px 10px 0px 0px;
+}
+// #user-icon {
+//     visibility: visible;
+//     padding: 11px 5px;
+//     color: var(--isha-orange);
+//     font-size: 25px;
+// }
+#name {
+    font-size: 20px;
+    margin: 0;
+    padding: 27px 0px 10px 0px;
+    line-height: 0px;
+    font-weight: bold;
+}
+#email {
+    color: var(--isha-orange);
+    font-size: 12px;
+    font-style: italic;
+    padding: 5px 0px 0px 0px;
+    line-height: 0px;
+}
+@media screen and (max-width: 780px) {
+    #user-icon {
+        width: 0;
+        visibility: hidden;
+    }
+    #user-info {
+        width: 0;
+        visibility: hidden;
+    }
+}
+@media screen and (max-width: 480px) {
+    #logo {
+        visibility: hidden;
+        width: 0;
+    }
+    #logo-min {
+        visibility: visible;
+        width: initial;
+    }
 }
 #logout-button {
-  position: fixed;
-  right: 10px;
-  .logout {
-    color: red;
+    margin: 0;
+    padding: 13px 10px 12px 0px;
+    text-align: center;
+    color: rgba(239, 83, 80, 0.5);
     &amp;:hover {
-      cursor: pointer;
+        color: #ef5350;
+        cursor: pointer;
     }
-  }
-}</code></pre>
+    #logout-icon {
+        font-size: 25px;
+    }
+    #logout-text {
+        font-size: 0.5em;
+        padding: 0;
+        margin: 0;
+    }
+}
+</code></pre>
     </div>
 
 
@@ -329,8 +257,8 @@
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-toolbar id="topnav">  <img id="logo" class="topnav-item" src="assets/logo/logo.png" routerLink="/" alt="Logo" />  <img id="logo-min" class="topnav-item" src="assets/logo/logoMin.png" routerLink="/" alt="Logo Mini" />  <app-breadcrumb [currentPath]="currentPath" id="topnav-breadcrumb" class="topnav-item"></app-breadcrumb>  <span id="logout-button" class="topnav-item">    <i class="material-icons logout" (click)="logout()">logout</i>  </span></mat-toolbar></div>'
-    var COMPONENTS = [{'name': 'AddEditProgramComponent', 'selector': 'app-add-program'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'DataTableComponent', 'selector': 'app-data-table'},{'name': 'EditButtonRenderer', 'selector': 'edit-button'},{'name': 'FormFieldComponent', 'selector': 'form-field'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'MasterFormComponent', 'selector': 'app-master-form'},{'name': 'PaginatorComponent', 'selector': 'app-paginator'},{'name': 'ProgramsComponent', 'selector': 'app-programs'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'TopnavComponent', 'selector': 'app-topnav'}];
+        var COMPONENT_TEMPLATE = '<div><mat-toolbar id="topnav">    <img id="logo" src="assets/logo/logo.png" routerLink="/" alt="Logo" />    <img id="logo-min" src="assets/logo/logoMin.png" routerLink="/" alt="Logo Mini" />    <app-breadcrumb id="topnav-breadcrumb" class="topnav-item"></app-breadcrumb>    <!-- <div id="session">        <div id="user-info">            <div id="name"> {{username}}</div>        </div>        <div id="logout-button" pTooltip="Logout" tooltipPosition="bottom" showDelay="1000">            <i id="logout-icon" class="fa fa-power-off" (click)="logout()"></i>        </div>    </div> --></mat-toolbar></div>'
+    var COMPONENTS = [{'name': 'AddEditContactComponent', 'selector': 'app-add-contact'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'BulkUploadComponent', 'selector': 'jhi-bulk-upload'},{'name': 'ContactsComponent', 'selector': 'app-contacts'},{'name': 'DataTableComponent', 'selector': 'app-data-table'},{'name': 'EditButtonRenderer', 'selector': 'edit-button'},{'name': 'FormFieldComponent', 'selector': 'form-field'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'MasterFormComponent', 'selector': 'app-master-form'},{'name': 'PaginatorComponent', 'selector': 'app-paginator'},{'name': 'RecordErrorRendererComponent', 'selector': 'app-record-error-renderer'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'TopnavComponent', 'selector': 'app-topnav'}];
     var DIRECTIVES = [{'name': 'CreditCardValidator', 'selector': '[validCreditCard]'}];
     var ACTUAL_COMPONENT = {'name': 'TopnavComponent'};
 </script>

@@ -38,7 +38,7 @@
 
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li>ProgramFormCreator</li>
+  <li>CDIService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -53,8 +53,9 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/modules/programs/components/add-program/program.form.ts</code>
+            <code>src/app/services/cdi/cdi.service.ts</code>
         </p>
+
 
 
 
@@ -62,21 +63,27 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+
                 <tr>
                     <td class="col-md-4">
-                        <h6><b>Properties</b></h6>
+                        <h6><b>Methods</b></h6>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#generateProgramForm">generateProgramForm</a>
+                                <a href="#listCountries">listCountries</a>
+                            </li>
+                            <li>
+                                <a href="#validateEmail">validateEmail</a>
+                            </li>
+                            <li>
+                                <a href="#validatePhone">validatePhone</a>
                             </li>
                         </ul>
                     </td>
                 </tr>
-
 
 
 
@@ -92,7 +99,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>)</code>
+<code>constructor(http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
                     </td>
                 </tr>
 
@@ -110,10 +117,10 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>fb</td>
+                                                        <td>http</td>
                                                   
                                                         <td>
-                                                                    <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -130,61 +137,164 @@
         </table>
 </section>
 
-
             <section>
     
-        <h3 id="inputs">
-            Properties
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="generateProgramForm"></a>
-                        <span class="name">
-                            <b>
-                            generateProgramForm
-                            </b>
-                            <a href="#generateProgramForm"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>generateProgramForm:     <code></code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>program &#x3D;&gt; {
-    const programForm &#x3D; this.fb.group({
-      active: [1],
-      programId: [program.programId],
-      programName: [program.programName],
-    //   programName: [program.programName, [Validators.required]],
-      programType: [program.programType, Validators.required],
-      startDate: [
-        parseDateForCalendar(program.startDate),
-        [Validators.required, dateRangeValidator]
-      ],
-      endDate: [
-        parseDateForCalendar(program.endDate),
-        [Validators.required, dateRangeValidator]
-      ],
-      venue: [program.venue],
-      city: [program.city, Validators.required],
-      state: [program.state, Validators.required],
-      country: [program.country, Validators.required]
-    });
-    return programForm;
-  }</code>
-                        </td>
-                    </tr>
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="listCountries"></a>
+                    <span class="name">
+                        <b>
+                            listCountries
+                        </b>
+                        <a href="#listCountries"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>listCountries()</code>
+                </td>
+            </tr>
 
 
-            </tbody>
-        </table>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateEmail"></a>
+                    <span class="name">
+                        <b>
+                            validateEmail
+                        </b>
+                        <a href="#validateEmail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validateEmail(email)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>email</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validatePhone"></a>
+                    <span class="name">
+                        <b>
+                            validatePhone
+                        </b>
+                        <a href="#validatePhone"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validatePhone(phone)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>phone</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>
 
     </div>
@@ -220,7 +330,7 @@
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
-            var COMPODOC_CURRENT_PAGE_URL = 'ProgramFormCreator.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'CDIService.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

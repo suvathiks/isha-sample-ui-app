@@ -61,7 +61,7 @@
         <h3>Implements</h3>
     </p>
     <p class="comment">
-                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
     </p>
 
     <p class="comment">
@@ -126,19 +126,22 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#childLinks">childLinks</a>
+                                <a href="#clickedLinks">clickedLinks</a>
                             </li>
                             <li>
-                                <a href="#clickedLink">clickedLink</a>
+                                <a href="#currentUrl">currentUrl</a>
+                            </li>
+                            <li>
+                                <a href="#getSidenavModeFromLocalStorage">getSidenavModeFromLocalStorage</a>
                             </li>
                             <li>
                                 <a href="#homeLink">homeLink</a>
                             </li>
                             <li>
-                                <a href="#isLinkChild">isLinkChild</a>
+                                <a href="#microSidenavWidth">microSidenavWidth</a>
                             </li>
                             <li>
-                                <a href="#isPathInLink">isPathInLink</a>
+                                <a href="#miniSidenavWidth">miniSidenavWidth</a>
                             </li>
                             <li>
                                 <a href="#navLinks">navLinks</a>
@@ -150,36 +153,37 @@
                                 <a href="#onSidenavLinkClick">onSidenavLinkClick</a>
                             </li>
                             <li>
-                                <a href="#resetClickedLink">resetClickedLink</a>
+                                <a href="#removeClickedLink">removeClickedLink</a>
                             </li>
                             <li>
                                 <a href="#setClickedLink">setClickedLink</a>
                             </li>
                             <li>
-                                <a href="#showSidebar">showSidebar</a>
+                                <a href="#setSidenavModeToLocalStorage">setSidenavModeToLocalStorage</a>
                             </li>
                             <li>
-                                <a href="#sidebarActiveLink">sidebarActiveLink</a>
+                                <a href="#showMicroSidenav">showMicroSidenav</a>
+                            </li>
+                            <li>
+                                <a href="#showSidenav">showSidenav</a>
+                            </li>
+                            <li>
+                                <a href="#sidenavActiveLink">sidenavActiveLink</a>
+                            </li>
+                            <li>
+                                <a href="#sidenavMiniActiveLink">sidenavMiniActiveLink</a>
+                            </li>
+                            <li>
+                                <a href="#toggleMicroSidenav">toggleMicroSidenav</a>
+                            </li>
+                            <li>
+                                <a href="#urlContainsPath">urlContainsPath</a>
                             </li>
                         </ul>
                     </td>
                 </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Inputs</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#currentPath">currentPath</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
 
 
 
@@ -215,7 +219,7 @@
                                                         <td>router</td>
                                                   
                                                         <td>
-                                                                    <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -232,25 +236,7 @@
         </table>
 </section>
 
-    <section>
-    <h3 id="inputs">Inputs</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-2">
-                        <a name="currentPath"></a>
-                        <code>currentPath</code>
-                    </td>
-                    <td class="col-md-10">
-                            <p>
-                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
-                            </p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
 
 
 
@@ -264,25 +250,23 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="childLinks"></a>
+                        <a name="clickedLinks"></a>
                         <span class="name">
                             <b>
-                            childLinks
-                            </b>
-                            <a href="#childLinks"><span class="icon ion-ios-link"></span></a>
+                            clickedLinks</b>
+                            <a href="#clickedLinks"><span class="icon ion-ios-link"></span></a>
                         </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>childLinks:     <code><a href="../classes/Link.html" target="_self" >Link[]</a></code>
-</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="../classes/Link.html" target="_self" >Link[]</a></code>
+                            <i>Type : </i>        <code><a href="../classes/Link.html" target="_self" >Link[]</a></code>
 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
                         </td>
                     </tr>
 
@@ -293,33 +277,53 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="clickedLink"></a>
+                        <a name="currentUrl"></a>
                         <span class="name">
                             <b>
-                            clickedLink
-                            </b>
-                            <a href="#clickedLink"><span class="icon ion-ios-link"></span></a>
+                            currentUrl</b>
+                            <a href="#currentUrl"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <code>clickedLink:     <code><a href="../classes/Link.html" target="_self" >Link</a></code>
-</code>
+                        <a name="getSidenavModeFromLocalStorage"></a>
+                        <span class="name">
+                            <b>
+                            getSidenavModeFromLocalStorage</b>
+                            <a href="#getSidenavModeFromLocalStorage"><span class="icon ion-ios-link"></span></a>
+                        </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="../classes/Link.html" target="_self" >Link</a></code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>new Link()</code>
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
                         </td>
                     </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Retrieve the showMicroSidenav from localStorage</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -330,21 +334,14 @@
                         <a name="homeLink"></a>
                         <span class="name">
                             <b>
-                            homeLink
-                            </b>
+                            homeLink</b>
                             <a href="#homeLink"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>homeLink:     <code><a href="../classes/Link.html" target="_self" >Link</a></code>
-</code>
-                    </td>
-                </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="../classes/Link.html" target="_self" >Link</a></code>
+                            <i>Type : </i>        <code><a href="../classes/Link.html" target="_self" >Link</a></code>
 
                         </td>
                     </tr>
@@ -361,48 +358,20 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="isLinkChild"></a>
+                        <a name="microSidenavWidth"></a>
                         <span class="name">
                             <b>
-                            isLinkChild
-                            </b>
-                            <a href="#isLinkChild"><span class="icon ion-ios-link"></span></a>
+                            microSidenavWidth</b>
+                            <a href="#microSidenavWidth"><span class="icon ion-ios-link"></span></a>
                         </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>isLinkChild:     <code></code>
-</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>(parentLink: Link, link: Link) &#x3D;&gt; {
-    const parentLinkId &#x3D; &#x60;${parentLink.label}${parentLink.path}&#x60;;
-    const childLinkId &#x3D; &#x60;${link.label}${link.path}&#x60;;
-    if (parentLinkId &#x3D;&#x3D;&#x3D; childLinkId) {
-      return true;
-    } else if (parentLink.children.length) {
-      const parentLinkString &#x3D; JSON.stringify(parentLink);
-      if (
-        parentLinkString.includes(&#x60;&quot;label&quot;:&quot;${link.label}&quot;&#x60;) &amp;&amp;
-        parentLinkString.includes(&#x60;path&quot;:&quot;${link.path}&quot;&#x60;)
-      ) {
-        return true;
-      }
-    }
-    return false;
-  }</code>
+                            <i>Default value : </i><code>getComputedStyle(document.body).getPropertyValue(&#x27;--micro-sidenav-width&#x27;)</code>
                         </td>
                     </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Returns true if link2 is contained within link1</p>
-</div>
-                    </td>
-                </tr>
 
             </tbody>
         </table>
@@ -410,29 +379,17 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="isPathInLink"></a>
+                        <a name="miniSidenavWidth"></a>
                         <span class="name">
                             <b>
-                            isPathInLink
-                            </b>
-                            <a href="#isPathInLink"><span class="icon ion-ios-link"></span></a>
+                            miniSidenavWidth</b>
+                            <a href="#miniSidenavWidth"><span class="icon ion-ios-link"></span></a>
                         </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>isPathInLink:     <code></code>
-</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>(path: string, link: Link) &#x3D;&gt; {
-    const linkString &#x3D; JSON.stringify(link);
-    if (linkString.includes(&#x60;path&quot;:&quot;${path}&quot;&#x60;)) {
-      return true;
-    } else return false;
-  }</code>
+                            <i>Default value : </i><code>getComputedStyle(document.body).getPropertyValue(&#x27;--mini-sidenav-width&#x27;)</code>
                         </td>
                     </tr>
 
@@ -446,22 +403,20 @@
                         <a name="navLinks"></a>
                         <span class="name">
                             <b>
-                            navLinks
-                            </b>
+                            navLinks</b>
                             <a href="#navLinks"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>navLinks:     <code><a href="../classes/Link.html" target="_self" >Link[]</a></code>
-</code>
-                    </td>
-                </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="../classes/Link.html" target="_self" >Link[]</a></code>
+                            <i>Type : </i>        <code><a href="../classes/Link.html" target="_self" >Link[]</a></code>
 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
                         </td>
                     </tr>
 
@@ -475,24 +430,14 @@
                         <a name="onMiniSidenavLinkClick"></a>
                         <span class="name">
                             <b>
-                            onMiniSidenavLinkClick
-                            </b>
+                            onMiniSidenavLinkClick</b>
                             <a href="#onMiniSidenavLinkClick"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>onMiniSidenavLinkClick:     <code></code>
-</code>
-                    </td>
-                </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>(link: Link) &#x3D;&gt; {
-    this.setClickedLink(link);
-    this.showSidebar &#x3D; true;
-  }</code>
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
                         </td>
                     </tr>
 
@@ -506,30 +451,14 @@
                         <a name="onSidenavLinkClick"></a>
                         <span class="name">
                             <b>
-                            onSidenavLinkClick
-                            </b>
+                            onSidenavLinkClick</b>
                             <a href="#onSidenavLinkClick"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>onSidenavLinkClick:     <code></code>
-</code>
-                    </td>
-                </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>(link: Link) &#x3D;&gt; {
-    if (link.path !&#x3D;&#x3D; null) {
-      this.showSidebar &#x3D; false;
-    }
-    if (this.isLinkChild(link, this.clickedLink)) {
-      this.resetClickedLink();
-    } else {
-      this.setClickedLink(link);
-    }
-  }</code>
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
                         </td>
                     </tr>
 
@@ -540,29 +469,26 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="resetClickedLink"></a>
+                        <a name="removeClickedLink"></a>
                         <span class="name">
                             <b>
-                            resetClickedLink
-                            </b>
-                            <a href="#resetClickedLink"><span class="icon ion-ios-link"></span></a>
+                            removeClickedLink</b>
+                            <a href="#removeClickedLink"><span class="icon ion-ios-link"></span></a>
                         </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>resetClickedLink:     <code></code>
-</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>() &#x3D;&gt; {
-    this.clickedLink &#x3D; new Link();
-  }</code>
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
                         </td>
                     </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Removes the given link from the array of clicked links</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -573,27 +499,25 @@
                         <a name="setClickedLink"></a>
                         <span class="name">
                             <b>
-                            setClickedLink
-                            </b>
+                            setClickedLink</b>
                             <a href="#setClickedLink"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>setClickedLink:     <code></code>
-</code>
-                    </td>
-                </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>(link: Link) &#x3D;&gt; {
-    this.clickedLink &#x3D; link;
-    this.childLinks &#x3D; link.children;
-  }</code>
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
                         </td>
                     </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Takes the given link and pushes into the list of clicked links.
+The clicked links array will be used to determine which links need to
+be shown with expanded list of child links.</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -601,27 +525,41 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="showSidebar"></a>
+                        <a name="setSidenavModeToLocalStorage"></a>
                         <span class="name">
                             <b>
-                            showSidebar
-                            </b>
-                            <a href="#showSidebar"><span class="icon ion-ios-link"></span></a>
+                            setSidenavModeToLocalStorage</b>
+                            <a href="#setSidenavModeToLocalStorage"><span class="icon ion-ios-link"></span></a>
                         </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>showSidebar:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
                         </td>
                     </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Set the showMicroSidenav to localStorage</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showMicroSidenav"></a>
+                        <span class="name">
+                            <b>
+                            showMicroSidenav</b>
+                            <a href="#showMicroSidenav"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>false</code>
@@ -635,35 +573,38 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="sidebarActiveLink"></a>
+                        <a name="showSidenav"></a>
                         <span class="name">
                             <b>
-                            sidebarActiveLink
-                            </b>
-                            <a href="#sidebarActiveLink"><span class="icon ion-ios-link"></span></a>
+                            showSidenav</b>
+                            <a href="#showSidenav"><span class="icon ion-ios-link"></span></a>
                         </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>sidebarActiveLink:     <code></code>
-</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>(link: Link) &#x3D;&gt; {
-    const linkPath &#x3D; link.path;
-    if (linkPath &#x3D;&#x3D;&#x3D; this.currentPath) {
-      return true;
-    } else if (
-      this.isPathInLink(this.currentPath, link) &amp;&amp;
-      link !&#x3D;&#x3D; this.clickedLink
-    ) {
-      return true;
-    }
-    return false;
-  }</code>
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sidenavActiveLink"></a>
+                        <span class="name">
+                            <b>
+                            sidenavActiveLink</b>
+                            <a href="#sidenavActiveLink"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
                         </td>
                     </tr>
 
@@ -674,6 +615,77 @@ or that of its children contain the currentPath.</p>
 </div>
                     </td>
                 </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sidenavMiniActiveLink"></a>
+                        <span class="name">
+                            <b>
+                            sidenavMiniActiveLink</b>
+                            <a href="#sidenavMiniActiveLink"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Used for the minisidenav.
+Takes in a link and returns true if its path
+or that of its children contain the currentPath.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="toggleMicroSidenav"></a>
+                        <span class="name">
+                            <b>
+                            toggleMicroSidenav</b>
+                            <a href="#toggleMicroSidenav"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="urlContainsPath"></a>
+                        <span class="name">
+                            <b>
+                            urlContainsPath</b>
+                            <a href="#urlContainsPath"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+
 
             </tbody>
         </table>
@@ -688,91 +700,159 @@ or that of its children contain the currentPath.</p>
                 <p class="comment">
                     <code>./sidenav.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">#sidebar {
-  padding-top: 10px;
-  top: var(--topnav-height);
-  position: fixed;
-  background: var(--sidenav-black);
-  height: 100vh;
-  overflow: hidden;
-  width: var(--mini-sidenav-width);
+                <pre class="line-numbers"><code class="language-scss">#miniSidenav {
+    padding: 10px 0px 0px 5px;
+    top: var(--topnav-height);
+    position: fixed;
+    background: var(--sidenav-black);
+    height: 100vh;
+    overflow: hidden;
+    width: var(--mini-sidenav-width);
 }
+
+#microSidenavToggle {
+    position: fixed;
+    padding: 10px 10px 10px 0px;
+    left: 10;
+    background: var(--sidenav-black-transparent);
+    bottom: 30px;
+    width: 30px;
+    height: auto;
+    border-radius: 0px 3px 3px 0px;
+    float: right;
+    cursor: pointer;
+    i {
+        padding: 1px 3px 1px 1px;
+        font-size: 1.2em;
+        color: rgba(255, 255, 255, 0.5);
+        &amp;:hover {
+            color: white;
+        }
+    }
+}
+
+@media screen and (max-height: 450px) {
+    #microSidenavToggle {
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
+}
+
 @media screen and (max-width: 480px) {
-  :root {
-    --mini-sidenav-width: 0px;
-  }
-  #sidebar {
-    visibility: hidden;
-  }
+    :root {
+        --mini-sidenav-width: 0px;
+        --mini-sidenav-width: 0px;
+    }
+    #sidenav {
+        visibility: hidden;
+    }
+    #miniSidenav {
+        visibility: hidden;
+    }
 }
 
 .nav-links-container {
-  overflow-y: scroll;
-  height: 100vh;
-  .nav-link {
-    i {
-      font-size: var(--sidenav-icon-size);
+    overflow-y: scroll;
+    height: 100%;
+    .nav-link {
+        cursor: pointer;
+        font-size: 1.1em;
+        text-align: left;
+        padding: 2px 2px 2px 0px;
+        margin: 0px 0px 5px 0px;
+        i {
+            width: var(--sidenav-icon-width);
+            text-align: center;
+            font-size: var(--sidenav-icon-size);
+            color: var(--isha-orange);
+        }
+        &amp;:hover {
+            background-color: var(--isha-orange-transparent);
+        }
     }
-    vertical-align: -webkit-baseline-middle;
-    cursor: pointer;
-    text-align: left;
-    padding: 2px;
-    margin: 0px 0px 5px 0px;
-    &amp;:hover {
-      background-color: var(--isha-orange-transparent);
-    }
-  }
 }
 
 .label-container {
-  display: table;
-  margin: 0px 0px 5px 0px;
-  i {
-    display: table-cell;
-    vertical-align: middle;
-    font-size: var(--sidenav-icon-size);
-  }
-  .nav-label {
-    left: 30px;
-    font-size: 18px;
-    display: table-cell;
-    vertical-align: middle;
-  }
-}
-.mini-nav-links {
-  .mini-nav-link {
+    display: table;
     i {
-      color: white;
-      font-size: var(--sidenav-icon-size);
+        width: var(--sidenav-icon-width);
+        text-align: center;
+        font-size: var(--sidenav-icon-size);
+        display: table-cell;
+        vertical-align: middle;
     }
+    .nav-label {
+        left: calc(var(--sidenav-icon-width) + 5px);
+        display: table-cell;
+        vertical-align: middle;
+        font-weight: bold;
+    }
+}
+.micro-nav-link {
+    color: white;
     cursor: pointer;
-    font-size: 1.2em;
     text-align: center;
     padding: 2px;
     margin: 0px 0px 5px 0px;
-  }
+    i {
+        font-size: var(--sidenav-icon-size);
+        color: var(--isha-orange);
+    }
+    &amp;:hover {
+        background-color: var(--isha-orange);
+        i {
+            color: var(--sidenav-black);
+        }
+    }
 }
+.mini-nav-link {
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    text-align: left;
+    padding: 2px 2px 2px 2px;
+    margin: 0px 0px 5px 0px;
+    i {
+        width: var(--sidenav-icon-width);
+        margin-right: 2px;
+        text-align: center;
+        font-size: var(--sidenav-icon-size);
+        color: var(--isha-orange);
+    }
+    &amp;:hover {
+        background-color: var(--isha-orange);
+        i {
+            color: var(--sidenav-black);
+        }
+    }
+}
+
 .activated {
-  background-color: var(--isha-orange);
+    background-color: var(--isha-orange);
+    i {
+        color: var(--sidenav-black) !important;
+    }
+    font-weight: bold;
 }
 
 #mobile-sidenav-puller {
-  position: fixed;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  cursor: pointer;
-  z-index: 99999;
-  width: 25px;
-  bottom: 20px;
-  left: 0px;
-  visibility: hidden;
+    position: fixed;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    z-index: 99999;
+    width: 25px;
+    bottom: 20px;
+    left: 0px;
+    visibility: hidden;
 }
 
 @media screen and (max-width: 480px) {
-  #mobile-sidenav-puller {
-    visibility: visible;
-  }
+    #mobile-sidenav-puller {
+        visibility: visible;
+    }
 }
 </code></pre>
     </div>
@@ -785,8 +865,8 @@ or that of its children contain the currentPath.</p>
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!-- Sidebar with hierarchical list of all routes --><p-sidebar [(visible)]="showSidebar" [style]="{background: \'var(--sidenav-black)\', border: \'solid var(--sidenav-black) 1px\', color: \'white\', width:\'27em\', top: \'var(--topnav-height)\', padding: \'10px\', margin: \'0px\'}"  [showCloseIcon]="false" [modal]="false" styleClass="ui-sidebar-md" (mouseleave)="showSidebar=false" [style.overflow-y]="scroll">  <div class="nav-links-container nav-links">    <div [routerLink]="homeLink.path" [class.activated]="sidebarActiveLink(homeLink)" (click)="onSidenavLinkClick(homeLink)"      class="nav-link">      <span class="label-container ">        <i class="material-icons">          {{homeLink.icon}}        </i>&nbsp;        <span class="nav-label">{{homeLink.label}}</span>      </span>    </div>    <div *ngFor="let link of navLinks">      <div [routerLink]="link.path" [class.activated]="sidebarActiveLink(link)" (click)="onSidenavLinkClick(link)" class="nav-link">        <span class="label-container ">          <i class="material-icons ">            {{link.icon}}          </i>          &nbsp;          <span class="nav-label ">{{link.label}}</span>        </span>      </div>      <div *ngIf="link.label === clickedLink.label && link.children.length">        <div *ngFor="let link of childLinks">          <div [routerLink]="link.path" [class.activated]="sidebarActiveLink(link)" (click)="onSidenavLinkClick(link)" class="nav-link">            <span class="label-container ">              &nbsp;&nbsp;&nbsp;              <i class="material-icons ">keyboard_arrow_right</i>              <i class="material-icons ">                {{link.icon}}              </i>&nbsp;              <span class="nav-label ">{{link.label}}</span>            </span>          </div>        </div>      </div>    </div>  </div></p-sidebar><!-- Mini sidebar that is unexpanded --><nav id="sidebar" class="mini-nav-links">  <div [pTooltip]="homeLink.label">    <div [routerLink]="homeLink.path" [class.activated]="sidebarActiveLink(homeLink)" class="mini-nav-link">      <i class="material-icons">        {{homeLink.icon}}      </i>    </div>  </div>  <div *ngFor="let link of navLinks">    <div [pTooltip]="link.label">      <div [routerLink]="link.path" [class.activated]="sidebarActiveLink(link)" (click)="onMiniSidenavLinkClick(link)" class="mini-nav-link">        <i class="material-icons">          {{link.icon}}        </i>      </div>    </div>  </div></nav><!-- Sidebar puller on mobile view --><div id="mobile-sidenav-puller">  <div (click)="showSidebar=true" *ngIf="!showSidebar">    <i class="material-icons">arrow_forward</i>  </div>  <div (click)="showSidebar=false" *ngIf="showSidebar">    <i class="material-icons" *ngIf="showSidebar">arrow_backward</i>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AddEditProgramComponent', 'selector': 'app-add-program'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'DataTableComponent', 'selector': 'app-data-table'},{'name': 'EditButtonRenderer', 'selector': 'edit-button'},{'name': 'FormFieldComponent', 'selector': 'form-field'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'MasterFormComponent', 'selector': 'app-master-form'},{'name': 'PaginatorComponent', 'selector': 'app-paginator'},{'name': 'ProgramsComponent', 'selector': 'app-programs'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'TopnavComponent', 'selector': 'app-topnav'}];
+        var COMPONENT_TEMPLATE = '<div><!-- Sidenav with hierarchical list of all routes --><p-sidebar    [(visible)]="showSidenav"    [style]="{        background: \'var(--sidenav-black)\',        border: \'solid var(--sidenav-black) 1px\',        color: \'white\',        width: \'27em\',        height: \'100vh\',        overflow: \'scroll\',        top: \'var(--topnav-height)\',        padding: \'10px 10px 10px 5px\',        margin: \'0px\'    }"    [showCloseIcon]="false"    [modal]="false"    styleClass="ui-sidenav-md"    (mouseleave)="showSidenav = false">    <div>        <div *ngFor="let link of navLinks" class="nav-links-container nav-links">            <div [routerLink]="link.path" [class.activated]="sidenavActiveLink(link)" (click)="onSidenavLinkClick(link)" class="nav-link">                <span class="label-container ">                    <i [ngClass]="\'fa fa-\' + link.icon" aria-hidden="true"></i>                    &nbsp;                    <span class="nav-label ">{{ link.label }}</span>                </span>            </div>            <div *ngIf="clickedLinks.includes(link) && link.children.length">                <div *ngFor="let link of link.children">                    <div                        [routerLink]="link.path"                        (click)="onSidenavLinkClick(link)"                        class="nav-link"                        [class.activated]="sidenavActiveLink(link)"                    >                        <span class="label-container ">                            &nbsp;&nbsp;&nbsp;                            <i class="fa fa-angle-right"></i>                            <i [ngClass]="\'fa fa-\' + link.icon" aria-hidden="true"></i>&nbsp;                            <span class="nav-label ">{{ link.label }}</span>                        </span>                    </div>                </div>            </div>        </div>        <br />        <br />    </div></p-sidebar><!-- Mini sidenav that is unexpanded. --><nav id="miniSidenav">    <div *ngFor="let link of navLinks">        <div [pTooltip]="showMicroSidenav ? link.label : null">            <div                [routerLink]="link.path"                (click)="onMiniSidenavLinkClick(link)"                [ngClass]="{ \'mini-nav-link\': !showMicroSidenav, \'micro-nav-link\': showMicroSidenav }"                [class.activated]="sidenavMiniActiveLink(link)"            >                <span class="label-container">                    <i [ngClass]="\'fa fa-\' + link.icon" aria-hidden="true"></i>                    <span *ngIf="!showMicroSidenav" class="nav-label">&nbsp;{{ link.label }}</span>                </span>            </div>        </div>    </div>    <div id="microSidenavToggle" (click)="toggleMicroSidenav()" [pTooltip]="showMicroSidenav ? \'Show labels\' : \'Hide labels\'" showDelay="1000">        <i class="fa" [ngClass]="{ \'fa-arrow-right\': showMicroSidenav, \'fa-arrow-left\': !showMicroSidenav }"></i>    </div></nav><!-- Sidenav puller on mobile view --><div id="mobile-sidenav-puller">    <div (click)="showSidenav = true" *ngIf="!showSidenav">        <i class="fa fa-arrow-right"></i>    </div>    <div (click)="showSidenav = false" *ngIf="showSidenav">        <i class="fa fa-arrow-left"></i>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AddEditContactComponent', 'selector': 'app-add-contact'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'BulkUploadComponent', 'selector': 'jhi-bulk-upload'},{'name': 'ContactsComponent', 'selector': 'app-contacts'},{'name': 'DataTableComponent', 'selector': 'app-data-table'},{'name': 'EditButtonRenderer', 'selector': 'edit-button'},{'name': 'FormFieldComponent', 'selector': 'form-field'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'MasterFormComponent', 'selector': 'app-master-form'},{'name': 'PaginatorComponent', 'selector': 'app-paginator'},{'name': 'RecordErrorRendererComponent', 'selector': 'app-record-error-renderer'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'TopnavComponent', 'selector': 'app-topnav'}];
     var DIRECTIVES = [{'name': 'CreditCardValidator', 'selector': '[validCreditCard]'}];
     var ACTUAL_COMPONENT = {'name': 'SidenavComponent'};
 </script>
