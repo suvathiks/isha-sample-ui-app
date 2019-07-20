@@ -15,7 +15,6 @@ import { ConstantState } from "./state/constants/constants.state";
 import { CDIState } from "./state/cdi/cdi.state";
 import { StylingModule } from "./shared/styling.imports";
 import { BulkUploadModule } from './modules/bulk-upload/bulk-upload.module';
-import { CsvModule } from './modules/csv/csv.module';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
@@ -29,7 +28,6 @@ import { SharedModule } from './shared/shared.module';
       developmentMode: !environment.production
     }),
     BulkUploadModule,
-    CsvModule,
     SdkModule // Includes all the sdk features from src/app/sdk
   ],
   providers: [ConstantParsingService],

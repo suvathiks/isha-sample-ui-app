@@ -31,12 +31,6 @@ export const sitemap: Link[] = [
     ]
   },
   {
-    label: "CSV Export",
-    path: "csv-export",
-    icon: "file-excel",
-    children: []
-  },
-  {
     label: "Bulk Upload",
     path: "bulk-upload",
     icon: "upload",

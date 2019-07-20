@@ -12,10 +12,6 @@ export const routes: Routes = [
     loadChildren: "./modules/bulk-upload/bulk-upload.module#BulkUploadModule"
   },
   {
-    path: "csv-export",
-    loadChildren: "./modules/csv/csv.module#CsvModule"
-  },
-  {
     path: "",
     redirectTo: "",
     pathMatch: "full"
