@@ -35,3 +35,10 @@ export const endpoints = {
     fetch: "contacts",
   }
 };
+
+export const endpoints1 = {
+  constants: { fetch: "constants" },
+  programs: {
+    fetch: "programs",
+  }
+};

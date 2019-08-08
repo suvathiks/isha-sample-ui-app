@@ -60,7 +60,26 @@ export const sitemap: Link[] = [
         children: []
       }
     ]
-  }
+  },
+  {
+    label: "Programs",
+    path: null,
+    icon: "address-book",
+    children: [
+      {
+        label: "Programs",
+        path: "programs/",
+        icon: "address-book",
+        children: []
+      },
+      {
+        label: "Add Programs",
+        path: "programs/add-program",
+        icon: "plus",
+        children: []
+      }
+    ]
+  },
 ];
 
 export class Link {
